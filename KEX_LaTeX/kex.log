@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  16 FEB 2025 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  16 FEB 2025 11:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -308,7 +308,14 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count290
 \l__pdf_internal_box=\box54
-) (./kex.aux)
+) (./kex.aux
+
+Package natbib Warning: Citation `example2025' multiply defined.
+
+
+Package natbib Warning: Citation `author2025' multiply defined.
+
+)
 \openout1 = `kex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -388,7 +395,7 @@ Package hyperref Info: Link coloring OFF on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<kthLogga.png, id=28, 88.1694pt x 98.2872pt>
+<kthLogga.png, id=56, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
 Package pdftex.def Info: kthLogga.png  used on input line 33.
@@ -396,7 +403,35 @@ Package pdftex.def Info: kthLogga.png  used on input line 33.
 [1
 
 
-{/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./kthLogga.png>] (./kex.toc)
+{/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./kthLogga.png>] (./kex.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+ [] [][]\T1/lmr/bx/n/12 Conclusion and Re-search 
+ []
+
+)
 \tf@toc=\write4
 \openout4 = `kex.toc'.
 
@@ -411,27 +446,105 @@ Package fancyhdr Warning: \headheight is too small (12.5pt):
 [1
 
 
-] (./kex.aux)
+]
+Underfull \hbox (badness 7273) in paragraph at lines 88--88
+|[]\T1/lmr/bx/n/14.4 Scientific Ques-tion and
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 91--92
+[]\T1/lmr/m/it/12 "Which of the two open-source
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 91--92
+\T1/lmr/m/it/12 DAM sys-tems, [Sys-tem A] and
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 91--92
+\T1/lmr/m/it/12 con-trol, and meta-data man-age-
+ []
+
+
+Package natbib Warning: Citation `Author2020' on page 2 undefined on input line 97.
+
+
+Package natbib Warning: Citation `AuthorEtAl2019' on page 2 undefined on input line 97.
+
+
+Package natbib Warning: Citation `Author2021' on page 2 undefined on input line 97.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 105.
+(/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Underfull \hbox (badness 1509) in paragraph at lines 106--107
+\T1/lmr/m/n/12 Role-Based Ac-cess Con-trol (RBAC)
+ []
+
+
+Underfull \hbox (badness 6493) in paragraph at lines 107--108
+[]\T1/lmr/bx/n/12 Metadata Man-age-ment: \T1/lmr/m/n/12 Tech-
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.5pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[2{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \hbox (badness 1769) in paragraph at lines 112--112
+|[]\T1/lmr/bx/n/17.28 Conclusion and Re-
+ []
+
+(./kex.bbl
+pdfTeX warning (ext4): destination with the same identifier (name{cite.example2025}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 ...item[Exempelförfattare, 2025]{example2025}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{cite.author2025}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \bibitem[Författare, 2025]{author2025}
+                                           )
+
+Package natbib Warning: There were undefined citations.
+
+
+Package natbib Warning: There were multiply defined citations.
+
+
+Package fancyhdr Warning: \headheight is too small (12.5pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[3] (./kex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: DE7A70B20C9A218EFB9AFBC603FDFE84;538.
+(rerunfilecheck)             Checksum: 5EEDEF8627E1C7F4217EF737C3DCB16F;1583.
  ) 
 Here is how much of TeX's memory you used:
- 10665 strings out of 475567
- 162389 string characters out of 5777889
- 1934187 words of memory out of 5000000
- 32685 multiletter control sequences out of 15000+600000
- 584415 words of font info for 46 fonts, out of 8000000 for 9000
+ 10806 strings out of 475567
+ 165575 string characters out of 5777889
+ 1939187 words of memory out of 5000000
+ 32788 multiletter control sequences out of 15000+600000
+ 598813 words of font info for 58 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,11n,79p,323b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,652b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (2 pages, 169691 bytes).
+Output written on kex.pdf (4 pages, 187004 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 138 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

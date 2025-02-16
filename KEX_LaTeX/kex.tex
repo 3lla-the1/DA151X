@@ -33,7 +33,7 @@
     \includegraphics[width=0.2\textwidth]{kthLogga.png}\\[1cm]
     {\large BACHELOR'S THESIS IN COMPUTER SCIENCE AND INDUSTRIAL ECONOMICS}\\[0.5cm]
     {\large UNDERGRADUATE LEVEL 15 CREDITS}\\[3cm]
-    {\Huge \textbf{Secure and Scalable Digital Asset Management Prototype}}\\[0.5cm]
+    {\Huge \textbf{A Comparative Evaluation of Open-Source Digital Asset Management Systems}}\\[0.5cm]
     {\Large Exploring Organizational and Marketing Criteria for Process and Marketing Innovation in SMEs}\\[1cm]
     \vfill
     {\Large \textbf{ELLA KARLSSON}}\\[1cm]
@@ -74,5 +74,53 @@ Sammanfatta de viktigaste insikterna och eventuella framtida forskningsmöjlighe
 \section{Referenser}
 \bibliographystyle{apalike}
 \bibliography{referenser} % referenser.bib should contain author2025 and example2025
+
+
+
+
+% ===== Section 1: Introduction =====
+\section{Introduction}
+\subsection{Background and Goals}
+The rapid evolution of digital workflows has led to a growing need for effective Digital Asset Management (DAM) systems, especially within organizations where design and manufacturing departments collaborate closely. Modern DAM systems support version control, access control, and comprehensive metadata management to streamline collaboration and maintain data integrity. 
+
+The client’s interest in this project stems from the need to improve internal processes and facilitate better collaboration between design and manufacturing teams. The overall goal is to identify which open-source DAM solution offers the most efficient support for version management, secure access control, and robust metadata handling. In a broader societal context, such improvements can lead to enhanced productivity, reduced errors in product development, and support sustainable work practices—all of which are increasingly important in today’s globalized economy.
+
+\subsection{Scientific Question and Problem Definition}
+This pre-study focuses on the following research question:
+\begin{quote}
+    \textit{"Which of the two open-source DAM systems, [System A] and [System B], is most effective in improving version control, access control, and metadata management in the collaboration between design and manufacturing departments?"}
+\end{quote}
+The problem definition involves identifying the challenges in integrating these systems into existing workflows, evaluating their technical performance, and understanding how they support collaborative processes. The expected outcome is a set of scientifically and technically validated criteria that can guide the implementation of a DAM solution in industrial settings.
+
+% ===== Section 2: Previous Studies =====
+\section{Previous Studies}
+Recent research has explored various aspects of digital asset management in industrial environments. For instance, \citet{Author2020} demonstrated that effective version control systems can significantly reduce errors in collaborative design processes. Similarly, \citet{AuthorEtAl2019} highlighted that robust access control mechanisms are essential for protecting sensitive design data, while \citet{Author2021} found that well-structured metadata management leads to improved data retrieval and workflow efficiency. 
+
+These studies collectively underline the importance of integrating technical solutions with organizational practices. Although approaches vary, a common conclusion is that a system must address both the technical performance and usability aspects to be successful. This pre-study builds on these findings by comparing two open-source DAM systems and synthesizing previous work into a unified framework for evaluation.
+
+% ===== Section 3: Theory =====
+\section{Theory}
+The theoretical framework for this study is based on principles from software engineering and digital collaboration. Key areas include:
+\begin{itemize}
+    \item \textbf{Version Control:} Methods for tracking and managing changes to digital assets. Modern DAM systems integrate version control features to ensure data consistency and traceability.
+    \item \textbf{Access Control:} Implementation of Role-Based Access Control (RBAC) models to secure sensitive data and enforce user permissions.
+    \item \textbf{Metadata Management:} Techniques for organizing, categorizing, and retrieving digital content, often leveraging structured data formats such as JSON Schema.
+\end{itemize}
+One of the candidate systems, Invenio, is built on Python (Flask) and PostgreSQL, with support for Elasticsearch for search functionality and Redis for caching. Its modular architecture allows for extensive customization using JSON Schema for data modeling. However, technical challenges remain; for example, difficulties in deploying Invenio via Docker highlight potential integration issues that will be further investigated in this study.
+
+% ===== Section 4: Conclusion of Pre-Study: Method =====
+\section{Conclusion and Research Method}
+Based on the literature review and theoretical analysis, the study will undertake a comparative evaluation of two open-source DAM systems ([System A] and [System B]). The research method includes:
+\begin{itemize}
+    \item \textbf{Benchmarking:} Quantitative evaluation of system performance in terms of version control efficiency, access control robustness, and metadata management capabilities.
+    \item \textbf{User Feedback:} Qualitative assessments through interviews and workshops with stakeholders from design and manufacturing departments.
+    \item \textbf{Technical Testing:} Hands-on testing, including deployment experiments (e.g., using Docker) to evaluate practical integration challenges—such as the current difficulties in running Invenio.
+\end{itemize}
+The combined insights from these methods will provide a comprehensive understanding of which DAM system is best suited for enhancing collaborative workflows in an industrial environment.
+
+% ===== Section 5: References =====
+\section{References}
+\bibliographystyle{apalike}
+\bibliography{references} % Ensure your references.bib file includes all cited sources, e.g., Author2020, AuthorEtAl2019, Author2021
 
 \end{document}
