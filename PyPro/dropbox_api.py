@@ -1,21 +1,52 @@
 import os
-import sqlite3
+import requests
 import dropbox
+import sqlite3
 import logging
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
 
 # Konfigurera logging
 logging.basicConfig(level=logging.DEBUG)
 
-# Ladda Dropbox Access Token från en miljövariabel
-ACCESS_TOKEN = os.getenv("DROPBOX_ACCESS_TOKEN")
-if not ACCESS_TOKEN:
-    raise ValueError("ERROR: Saknar Dropbox Access Token. Ange den som en miljövariabel.")
+# Ladda miljövariabler från .env-filen
+load_dotenv()
 
+# Läs in från miljövariabler
+DROPBOX_REFRESH_TOKEN = os.getenv("DROPBOX_REFRESH_TOKEN")
+DROPBOX_CLIENT_ID = os.getenv("DROPBOX_CLIENT_ID")
+DROPBOX_CLIENT_SECRET = os.getenv("DROPBOX_CLIENT_SECRET")
+
+if not all([DROPBOX_REFRESH_TOKEN, DROPBOX_CLIENT_ID, DROPBOX_CLIENT_SECRET]):
+    raise ValueError("Saknar en eller flera Dropbox-miljövariabler.")
+
+
+def get_new_access_token():
+    """Hämtar en ny access token med hjälp av refresh token."""
+    url = "https://api.dropbox.com/oauth2/token"
+    data = {
+        "grant_type": "refresh_token",
+        "refresh_token": DROPBOX_REFRESH_TOKEN,
+        "client_id": DROPBOX_CLIENT_ID,
+        "client_secret": DROPBOX_CLIENT_SECRET
+    }
+    response = requests.post(url, data=data)
+    response_json = response.json()
+
+    if "access_token" not in response_json:
+        raise ValueError(f"Misslyckades att uppdatera access token: {response_json}")
+
+    return response_json["access_token"]
+
+# Hämta en ny access token
+ACCESS_TOKEN = get_new_access_token()
+
+# Initiera Dropbox-klienten med den nya access-tokenen
 dbx = dropbox.Dropbox(ACCESS_TOKEN)
 
 # Initiera Flask
 app = Flask(__name__)
+
 
 # Databasanslutning
 def get_db_connection():
