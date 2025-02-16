@@ -1,25 +1,25 @@
 \documentclass[a4paper,12pt,twocolumn]{article}
 
-\usepackage[utf8]{inputenc} % Stöd för svenska tecken
-\usepackage[T1]{fontenc}    % Bättre font-rendering
-\usepackage{graphicx}       % För bilder
-\usepackage{amsmath}        % För matematiska formler
-\usepackage{hyperref}       % Klickbara länkar i PDF
-\usepackage{geometry}       % Justering av marginaler
+\usepackage[utf8]{inputenc} % Support for UTF-8 encoding
+\usepackage[T1]{fontenc}    % Better font rendering
+\usepackage{graphicx}       % For including images
+\usepackage{amsmath}        % For mathematical formulas
+\usepackage{hyperref}       % For clickable links in the PDF
+\usepackage{geometry}       % To adjust margins
 \geometry{margin=2.5cm}
-\usepackage{titlesec}       % Anpassning av sektioner
-\usepackage{fancyhdr}       % Sidhuvud och sidfot
-\usepackage{natbib}         % Löpande referenser (Harvard-stil)
-\usepackage{lmodern}        % Bättre typsnitt
-\usepackage{setspace}       % För att justera radavstånd
+\usepackage{titlesec}       % For custom section headings
+\usepackage{fancyhdr}       % For header and footer customization
+\usepackage{natbib}         % For in-text citations (Harvard style)
+\usepackage{lmodern}        % Improved font quality
+\usepackage{setspace}       % For adjusting line spacing
 
 % ---- Fix fancyhdr warning: set proper headheight ----
 \setlength{\headheight}{12.5pt}
 
-% ---- Sidhuvud ----
+% ---- Header settings ----
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{KEX-arbete}
+\lhead{KEX Project}
 \rhead{KTH}
 \cfoot{\thepage}
 
@@ -27,20 +27,22 @@
 
 % ---- Suppress page numbering on title page to avoid duplicate "page.1" link ----
 \pagenumbering{gobble}
+
 \begin{titlepage}
     \centering
     \includegraphics[width=0.2\textwidth]{kthLogga.png}\\[1cm]
-    {\large KANDIDATEXAMENSARBETE INOM DATATEKNIK OCH INDUSTRIELL EKONOMI}\\[0.5cm]
-    {\large GRUNDNIVÅ 15 HP}\\[3cm]
-    {\Huge \textbf{Demokratisering av hållbarhetsdata:}}\\[0.5cm]
-    {\Large Designöverväganden för Business Intelligence-verktyg i Greentech-företag}\\[1cm]
+    {\large BACHELOR'S THESIS IN COMPUTER SCIENCE AND INDUSTRIAL ECONOMICS}\\[0.5cm]
+    {\large UNDERGRADUATE LEVEL 15 CREDITS}\\[3cm]
+    {\Huge \textbf{Secure and Scalable Digital Asset Management Prototype}}\\[0.5cm]
+    {\Large Exploring Organizational and Marketing Criteria for Process and Marketing Innovation in SMEs}\\[1cm]
     \vfill
     {\Large \textbf{ELLA KARLSSON}}\\[1cm]
     \vfill
-    {\large Skolan för Elektroteknik och Datavetenskap}\\
-    {\large Kungliga Tekniska Högskolan (KTH)}\\
+    {\large School of Electrical Engineering and Computer Science}\\
+    {\large Royal Institute of Technology (KTH)}\\
     %{\large \today}\\
 \end{titlepage}
+
 \clearpage
 
 % ---- Resume normal page numbering ----

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  16 FEB 2025 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  16 FEB 2025 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -391,7 +391,7 @@ Package hyperref Info: Link coloring OFF on input line 26.
 <kthLogga.png, id=28, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 32.
+Package pdftex.def Info: kthLogga.png  used on input line 33.
 (pdftex.def)             Requested size: 91.04742pt x 101.50087pt.
 [1
 
@@ -426,9 +426,9 @@ Here is how much of TeX's memory you used:
  32685 multiletter control sequences out of 15000+600000
  584415 words of font info for 46 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,11n,79p,329b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,323b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (2 pages, 169554 bytes).
+Output written on kex.pdf (2 pages, 169691 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
