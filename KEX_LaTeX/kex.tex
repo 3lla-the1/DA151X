@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt,twocolumn]{article}
+
+\usepackage[utf8]{inputenc} % Stöd för svenska tecken
+\usepackage[T1]{fontenc}    % Bättre font-rendering
+\usepackage{graphicx}       % För bilder
+\usepackage{amsmath}        % För matematiska formler
+\usepackage{hyperref}       % Klickbara länkar i PDF
+\usepackage{geometry}       % Justering av marginaler
+\geometry{margin=2.5cm}
+\usepackage{titlesec}       % Anpassning av sektioner
+\usepackage{fancyhdr}       % Sidhuvud och sidfot
+\usepackage{natbib}         % Löpande referenser (Harvard-stil)
+\usepackage{lmodern}        % Bättre typsnitt
+\usepackage{setspace}       % För att justera radavstånd
+
+% ---- Fix fancyhdr warning: set proper headheight ----
+\setlength{\headheight}{12.5pt}
+
+% ---- Sidhuvud ----
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{KEX-arbete}
+\rhead{KTH}
+\cfoot{\thepage}
+
+\begin{document}
+
+% ---- Suppress page numbering on title page to avoid duplicate "page.1" link ----
+\pagenumbering{gobble}
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.2\textwidth]{kthLogga.png}\\[1cm]
+    {\large KANDIDATEXAMENSARBETE INOM DATATEKNIK OCH INDUSTRIELL EKONOMI}\\[0.5cm]
+    {\large GRUNDNIVÅ 15 HP}\\[3cm]
+    {\Huge \textbf{Demokratisering av hållbarhetsdata:}}\\[0.5cm]
+    {\Large Designöverväganden för Business Intelligence-verktyg i Greentech-företag}\\[1cm]
+    \vfill
+    {\Large \textbf{ELLA KARLSSON}}\\[1cm]
+    \vfill
+    {\large Skolan för Elektroteknik och Datavetenskap}\\
+    {\large Kungliga Tekniska Högskolan (KTH)}\\
+    %{\large \today}\\
+\end{titlepage}
+\clearpage
+
+% ---- Resume normal page numbering ----
+\pagenumbering{arabic}
+
+% Abstract
+\begin{abstract}
+Två trender som blivit alltmer påtagliga de senaste åren är ökade datamängder och ökat fokus på klimatförändringar. Denna rapport undersöker hur hållbarhetsdata kan integreras i Business Intelligence (BI) för greentech-företag.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Här beskriver du bakgrunden till ditt arbete och dess syfte, med referenser enligt \citet{author2025} eller \citep{author2025}.
+
+\section{Method}
+Beskriv hur du genomför din undersökning, vilka metoder du använder och varför. Använd \citet{example2025} för att nämna författaren i texten eller \citep{example2025} för att ha referensen inom parentes.
+
+\section{Resultat}
+Presentera de resultat du har fått fram.
+
+\section{Diskussion}
+Analysera och diskutera resultaten i relation till tidigare forskning och teorier.
+
+\section{Slutsatser}
+Sammanfatta de viktigaste insikterna och eventuella framtida forskningsmöjligheter.
+
+\section{Referenser}
+\bibliographystyle{apalike}
+\bibliography{referenser} % referenser.bib should contain author2025 and example2025
+
+\end{document}
