@@ -1,0 +1,13 @@
+\begin{thebibliography}{}
+
+\bibitem[Exempelförfattare, 2025]{example2025}
+Exempelförfattare, B. (2025).
+\newblock {\em Exempelbokens Titel}.
+\newblock Förlag AB.
+
+\bibitem[Författare, 2025]{author2025}
+Författare, A. (2025).
+\newblock Artikelns titel.
+\newblock {\em Journalnamn}, 10(2):123--135.
+
+\end{thebibliography}
