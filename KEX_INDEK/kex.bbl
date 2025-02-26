@@ -1,13 +1,59 @@
 \begin{thebibliography}{}
 
-\bibitem[Exempelförfattare, 2025]{example2025}
-Exempelförfattare, B. (2025).
-\newblock {\em Exempelbokens Titel}.
-\newblock Förlag AB.
+\bibitem[Barney, 1991]{barney1991}
+Barney, J. (1991).
+\newblock Firm resources and sustained competitive advantage.
+\newblock {\em Journal of Management}, 17(1):99--120.
 
-\bibitem[Författare, 2025]{author2025}
-Författare, A. (2025).
-\newblock Artikelns titel.
-\newblock {\em Journalnamn}, 10(2):123--135.
+\bibitem[Chumphong et~al., 2020]{Chumphong2020}
+Chumphong, O., Srimai, S., and Potipiroon, W. (2020).
+\newblock The resource-based view, dynamic capabilities and sme performance for smes to become smart enterprises.
+\newblock {\em ABAC ODI Journal Vision. Action. Outcome.}, 7(2):129--146.
+
+\bibitem[Civelek et~al., 2023]{Civelek2023}
+Civelek, M., Kraj{\v{c}}{\'i}k, V., and Klju{\v{c}}nikov, A. (2023).
+\newblock The impacts of dynamic capabilities on smes' digital transformation process: The resource-based view perspective.
+\newblock {\em Oeconomia Copernicana}, 14(4):1367--1392.
+
+\bibitem[Eisenhardt and Martin, 2000]{eisenhardt2000}
+Eisenhardt, K.~M. and Martin, J.~A. (2000).
+\newblock Dynamic capabilities: What are they?
+\newblock {\em Strategic Management Journal}, 21(10-11):1105--1121.
+
+\bibitem[Mladenova, 2024]{Mladenova2024}
+Mladenova, I. (2024).
+\newblock Smes in a digital era: The role of management.
+\newblock {\em Administrative Sciences}, 14(11):296.
+
+\bibitem[OECD and Eurostat, 2018]{oecd2018oslo}
+OECD and Eurostat (2018).
+\newblock {\em Oslo Manual 2018: Guidelines for Collecting, Reporting and Using Data on Innovation}.
+\newblock OECD Publishing, Paris.
+
+\bibitem[Simons, 1995]{simons1995}
+Simons, R. (1995).
+\newblock {\em Levers of Control: How Managers Use Innovative Control Systems to Drive Strategic Renewal}.
+\newblock Harvard Business School Press.
+
+\bibitem[Teece et~al., 1997]{teece1997}
+Teece, D.~J., Pisano, G., and Shuen, A. (1997).
+\newblock Dynamic capabilities and strategic management.
+\newblock {\em Strategic Management Journal}, 18(7):509--533.
+
+\bibitem[Teng et~al., 2022]{teng2022}
+Teng, X., Wu, Z., and Yang, F. (2022).
+\newblock Impact of the digital transformation of small- and medium-sized listed companies on performance: Based on a cost-benefit analysis framework.
+\newblock {\em Journal of Mathematics}, 2022:1--15.
+
+\bibitem[Tillväxtverket, 2021]{tillvaxtverket2021}
+Tillväxtverket (2021).
+\newblock Små och medelstora företags digitalisering - vad har betydelse?
+\newblock Technical Report 0366, Tillväxtverket.
+\newblock Accessed: 2025-02-15.
+
+\bibitem[Wernerfelt, 1984]{wernerfelt1984}
+Wernerfelt, B. (1984).
+\newblock A resource-based view of the firm.
+\newblock {\em Strategic Management Journal}, 5(2):171--180.
 
 \end{thebibliography}

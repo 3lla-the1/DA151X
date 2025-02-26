@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt,twocolumn]{article}
 
+
 \usepackage[utf8]{inputenc} % Support for UTF-8 encoding
 \usepackage[T1]{fontenc}    % Better font rendering
 \usepackage{graphicx}       % For including images
@@ -12,9 +13,12 @@
 \usepackage{natbib}         % For in-text citations (Harvard style)
 \usepackage{lmodern}        % Improved font quality
 \usepackage{setspace}       % For adjusting line spacing
+\usepackage{ragged2e}       % Fix justification issues
+\usepackage[protrusion=true,expansion=true]{microtype} % Better text spacing
+
 
 % ---- Fix fancyhdr warning: set proper headheight ----
-\setlength{\headheight}{12.5pt}
+\setlength{\headheight}{14.5pt}
 
 % ---- Header settings ----
 \pagestyle{fancy}
@@ -26,8 +30,11 @@
 \begin{document}
 
 % ---- Suppress page numbering on title page to avoid duplicate "page.1" link ----
-\pagenumbering{gobble}
+\clearpage
+\thispagestyle{empty}  % Removes the page number but avoids identifier conflicts
 
+\setlength{\headheight}{14.5pt}
+% ---- Title Page ----
 \begin{titlepage}
     \centering
     \includegraphics[width=0.2\textwidth]{kthLogga.png}\\[1cm]
@@ -38,89 +45,199 @@
     \vfill
     {\Large \textbf{ELLA KARLSSON}}\\[1cm]
     \vfill
-    {\large School of Electrical Engineering and Computer Science}\\
+    {\large School of Industrial Engineering and Management}\\
     {\large Royal Institute of Technology (KTH)}\\
-    %{\large \today}\\
 \end{titlepage}
 
-\clearpage
-
-% ---- Resume normal page numbering ----
-\pagenumbering{arabic}
-
-% Abstract
-\begin{abstract}
-Två trender som blivit alltmer påtagliga de senaste åren är ökade datamängder och ökat fokus på klimatförändringar. Denna rapport undersöker hur hållbarhetsdata kan integreras i Business Intelligence (BI) för greentech-företag.
-\end{abstract}
-
+% ---- Ensure Table of Contents is in Single Column ----
+\newpage
+\onecolumn
 \tableofcontents
 \newpage
 
-\section{Introduction}
-Här beskriver du bakgrunden till ditt arbete och dess syfte, med referenser enligt \citet{author2025} eller \citep{author2025}.
+% ---- Switch Back to Two-Column Layout for Main Content ----
+\twocolumn
+\pagenumbering{arabic}
 
-\section{Method}
-Beskriv hur du genomför din undersökning, vilka metoder du använder och varför. Använd \citet{example2025} för att nämna författaren i texten eller \citep{example2025} för att ha referensen inom parentes.
-
-\section{Resultat}
-Presentera de resultat du har fått fram.
-
-\section{Diskussion}
-Analysera och diskutera resultaten i relation till tidigare forskning och teorier.
-
-\section{Slutsatser}
-Sammanfatta de viktigaste insikterna och eventuella framtida forskningsmöjligheter.
-
-\section{Referenser}
-\bibliographystyle{apalike}
-\bibliography{referenser} % referenser.bib should contain author2025 and example2025
-
-
-
+% ===== Apply Spacing Fixes =====
+\RaggedRight   % Disable full justification to avoid stretched text
+\sloppy        % Allow better text breaking to prevent large spaces
+\hyphenpenalty=500
+\tolerance=1000
 
 % ===== Section 1: Introduction =====
 \section{Introduction}
-\subsection{Background and Goals}
-The rapid evolution of digital workflows has led to a growing need for effective Digital Asset Management (DAM) systems, especially within organizations where design and manufacturing departments collaborate closely. Modern DAM systems support version control, access control, and comprehensive metadata management to streamline collaboration and maintain data integrity. 
+\subsection{Research Question}
+The research question investigated in this pre-study is:
 
-The client’s interest in this project stems from the need to improve internal processes and facilitate better collaboration between design and manufacturing teams. The overall goal is to identify which open-source DAM solution offers the most efficient support for version management, secure access control, and robust metadata handling. In a broader societal context, such improvements can lead to enhanced productivity, reduced errors in product development, and support sustainable work practices—all of which are increasingly important in today’s globalized economy.
-
-\subsection{Scientific Question and Problem Definition}
-This pre-study focuses on the following research question:
 \begin{quote}
-    \textit{"Which of the two open-source DAM systems, [System A] and [System B], is most effective in improving version control, access control, and metadata management in the collaboration between design and manufacturing departments?"}
+    \textit{"To what extent does DAM adoption contribute to improved operational efficiency and strategic positioning in a premium manufacturing company?"}
 \end{quote}
-The problem definition involves identifying the challenges in integrating these systems into existing workflows, evaluating their technical performance, and understanding how they support collaborative processes. The expected outcome is a set of scientifically and technically validated criteria that can guide the implementation of a DAM solution in industrial settings.
 
-% ===== Section 2: Previous Studies =====
-\section{Previous Studies}
-Recent research has explored various aspects of digital asset management in industrial environments. For instance, \citet{Author2020} demonstrated that effective version control systems can significantly reduce errors in collaborative design processes. Similarly, \citet{AuthorEtAl2019} highlighted that robust access control mechanisms are essential for protecting sensitive design data, while \citet{Author2021} found that well-structured metadata management leads to improved data retrieval and workflow efficiency. 
+\subsection{Connection to the Technical Project}
+The technical aspect of this study examines the adoption of an open-source DAM system versus 
+the development of a tailored solution, with a focus on role-based access control, security, 
+logging, and usability. 
 
-These studies collectively underline the importance of integrating technical solutions with organizational practices. Although approaches vary, a common conclusion is that a system must address both the technical performance and usability aspects to be successful. This pre-study builds on these findings by comparing two open-source DAM systems and synthesizing previous work into a unified framework for evaluation.
-
-% ===== Section 3: Theory =====
-\section{Theory}
-The theoretical framework for this study is based on principles from software engineering and digital collaboration. Key areas include:
+\vspace{0.3cm} 
+However, technological advancements alone do not guarantee successful integration. To complement this,
+the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
 \begin{itemize}
-    \item \textbf{Version Control:} Methods for tracking and managing changes to digital assets. Modern DAM systems integrate version control features to ensure data consistency and traceability.
-    \item \textbf{Access Control:} Implementation of Role-Based Access Control (RBAC) models to secure sensitive data and enforce user permissions.
-    \item \textbf{Metadata Management:} Techniques for organizing, categorizing, and retrieving digital content, often leveraging structured data formats such as JSON Schema.
+    \item \textbf{Process Impact:} Assessing whether the DAM system has enhanced workflow efficiency, minimized errors, and reduced redundant tasks.
+    \item \textbf{Organizational Adoption:} Evaluating the ease of employee adaptation, the necessity of training, and any role adjustments required for successful implementation.
+    \item \textbf{Strategic Impact:} Determining whether the DAM system strengthens brand consistency, improves customer engagement, and supports scalability as the company expands.
 \end{itemize}
-One of the candidate systems, Invenio, is built on Python (Flask) and PostgreSQL, with support for Elasticsearch for search functionality and Redis for caching. Its modular architecture allows for extensive customization using JSON Schema for data modeling. However, technical challenges remain; for example, difficulties in deploying Invenio via Docker highlight potential integration issues that will be further investigated in this study.
 
-% ===== Section 4: Conclusion of Pre-Study: Method =====
-\section{Conclusion and Research Method}
-Based on the literature review and theoretical analysis, the study will undertake a comparative evaluation of two open-source DAM systems ([System A] and [System B]). The research method includes:
+\vspace{0.3cm} 
+\subsection{Societal Impact}
+Digital transformation has a significant impact on small and medium-sized enterprises (SMEs). SMEs account for approximately 
+60\% of total turnover and value-added contributions in Sweden’s private sector, employing around 65\% of the workforce \citep{tillvaxtverket2021}.
+
+\vspace{0.3cm}
+The adoption of DAM systems is an integral part of this transformation, 
+improving operational efficiency and reducing manual work,
+which contributes to broader economic growth. A cost-benefit analysis of 319 SMEs 
+found that digital transformation enhances organizational resilience, reduces 
+operational costs, and improves long-term scalability \citep{teng2022}.
+
+% ===== Reset Formatting for Other Sections =====
+\justifying
+\fussy
+
+% ===== Section 2: Theoretical Framework and Previous Studies =====
+\section{Theoretical Framework and Previous Studies}
+This section builds upon existing literature and theoretical frameworks to analyze how DAM adoption influences 
+strategic decision-making, cost structures, and competitive positioning in SMEs. A particular emphasis is placed 
+on the interplay between technological capabilities, organizational governance, and leadership dynamics,
+as these factors shape the effectiveness of DAM systems in practice.
+
+
+\subsection{The Resource-Based View}
+The Resource-Based View (RBV) suggests that organizations derive competitive advantage by leveraging valuable, rare, inimitable, 
+and non-substitutable (VRIN) resources \cite{barney1991}. DAM systems fulfill these criteria by providing centralized governance,
+metadata standardization, and automation, transforming digital assets into strategic resources \cite{Chumphong2020}.
+
+\vspace{0.3cm}
+Empirical findings support this perspective. \cite{Chumphong2020} report that SMEs achieving full DAM integration 
+demonstrate 23\% higher operational resilience during market disruptions compared to those with only partial implementation. 
+This aligns with RBV’s emphasis on resource orchestration and its role in maintaining competitiveness.
+
+\vspace{0.3cm}
+Nevertheless, some scholars argue that resource possession alone does not guarantee successful digital transformation. 
+\cite{Civelek2023} found no significant link be-
+tween dynamic capabilities—a key aspect
+of RBV that involves adapting, integrating,
+and reconfiguring resources—and successful
+digital transformation among Czech manu-
+facturing SMEs. Their findings suggest that
+merely possessing dynamic capabilities is
+insufficient for digital transformation unless
+supported by complementary factors such as
+digital literacy and IT infrastructure matu-
+rity.
+
+\subsection{Simons’ Levers of Control}
+\cite{simons1995} Levers of Control (LOC) framework is a central model for understanding how organizations 
+balance control and innovation through management control systems (MCS). 
+There are diagnostic control systems, which are used to monitor and ensure that operations 
+align with set objectives, and interactive control systems, which facilitate strategic discussions and adaptation to 
+changing market conditions. In a digital context, these control mechanisms become crucial for how organizations effectively 
+implement systems.
+
+\subsubsection{Diagnostic Control Systems}
+By implementing DAM, organizations can systematically monitor resource usage and efficiency, reducing redundancies 
+and improving workflows. Previous research indicates that such systems can reduce unnecessary tasks by up to 34\% through automated version management 
+and asset tracking \cite{Mladenova2024}. 
+
+\vspace{0.3cm}
+\cite{wernerfelt1984} lays the foundation for resource-based theory, suggesting that firms should focus on acquiring and leveraging valuable resources 
+rather than just competing on products or market positioning. The idea that DAM enhance governance and long-
+term decision-making can be linked to his argument that a firm’s internal resources
+dictate its competitive position. \cite{barney1991} builds upon this idea by highlighting the importance of VRIN resources that are difficult to imitate or substitute. 
+DAM can play a key role in creating such competitive advantages by protecting and optimizing an organization’s digital content management. 
+By gathering data on usage patterns and performance, DAM can also contribute to a more data-driven governance approach, strengthening long-term strategic decision-making \cite{wernerfelt1984}.
+
+\subsubsection{Interactive Control Systems}
+Technological advancements necessitate a continuous reassessment of strategies and work processes. DAM can serve as an interactive control 
+tool by integrating digital assets into strategic processes and facilitating collaboration across organizational boundaries.
+\cite{teece1997} argue that companies require dynamic capabilities 
+to adapt to rapid environmental changes, and DAM systems can serve as such a capability by facilitating knowledge sharing and cross-functional collaboration.
+\cite{Mladenova2024} found that companies implementing DAM experienced a 19\% faster time-to-market for new products, 
+suggesting that it contributes to increased organizational flexibility and innovation capabilities.
+
+\vspace{0.3cm}
+However, for DAM to function as interactive control, management must actively engage in its use and foster a culture where digital 
+tools are seen as integral to the company’s strategic development. 
+\cite{simons1995} emphasizes that control systems must evolve alongside technological adoption and that management plays a central 
+role in ensuring that new technology is integrated in a way that supports both control and innovation. 
+ \cite{eisenhardt2000} furhter stress that technological resources alone do not provide a competitive advantage
+ unless combined with organizational capabilities that enable adaptation and change
+
+\subsection{Leadership dynamics}
+This review extends prior research by addressing the underexplored role of leadership styles in mediating DAM success. 
+\cite{Civelek2023} emphasizes the importance of joint ventures with IT firms in SME digital transformation, but does not explicitly examine how leadership styles influence 
+DAM adoption. This gap suggests that existing frameworks may not fully account for the managerial processes that enable or hinder DAM integration within SMEs.
+
+\subsection{Innovation Theory}
+This study extends the discussion on digital transformation in SMEs by integrating the innovation classification outlined in the Oslo Manual.
+Process innovation refers to the introduction of significantly improved production or delivery methods, including advancements in techniques, software, and organizational workflows \cite{oecd2018oslo}. 
+
+% ===== Section 3: Research Methodology =====
+\section{Research Methodology}
+Undersöka om förändringarna är ”nyttiga” och ”hållbara” ur flera perspektiv:
+1. Intern process (är arbetssättet väsentligt förbättrat och mer effektivt?)
+2. Extern marknad (leder det till nya eller förbättrade sätt att nå och engagera kunder?)
+3. Hållbarhet och tillväxt (kan lösningen skalas upp till nya marknader eller segment?)
+
+\subsection{Literature Review}
+A systematic literature review will be conducted to identify key factors influencing DAM adoption in SMEs. Topics include:
 \begin{itemize}
-    \item \textbf{Benchmarking:} Quantitative evaluation of system performance in terms of version control efficiency, access control robustness, and metadata management capabilities.
-    \item \textbf{User Feedback:} Qualitative assessments through interviews and workshops with stakeholders from design and manufacturing departments.
-    \item \textbf{Technical Testing:} Hands-on testing, including deployment experiments (e.g., using Docker) to evaluate practical integration challenges—such as the current difficulties in running Invenio.
+    \item Digital transformation in SMEs
+    \item Organizational change management
+    \item Process and marketing innovation strategies
 \end{itemize}
-The combined insights from these methods will provide a comprehensive understanding of which DAM system is best suited for enhancing collaborative workflows in an industrial environment.
 
-% ===== Section 5: References =====
+\subsection{Workshops and Interviews}
+Workshops will be held with industry stakeholders, including designers, project managers, and business executives, to assess their needs and expectations. Interviews will be conducted to explore:
+\begin{itemize}
+    \item Existing workflow challenges
+    \item Perceived value of DAM systems
+    \item Business considerations influencing adoption
+\end{itemize}
+
+\subsection{Benchmarking}
+A comparative analysis of DAM adoption in similar industries will be conducted, identifying best practices and potential pitfalls.
+
+\subsection{Economic and Organizational Impact Analysis}
+The study will evaluate:
+\begin{itemize}
+    \item \textbf{Quantitative factors:} Cost savings, efficiency improvements, and return on investment (ROI).
+    \item \textbf{Qualitative factors:} Changes in collaboration dynamics, decision-making processes, and marketing strategies.
+\end{itemize}
+
+% ===== Section 4: Discussion =====
+\section{Discussion}
+\subsection{Suitability of the Theoretical Framework}
+The Oslo Manual framework provides a structured way to classify and analyze innovation. However, its broad definitions may need refinement when applied to specific SME contexts.
+
+\subsection{Expected Findings}
+The study anticipates that the primary challenges in DAM adoption will be:
+\begin{itemize}
+    \item Resistance to change within SMEs.
+    \item Need for a clear return on investment to justify adoption.
+    \item Importance of a user-friendly design to ensure full adoption and utilization.
+\end{itemize}
+
+These findings will be validated through empirical data collection.
+
+% ===== Section 5: Conclusion =====
+\section{Conclusion}
+The **industrial economics perspective** enriches the **technical development** of DAM systems by identifying **critical business considerations**.  
+This pre-study establishes a foundation for further research into the **organizational and strategic factors** necessary for successful DAM adoption in **SMEs operating within premium manufacturing**.
+
+% ===== Section 6: References =====
 \section{References}
 \bibliographystyle{apalike}
-\bibliography{references} % Ensure your references.bib file includes all cited sources, e.g., Author2020, AuthorEtAl2019, Author2021
+\bibliography{references} % Ensure your references.bib file includes all cited sources
 
 \end{document}
