@@ -1,13 +1,22 @@
-\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Method}{1}{section.2}%
-\contentsline {section}{\numberline {3}Resultat}{1}{section.3}%
-\contentsline {section}{\numberline {4}Diskussion}{1}{section.4}%
-\contentsline {section}{\numberline {5}Slutsatser}{1}{section.5}%
-\contentsline {section}{\numberline {6}Referenser}{1}{section.6}%
-\contentsline {section}{\numberline {7}Introduction}{2}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Background and Goals}{2}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Scientific Question and Problem Definition}{2}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Previous Studies}{2}{section.8}%
-\contentsline {section}{\numberline {9}Theory}{2}{section.9}%
-\contentsline {section}{\numberline {10}Conclusion and Research Method}{3}{section.10}%
-\contentsline {section}{\numberline {11}References}{3}{section.11}%
+\contentsline {section}{Abstract}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Sammanfattning}{1}{section.1}%
+\contentsline {section}{\numberline {2}Intro}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Connection to the Technical Project}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Societal Impact}{1}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Theoretical Framework and Previous Studies}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Resource-Based View}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Simons’ Levers of Control}{2}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Diagnostic Control Systems}{2}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Interactive Control Systems}{2}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Leadership dynamics}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Innovation Theory}{3}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Research Methodology}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Literature Review}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Workshops and Interviews}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Benchmarking}{3}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Economic and Organizational Impact Analysis}{3}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Discussion}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Suitability of the Theoretical Framework}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Expected Findings}{3}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Conclusion}{4}{section.6}%
+\contentsline {section}{\numberline {7}References}{4}{section.7}%

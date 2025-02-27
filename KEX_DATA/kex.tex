@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt,twocolumn]{article}
 
+
 \usepackage[utf8]{inputenc} % Support for UTF-8 encoding
 \usepackage[T1]{fontenc}    % Better font rendering
 \usepackage{graphicx}       % For including images
@@ -12,9 +13,12 @@
 \usepackage{natbib}         % For in-text citations (Harvard style)
 \usepackage{lmodern}        % Improved font quality
 \usepackage{setspace}       % For adjusting line spacing
+\usepackage{ragged2e}       % Fix justification issues
+\usepackage[protrusion=true,expansion=true]{microtype} % Better text spacing
+
 
 % ---- Fix fancyhdr warning: set proper headheight ----
-\setlength{\headheight}{12.5pt}
+\setlength{\headheight}{14.5pt}
 
 % ---- Header settings ----
 \pagestyle{fancy}
@@ -26,8 +30,11 @@
 \begin{document}
 
 % ---- Suppress page numbering on title page to avoid duplicate "page.1" link ----
-\pagenumbering{gobble}
+\clearpage
+\thispagestyle{empty}  % Removes the page number but avoids identifier conflicts
 
+\setlength{\headheight}{14.5pt}
+% ---- Title Page ----
 \begin{titlepage}
     \centering
     \includegraphics[width=0.2\textwidth]{kthLogga.png}\\[1cm]
@@ -38,15 +45,235 @@
     \vfill
     {\Large \textbf{ELLA KARLSSON}}\\[1cm]
     \vfill
-    {\large School of Electrical Engineering and Computer Science}\\
+    {\large School of Industrial Engineering and Management}\\
     {\large Royal Institute of Technology (KTH)}\\
-    %{\large \today}\\
 \end{titlepage}
 
-\clearpage
+% ===== Section 1: abstract och sammanfattning =====
+\newpage
+\onecolumn
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
 
-% ---- Resume normal page numbering ----
+•	What is the topic area? (optional) Introduces the subject area for the project.
+•	Short problem statement
+•	Why was this problem worth a Master’s thesis project? (i.e., why is the problem both significant and of a suitable degree of difficulty for a Master’s thesis project? Why has no one else solved it yet?)
+•	How did you solve the problem? What was your method/insight?
+•	Results/Conclusions/Consequences/Impact: What are your key results/conclusions? What will others do based upon your results? What can be done now that you have finished - that could not be done before your thesis project was completed?
+
+\vspace{0.3cm} 
+\textbf{Keywords:} 
+    
+Digital Asset Management (DAM), Version Control, Metadata Management, Access Control, SMEs, Workflow Optimization
+
+
+\section{Sammanfattning}
+
+\vspace{0.3cm} 
+\textbf{Nyckelord:} 
+\newpage
+
+% ---- Ensure Table of Contents is in Single Column ----
+\newpage
+\onecolumn
+\tableofcontents
+\newpage
+
+
+
+
+% ---- Switch Back to Two-Column Layout for Main Content ----
+\twocolumn
 \pagenumbering{arabic}
+
+% ===== Apply Spacing Fixes =====
+\RaggedRight   % Disable full justification to avoid stretched text
+\sloppy        % Allow better text breaking to prevent large spaces
+\hyphenpenalty=500
+\tolerance=1000
+
+
+
+% ===== Section 2 =====
+
+\section{Intro}
+
+\begin{quote}
+    \textit{"To what extent does DAM adoption contribute to improved operational efficiency and strategic positioning in a premium manufacturing company?"}
+\end{quote}
+
+\subsection{Connection to the Technical Project}
+The technical aspect of this study examines the adoption of an open-source DAM system versus 
+the development of a tailored solution, with a focus on role-based access control, security, 
+logging, and usability. 
+
+\vspace{0.3cm} 
+However, technological advancements alone do not guarantee successful integration. To complement this,
+the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
+\begin{itemize}
+    \item \textbf{Process Impact:} Assessing whether the DAM system has enhanced workflow efficiency, minimized errors, and reduced redundant tasks.
+    \item \textbf{Organizational Adoption:} Evaluating the ease of employee adaptation, the necessity of training, and any role adjustments required for successful implementation.
+    \item \textbf{Strategic Impact:} Determining whether the DAM system strengthens brand consistency, improves customer engagement, and supports scalability as the company expands.
+\end{itemize}
+
+\vspace{0.3cm} 
+\subsection{Societal Impact}
+Digital transformation has a significant impact on small and medium-sized enterprises (SMEs). SMEs account for approximately 
+60\% of total turnover and value-added contributions in Sweden’s private sector, employing around 65\% of the workforce \citep{tillvaxtverket2021}.
+
+\vspace{0.3cm}
+The adoption of DAM systems is an integral part of this transformation, 
+improving operational efficiency and reducing manual work,
+which contributes to broader economic growth. A cost-benefit analysis of 319 SMEs 
+found that digital transformation enhances organizational resilience, reduces 
+operational costs, and improves long-term scalability \citep{teng2022}.
+
+% ===== Reset Formatting for Other Sections =====
+\justifying
+\fussy
+
+% ===== Section 2: Theoretical Framework and Previous Studies =====
+\section{Theoretical Framework and Previous Studies}
+This section builds upon existing literature and theoretical frameworks to analyze how DAM adoption influences 
+strategic decision-making, cost structures, and competitive positioning in SMEs. A particular emphasis is placed 
+on the interplay between technological capabilities, organizational governance, and leadership dynamics,
+as these factors shape the effectiveness of DAM systems in practice.
+
+
+\subsection{The Resource-Based View}
+The Resource-Based View (RBV) suggests that organizations derive competitive advantage by leveraging valuable, rare, inimitable, 
+and non-substitutable (VRIN) resources \cite{barney1991}. DAM systems fulfill these criteria by providing centralized governance,
+metadata standardization, and automation, transforming digital assets into strategic resources \cite{Chumphong2020}.
+
+\vspace{0.3cm}
+Empirical findings support this perspective. \cite{Chumphong2020} report that SMEs achieving full DAM integration 
+demonstrate 23\% higher operational resilience during market disruptions compared to those with only partial implementation. 
+This aligns with RBV’s emphasis on resource orchestration and its role in maintaining competitiveness.
+
+\vspace{0.3cm}
+Nevertheless, some scholars argue that resource possession alone does not guarantee successful digital transformation. 
+\cite{Civelek2023} found no significant link be-
+tween dynamic capabilities—a key aspect
+of RBV that involves adapting, integrating,
+and reconfiguring resources—and successful
+digital transformation among Czech manu-
+facturing SMEs. Their findings suggest that
+merely possessing dynamic capabilities is
+insufficient for digital transformation unless
+supported by complementary factors such as
+digital literacy and IT infrastructure matu-
+rity.
+
+\subsection{Simons’ Levers of Control}
+\cite{simons1995} Levers of Control (LOC) framework is a central model for understanding how organizations 
+balance control and innovation through management control systems (MCS). 
+There are diagnostic control systems, which are used to monitor and ensure that operations 
+align with set objectives, and interactive control systems, which facilitate strategic discussions and adaptation to 
+changing market conditions. In a digital context, these control mechanisms become crucial for how organizations effectively 
+implement systems.
+
+\subsubsection{Diagnostic Control Systems}
+By implementing DAM, organizations can systematically monitor resource usage and efficiency, reducing redundancies 
+and improving workflows. Previous research indicates that such systems can reduce unnecessary tasks by up to 34\% through automated version management 
+and asset tracking \cite{Mladenova2024}. 
+
+\vspace{0.3cm}
+\cite{wernerfelt1984} lays the foundation for resource-based theory, suggesting that firms should focus on acquiring and leveraging valuable resources 
+rather than just competing on products or market positioning. The idea that DAM enhance governance and long-
+term decision-making can be linked to his argument that a firm’s internal resources
+dictate its competitive position. \cite{barney1991} builds upon this idea by highlighting the importance of VRIN resources that are difficult to imitate or substitute. 
+DAM can play a key role in creating such competitive advantages by protecting and optimizing an organization’s digital content management. 
+By gathering data on usage patterns and performance, DAM can also contribute to a more data-driven governance approach, strengthening long-term strategic decision-making \cite{wernerfelt1984}.
+
+\subsubsection{Interactive Control Systems}
+Technological advancements necessitate a continuous reassessment of strategies and work processes. DAM can serve as an interactive control 
+tool by integrating digital assets into strategic processes and facilitating collaboration across organizational boundaries.
+\cite{teece1997} argue that companies require dynamic capabilities 
+to adapt to rapid environmental changes, and DAM systems can serve as such a capability by facilitating knowledge sharing and cross-functional collaboration.
+\cite{Mladenova2024} found that companies implementing DAM experienced a 19\% faster time-to-market for new products, 
+suggesting that it contributes to increased organizational flexibility and innovation capabilities.
+
+\vspace{0.3cm}
+However, for DAM to function as interactive control, management must actively engage in its use and foster a culture where digital 
+tools are seen as integral to the company’s strategic development. 
+\cite{simons1995} emphasizes that control systems must evolve alongside technological adoption and that management plays a central 
+role in ensuring that new technology is integrated in a way that supports both control and innovation. 
+ \cite{eisenhardt2000} furhter stress that technological resources alone do not provide a competitive advantage
+ unless combined with organizational capabilities that enable adaptation and change
+
+\subsection{Leadership dynamics}
+This review extends prior research by addressing the underexplored role of leadership styles in mediating DAM success. 
+\cite{Civelek2023} emphasizes the importance of joint ventures with IT firms in SME digital transformation, but does not explicitly examine how leadership styles influence 
+DAM adoption. This gap suggests that existing frameworks may not fully account for the managerial processes that enable or hinder DAM integration within SMEs.
+
+\subsection{Innovation Theory}
+This study extends the discussion on digital transformation in SMEs by integrating the innovation classification outlined in the Oslo Manual.
+Process innovation refers to the introduction of significantly improved production or delivery methods, including advancements in techniques, software, and organizational workflows \cite{oecd2018oslo}. 
+
+% ===== Section 3: Research Methodology =====
+\section{Research Methodology}
+Undersöka om förändringarna är ”nyttiga” och ”hållbara” ur flera perspektiv:
+1. Intern process (är arbetssättet väsentligt förbättrat och mer effektivt?)
+2. Extern marknad (leder det till nya eller förbättrade sätt att nå och engagera kunder?)
+3. Hållbarhet och tillväxt (kan lösningen skalas upp till nya marknader eller segment?)
+
+\subsection{Literature Review}
+A systematic literature review will be conducted to identify key factors influencing DAM adoption in SMEs. Topics include:
+\begin{itemize}
+    \item Digital transformation in SMEs
+    \item Organizational change management
+    \item Process and marketing innovation strategies
+\end{itemize}
+
+\subsection{Workshops and Interviews}
+Workshops will be held with industry stakeholders, including designers, project managers, and business executives, to assess their needs and expectations. Interviews will be conducted to explore:
+\begin{itemize}
+    \item Existing workflow challenges
+    \item Perceived value of DAM systems
+    \item Business considerations influencing adoption
+\end{itemize}
+
+\subsection{Benchmarking}
+A comparative analysis of DAM adoption in similar industries will be conducted, identifying best practices and potential pitfalls.
+
+\subsection{Economic and Organizational Impact Analysis}
+The study will evaluate:
+\begin{itemize}
+    \item \textbf{Quantitative factors:} Cost savings, efficiency improvements, and return on investment (ROI).
+    \item \textbf{Qualitative factors:} Changes in collaboration dynamics, decision-making processes, and marketing strategies.
+\end{itemize}
+
+% ===== Section 4: Discussion =====
+\section{Discussion}
+\subsection{Suitability of the Theoretical Framework}
+The Oslo Manual framework provides a structured way to classify and analyze innovation. However, its broad definitions may need refinement when applied to specific SME contexts.
+
+\subsection{Expected Findings}
+The study anticipates that the primary challenges in DAM adoption will be:
+\begin{itemize}
+    \item Resistance to change within SMEs.
+    \item Need for a clear return on investment to justify adoption.
+    \item Importance of a user-friendly design to ensure full adoption and utilization.
+\end{itemize}
+
+These findings will be validated through empirical data collection.
+
+% ===== Section 5: Conclusion =====
+\section{Conclusion}
+The **industrial economics perspective** enriches the **technical development** of DAM systems by identifying **critical business considerations**.  
+This pre-study establishes a foundation for further research into the **organizational and strategic factors** necessary for successful DAM adoption in **SMEs operating within premium manufacturing**.
+
+% ===== Section 6: References =====
+\section{References}
+\bibliographystyle{apalike}
+\bibliography{references} % Ensure your references.bib file includes all cited sources
+
+\end{document}
+
+
+
+
+
 
 % Abstract
 \begin{abstract}

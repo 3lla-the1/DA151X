@@ -1,8 +1,8 @@
-PWD /Users/ellakarlsson/Desktop/DA151X /KEX_LaTeX
+PWD /Users/ellakarlsson/Desktop/DA151X /KEX_DATA
 INPUT /usr/local/texlive/2024basic/texmf.cnf
 INPUT /usr/local/texlive/2024basic/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024basic/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/ellakarlsson/Desktop/DA151X /KEX_LaTeX/kex.tex
+INPUT /Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex
 OUTPUT kex.log
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/base/article.cls
@@ -110,6 +110,16 @@ INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/lmodern.sty
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype.sty
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/microtype.cfg
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -136,6 +146,9 @@ OUTPUT kex.pdf
 INPUT ./kex.out
 INPUT ./kex.out
 OUTPUT kex.out
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT ./kthLogga.png
 INPUT ./kthLogga.png
 INPUT ./kthLogga.png
@@ -148,10 +161,15 @@ INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./kex.toc
 INPUT ./kex.toc
 INPUT kex.toc
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -175,16 +193,10 @@ INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omxlmex.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omxlmex.fd
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/lmex10.tfm
 OUTPUT kex.toc
-INPUT ./kex.bbl
-INPUT ./kex.bbl
-INPUT kex.bbl
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT /usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT ./kex.bbl
+INPUT ./kex.bbl
 INPUT kex.bbl
 INPUT kex.aux
 INPUT ./kex.out
