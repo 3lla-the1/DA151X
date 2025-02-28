@@ -10,4 +10,20 @@ Författare, A. (2025).
 \newblock Artikelns titel.
 \newblock {\em Journalnamn}, 10(2):123--135.
 
+\bibitem[Krogh, 2009]{krogh2009}
+Krogh, P. (2009).
+\newblock {\em The DAM book: Digital asset management for photographers}.
+\newblock O'Reilly, Sebastopol, California, 2nd edition.
+
+\bibitem[Love and Matthews, 2019]{LOVE2019102930}
+Love, P.~E. and Matthews, J. (2019).
+\newblock The ‘how’ of benefits management for digital technology: From engineering to asset management.
+\newblock {\em Automation in Construction}, 107:102930.
+
+\bibitem[McCain et~al., 2021]{mccain2021}
+McCain, E., Mara, N., Van~Malssen, K., Carner, D., Reilly, B., Willette, K., Schiefer, S., Askins, J., and Buchanan, S.~A. (2021).
+\newblock {\em Endangered but not too late: The state of digital news preservation}.
+\newblock Donald W. Reynolds Journalism Institute, University of Missouri--Columbia Libraries.
+\newblock OpenAccess. Licensed under CC BY 4.0.
+
 \end{thebibliography}

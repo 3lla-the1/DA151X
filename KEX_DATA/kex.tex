@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc} % Support for UTF-8 encoding
 \usepackage[T1]{fontenc}    % Better font rendering
 \usepackage{graphicx}       % For including images
-\usepackage{amsmath}        % For mathematical formulas
 \usepackage{hyperref}       % For clickable links in the PDF
 \usepackage{geometry}       % To adjust margins
 \geometry{margin=2.5cm}
@@ -15,7 +14,15 @@
 \usepackage{setspace}       % For adjusting line spacing
 \usepackage{ragged2e}       % Fix justification issues
 \usepackage[protrusion=true,expansion=true]{microtype} % Better text spacing
+\usepackage{longtable}
+\usepackage{amsmath}        % Provides \numberwithin
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
 
+% \usepackage{parskip}   % This removes indentation and adds spacing between paragraphs
+\setlength{\parindent}{1em}  % First-line indentation for paragraphs
+\setlength{\parskip}{0pt}     % No extra space between paragraphs
 
 % ---- Fix fancyhdr warning: set proper headheight ----
 \setlength{\headheight}{14.5pt}
@@ -23,15 +30,30 @@
 % ---- Header settings ----
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{KEX Project}
+\lhead{BACHELOR’S THESIS}
 \rhead{KTH}
 \cfoot{\thepage}
 
+% ---- SUB SBUB no stretch settings ----
+\usepackage{xspace} % Ensures spacing works correctly
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries} % Normal font size, bold
+  {\thesubsubsection} % Keep numbering
+  {1em} % Indentation before text
+  {\raggedright} % Prevent text stretching
+
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt} % Remove extra spacing
+
+
+% --------------------------------------------------------------------------------------------------------------------------------------------
+
+
 \begin{document}
+
 
 % ---- Suppress page numbering on title page to avoid duplicate "page.1" link ----
 \clearpage
-\thispagestyle{empty}  % Removes the page number but avoids identifier conflicts
+\pagenumbering{gobble}  % Removes the page number but avoids identifier conflicts
 
 \setlength{\headheight}{14.5pt}
 % ---- Title Page ----
@@ -49,11 +71,17 @@
     {\large Royal Institute of Technology (KTH)}\\
 \end{titlepage}
 
-% ===== Section 1: abstract och sammanfattning =====
+% --------------------------------------------------------------------------------------------------------------------------------------------
+
+% ===== Section 1: abstract och sammanfattning... =====
 \newpage
+\pagenumbering{arabic}
 \onecolumn
+\phantomsection 
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
+
+\citep{author2025}
 
 •	What is the topic area? (optional) Introduces the subject area for the project.
 •	Short problem statement
@@ -66,288 +94,599 @@
     
 Digital Asset Management (DAM), Version Control, Metadata Management, Access Control, SMEs, Workflow Optimization
 
-
-\section{Sammanfattning}
+\phantomsection 
+\section*{Sammanfattning}
+\addcontentsline{toc}{section}{Sammanfattning}
 
 \vspace{0.3cm} 
 \textbf{Nyckelord:} 
 \newpage
 
-% ---- Ensure Table of Contents is in Single Column ----
+\phantomsection 
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+I would like to thank xxxx for having yyyy.
+
+% ---- Table of Contents, list of tables, figures ----
 \newpage
+\phantomsection 
 \onecolumn
 \tableofcontents
 \newpage
 
+\newpage
+\phantomsection 
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\newpage
+\phantomsection 
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+
+% ---- List of Acronyms and Abbreviations ----
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{List of Acronyms and Abbreviations}
+\section*{List of Acronyms and Abbreviations}
+\vspace{0.2cm} % Add some space to align table with the heading
+
+\renewcommand{\arraystretch}{1.2} % Adjust row height for readability
+\begin{flushleft} % Align the table properly with the heading
+\begin{longtable}{p{5cm} p{12cm}} % Adjust column width for proper alignment
+  
+    DAM  & Digital Asset Management \\
+    ERP  & Enterprise Resource Planning \\
+    IT   & Information Technology \\
+    MCS  & Management Control Systems \\
+    MDM  & Metadata Management \\
+    RBAC & Role-based access control \\
+    RBV  & Resource-Based View \\
+    SME  & Small and Medium-sized Enterprises \\
+    UX   & User Experience \\
+    VRIN & Valuable, Rare, Inimitable, Non-substitutable \\
+    YOLO & You Only Look Once \\
+    
+\end{longtable}
+\end{flushleft}
 
 
+% --------------------------------------------------------------------------------------------------------------------------------------------
 
 % ---- Switch Back to Two-Column Layout for Main Content ----
 \twocolumn
-\pagenumbering{arabic}
+\flushbottom % ÄNDR
+
 
 % ===== Apply Spacing Fixes =====
-\RaggedRight   % Disable full justification to avoid stretched text
+% \RaggedRight   % Disable full justification to avoid stretched text
 \sloppy        % Allow better text breaking to prevent large spaces
 \hyphenpenalty=500
 \tolerance=1000
 
 
+% ===== Section 2: Introduction =====
 
-% ===== Section 2 =====
+\section{Introduction}
 
-\section{Intro}
+This chapter describes the specific problem that this thesis addresses, the context of the problem,
+the goals of this thesis project, and outlines the structure of the thesis.
+Give a general introduction to the area. (Remember to use appropriate references in this and all
+other sections.)
+
+The first paragraph after a heading is not indented, all of the subsequent paragraphs have their first line indented.
+
+
+\subsection{Backgorund}
+The concept of Digital Asset Management emerged in the late 1990s as organizations began to grapple with the 
+increasing volume of digital content. In the early 2000s, DAM systems evolved from on-premises solutions to cloud-based platforms, 
+offering greater scalability and accessibility \citep{mccain2021}
+The integration of AI and machine learning technologies in DAM systems began in the mid-2010s, 
+marking a significant advancement in automating asset tagging and improving search capabilitie
+This technology leverages advanced computer vision techniques to analyze and tag images automatically, 
+reducing manual effort and enhancing the accuracy of asset categorization
+
+
+Present the background for the area. Set the context for your project – so that your reader can
+understand both your project and this thesis. (Give detailed background information in Chapter 2 -
+together with related work.)
+Sometimes it is useful to insert a system diagram here so that the reader knows what are the
+different elements and their relationship to each other. This also introduces the names/terms/…
+that you are going to use throughout your thesis (be consistent). This figure will also help you later
+delimit what you are going to do and what others have done or will do.
+As one can find in RFC 1235 [1] multicast is useful for xxxx
+
+\subsection{Problem}
+Longer problem statement
+If possible, end this section with a question as a problem statement.
 
 \begin{quote}
     \textit{"To what extent does DAM adoption contribute to improved operational efficiency and strategic positioning in a premium manufacturing company?"}
 \end{quote}
 
-\subsection{Connection to the Technical Project}
-The technical aspect of this study examines the adoption of an open-source DAM system versus 
-the development of a tailored solution, with a focus on role-based access control, security, 
-logging, and usability. 
+\subsection{Purpose}
 
-\vspace{0.3cm} 
-However, technological advancements alone do not guarantee successful integration. To complement this,
-the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
-\begin{itemize}
-    \item \textbf{Process Impact:} Assessing whether the DAM system has enhanced workflow efficiency, minimized errors, and reduced redundant tasks.
-    \item \textbf{Organizational Adoption:} Evaluating the ease of employee adaptation, the necessity of training, and any role adjustments required for successful implementation.
-    \item \textbf{Strategic Impact:} Determining whether the DAM system strengthens brand consistency, improves customer engagement, and supports scalability as the company expands.
-\end{itemize}
+This section should not begin “The project is about” even though this can be included in the purpose section. If so, state the purpose of the project after purpose of the thesis).
 
-\vspace{0.3cm} 
-\subsection{Societal Impact}
-Digital transformation has a significant impact on small and medium-sized enterprises (SMEs). SMEs account for approximately 
-60\% of total turnover and value-added contributions in Sweden’s private sector, employing around 65\% of the workforce \citep{tillvaxtverket2021}.
+State the purpose of your thesis and the purpose of your degree project.
+Describe who benefits and how they benefit if you achieve your goals. Include anticipated
+ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections
+in Section 6.4.)
+\subsection{Goals}
+State the goal/goals of this degree project.
+The goal of this project is XXX. This has been divided into the following three sub-goals:
+1. Subgoal \#1
+2. Subgoal \#2
+3. Subgoal \#3
+In addition to presenting the goal(s), you might also state what the deliverables and results of
+the project are.
+
+Note that in the literature study and even the alpha draft, these are your expected goals, deliverables, and results – which may change over the course of the project – hence you will revise this in the final report to describe what you actually achieved, delivered, and produced as results.
+\citep{example20251}
+
+\subsection{Research Methodology}
+Introduce your choice of methodology/methodologies and method/methods – and the reason why
+you chose them. Contrast them with and explain why you did not choose other methodologies or
+methods. (The details of the actual methodology and method you have chosen will be given in
+Chapter 3. Note that in Chapter 3, the focus could be research strategies, data collection, data
+analysis, and quality assurance.)
+In this section you should present your philosophical assumption(s), research method(s), and
+research approach(es).
+
+(footnote?)
+\subsection{Delimitations}
+Describe the boundary/limits of your thesis project and what you are explicitly not going to do. This
+will help you bound your efforts – as you have clearly defined what is out of the scope of this
+thesis project. Explain the delimitations. These are all the things that could affect the study if they
+were examined and included in the degree project.
+
+\subsection{Structure of the thesis}
+Chapter 2 presents relevant background information about xxx. Chapter 3 presents the
+methodology and method used to solve the problem. …
+
+Exclude the first chapter , references, and appendix/appendices. 
+
+% --------------------------------------------------------------------------------------------------------------------------------------------
+
+% ===== Section 2: Background =====
+\section{Background}
+This chapter provides basic background information about xxx. Additionally, this chapter describes
+xxx. The chapter also describes related work xxxx.
+What does a reader (another x student -- where x is your study line) need to know to understand
+your report?
+What have others already done? (This is the “related work”.) Explain what and how prior work /
+prior research will be applied on or used in the degree project /work (described in this thesis).
+Explain why and what is not used in the degree project and give valid reasons for rejecting the
+work/research.
+
+When you do your literature study, you should have a nearly complete Chapters 1, 2.
+
+You may also find it convenient to introduce the future work section into your report early – so that you can put things that you think about but decide not to do now into this section.
+
+Note that later you can move things between this future work section and what you have done as you may change your mind about what to do now versus what to put off to future work.
+
+\subsection{\mbox{Digital Asset Management}}
+Krogh (2009) presents DAM as an essential system for managing digital photography in a way that prioritizes protection, 
+accessibility, and longevity. While the components of a DAM system are deeply interwoven, the guiding principles 
+remain consistent: images must be preserved, findable, and future-proofed\citep{krogh2009}. 
+\vspace{0.3cm}
+
+By structuring digital archives with careful attention to metadata, file formats, and workflow efficiency, he argues photographers and organizations can ensure 
+that their collections remain valuable and usable over time. The primary stages of DAM can be 
+categorized into five stages as illustrated in Figure~\ref{fig:4steg}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{4steg.png}  % Replace with actual image file
+    \caption{Illustrating the main stages of digital asset management.}
+    \label{fig:4steg}  
+\end{figure}
 
 \vspace{0.3cm}
-The adoption of DAM systems is an integral part of this transformation, 
-improving operational efficiency and reducing manual work,
-which contributes to broader economic growth. A cost-benefit analysis of 319 SMEs 
-found that digital transformation enhances organizational resilience, reduces 
-operational costs, and improves long-term scalability \citep{teng2022}.
+\subsubsection{Technology Alone is Not Enough}
 
-% ===== Reset Formatting for Other Sections =====
-\justifying
-\fussy
+Love and Matthews (2019) demonstrated through a series of case studies that the promise of DAM
+is not unlocked simply by adopting new technology but only when companies embrace two 
+fundamental principles.
 
-% ===== Section 2: Theoretical Framework and Previous Studies =====
-\section{Theoretical Framework and Previous Studies}
-This section builds upon existing literature and theoretical frameworks to analyze how DAM adoption influences 
-strategic decision-making, cost structures, and competitive positioning in SMEs. A particular emphasis is placed 
-on the interplay between technological capabilities, organizational governance, and leadership dynamics,
-as these factors shape the effectiveness of DAM systems in practice.
+First, that technology alone does not create value but must be accompanied by organizational process reengineering, and second, that the benefits of DAM are maximized only through continuous strategic governance to monitor and sustain its impact.
+
+The first principle is a recognition that technology does not automatically create value. 
+Rather, its benefits are realized only when organizations actively re-engineer their processes 
+and align them with strategic governance \citep{LOVE2019102930}. 
+
+Building on these insights, Peppard (2016) argued that technology benefits cannot be achieved 
+without organizational change, and change efforts must produce tangible benefits to be sustainable. 
+He emphasized the need for strategic oversight to keep DAM systems adaptable and aligned with business 
+needs rather than letting them become static and ineffective\citep{LOVE2019102930}.
 
 
-\subsection{The Resource-Based View}
-The Resource-Based View (RBV) suggests that organizations derive competitive advantage by leveraging valuable, rare, inimitable, 
-and non-substitutable (VRIN) resources \cite{barney1991}. DAM systems fulfill these criteria by providing centralized governance,
-metadata standardization, and automation, transforming digital assets into strategic resources \cite{Chumphong2020}.
+Building on these insights, Peppard (2016) argued that the realization of technology benefits 
+is inseparable from organizational transformation, stating that "benefits are unable to be delivered 
+without change, and change without benefits cannot be sustained."
+He underscored the necessity of strategic oversight to ensure that DAM systems evolve alongside business needs rather than remaining static implementations
 
-\vspace{0.3cm}
-Empirical findings support this perspective. \cite{Chumphong2020} report that SMEs achieving full DAM integration 
-demonstrate 23\% higher operational resilience during market disruptions compared to those with only partial implementation. 
-This aligns with RBV’s emphasis on resource orchestration and its role in maintaining competitiveness.
 
-\vspace{0.3cm}
-Nevertheless, some scholars argue that resource possession alone does not guarantee successful digital transformation. 
-\cite{Civelek2023} found no significant link be-
-tween dynamic capabilities—a key aspect
-of RBV that involves adapting, integrating,
-and reconfiguring resources—and successful
-digital transformation among Czech manu-
-facturing SMEs. Their findings suggest that
-merely possessing dynamic capabilities is
-insufficient for digital transformation unless
-supported by complementary factors such as
-digital literacy and IT infrastructure matu-
-rity.
 
-\subsection{Simons’ Levers of Control}
-\cite{simons1995} Levers of Control (LOC) framework is a central model for understanding how organizations 
-balance control and innovation through management control systems (MCS). 
-There are diagnostic control systems, which are used to monitor and ensure that operations 
-align with set objectives, and interactive control systems, which facilitate strategic discussions and adaptation to 
-changing market conditions. In a digital context, these control mechanisms become crucial for how organizations effectively 
-implement systems.
 
-\subsubsection{Diagnostic Control Systems}
-By implementing DAM, organizations can systematically monitor resource usage and efficiency, reducing redundancies 
-and improving workflows. Previous research indicates that such systems can reduce unnecessary tasks by up to 34\% through automated version management 
-and asset tracking \cite{Mladenova2024}. 
 
-\vspace{0.3cm}
-\cite{wernerfelt1984} lays the foundation for resource-based theory, suggesting that firms should focus on acquiring and leveraging valuable resources 
-rather than just competing on products or market positioning. The idea that DAM enhance governance and long-
-term decision-making can be linked to his argument that a firm’s internal resources
-dictate its competitive position. \cite{barney1991} builds upon this idea by highlighting the importance of VRIN resources that are difficult to imitate or substitute. 
-DAM can play a key role in creating such competitive advantages by protecting and optimizing an organization’s digital content management. 
-By gathering data on usage patterns and performance, DAM can also contribute to a more data-driven governance approach, strengthening long-term strategic decision-making \cite{wernerfelt1984}.
+What about the benefits? A missing perspective in software engineering
+There are xxx characteristics that distinguish yyy from other information and communication
+technology (ICT) system, as shown in Figure 2-1. Table 2.1 summarizes these characteristics.
 
-\subsubsection{Interactive Control Systems}
-Technological advancements necessitate a continuous reassessment of strategies and work processes. DAM can serve as an interactive control 
-tool by integrating digital assets into strategic processes and facilitating collaboration across organizational boundaries.
-\cite{teece1997} argue that companies require dynamic capabilities 
-to adapt to rapid environmental changes, and DAM systems can serve as such a capability by facilitating knowledge sharing and cross-functional collaboration.
-\cite{Mladenova2024} found that companies implementing DAM experienced a 19\% faster time-to-market for new products, 
-suggesting that it contributes to increased organizational flexibility and innovation capabilities.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\linewidth]{kthLogga.png}  % Replace with actual image file
+    \caption{An example figure in Section 2.1.}
+    \label{fig:lit_review}  
+\end{figure}
 
-\vspace{0.3cm}
-However, for DAM to function as interactive control, management must actively engage in its use and foster a culture where digital 
-tools are seen as integral to the company’s strategic development. 
-\cite{simons1995} emphasizes that control systems must evolve alongside technological adoption and that management plays a central 
-role in ensuring that new technology is integrated in a way that supports both control and innovation. 
- \cite{eisenhardt2000} furhter stress that technological resources alone do not provide a competitive advantage
- unless combined with organizational capabilities that enable adaptation and change
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Column 1 & Column 2 \\
+        \hline
+        Data 1 & Data 2 \\
+        Data 3 & Data 4 \\
+        \hline
+    \end{tabular}
+    \caption{An example table in Section 2.1.}
+    \label{tab:lit_review}  
+\end{table}
 
-\subsection{Leadership dynamics}
-This review extends prior research by addressing the underexplored role of leadership styles in mediating DAM success. 
-\cite{Civelek2023} emphasizes the importance of joint ventures with IT firms in SME digital transformation, but does not explicitly examine how leadership styles influence 
-DAM adoption. This gap suggests that existing frameworks may not fully account for the managerial processes that enable or hinder DAM integration within SMEs.
 
-\subsection{Innovation Theory}
-This study extends the discussion on digital transformation in SMEs by integrating the innovation classification outlined in the Oslo Manual.
-Process innovation refers to the introduction of significantly improved production or delivery methods, including advancements in techniques, software, and organizational workflows \cite{oecd2018oslo}. 
+\ref{fig:lit_review} is an image 
+\ref{tab:lit_review} is a table
 
-% ===== Section 3: Research Methodology =====
-\section{Research Methodology}
-Undersöka om förändringarna är ”nyttiga” och ”hållbara” ur flera perspektiv:
-1. Intern process (är arbetssättet väsentligt förbättrat och mer effektivt?)
-2. Extern marknad (leder det till nya eller förbättrade sätt att nå och engagera kunder?)
-3. Hållbarhet och tillväxt (kan lösningen skalas upp till nya marknader eller segment?)
+\subsubsection{Major background area\#1\#1}
+Recent studies have demonstrated the effectiveness of various AI techniques in image tagging. 
+Zhang et al. (2019) showcased the application of convolutional neural networks (CNNs) for automatic 
+image classification in DAM systems, achieving an accuracy of 92\% on a diverse dataset of digital assets
 
-\subsection{Literature Review}
-A systematic literature review will be conducted to identify key factors influencing DAM adoption in SMEs. Topics include:
-\begin{itemize}
-    \item Digital transformation in SMEs
-    \item Organizational change management
-    \item Process and marketing innovation strategies
-\end{itemize}
+This work was further extended by Li 
+and Chen (2020), who integrated attention mechanisms into CNNs, improving the model's ability to focus on 
+salient features and increasing tagging accuracy to 95\%
 
-\subsection{Workshops and Interviews}
-Workshops will be held with industry stakeholders, including designers, project managers, and business executives, to assess their needs and expectations. Interviews will be conducted to explore:
-\begin{itemize}
-    \item Existing workflow challenges
-    \item Perceived value of DAM systems
-    \item Business considerations influencing adoption
-\end{itemize}
+The YOLO (You Only Look Once) algorithm has also been applied successfully in DAM contexts. 
+Wang et al. (2021) demonstrated that YOLO-based models could perform real-time object detection and tagging 
+in DAM systems, processing up to 30 images per second with an average precision of 88\%
+This approach was particularly effective for identifying multiple objects within complex images, 
+a common requirement in DAM applications.
 
-\subsection{Benchmarking}
-A comparative analysis of DAM adoption in similar industries will be conducted, identifying best practices and potential pitfalls.
+Transformer-based models have recently gained traction in image tagging for DAM systems. A study by 
+Rodriguez and Kim (2022) applied Vision Transformer (ViT) models to DAM image tagging, achieving 
+state-of-the-art performance with an accuracy of 97\% on standard benchmarks
+The authors noted that transformer models excelled in capturing long-range dependencies in images, 
+leading to more nuanced and context-aware tagging.
 
-\subsection{Economic and Organizational Impact Analysis}
-The study will evaluate:
-\begin{itemize}
-    \item \textbf{Quantitative factors:} Cost savings, efficiency improvements, and return on investment (ROI).
-    \item \textbf{Qualitative factors:} Changes in collaboration dynamics, decision-making processes, and marketing strategies.
-\end{itemize}
 
-% ===== Section 4: Discussion =====
-\section{Discussion}
-\subsection{Suitability of the Theoretical Framework}
-The Oslo Manual framework provides a structured way to classify and analyze innovation. However, its broad definitions may need refinement when applied to specific SME contexts.
+While AI-powered image tagging offers significant benefits, it also presents several challenges. Data requirements 
+pose a significant hurdle, as highlighted by Brown et al. (2020), who found that AI models required at 
+least 10,000 labeled images per category for optimal performance in domain-specific DAM applications
 
-\subsection{Expected Findings}
-The study anticipates that the primary challenges in DAM adoption will be:
-\begin{itemize}
-    \item Resistance to change within SMEs.
-    \item Need for a clear return on investment to justify adoption.
-    \item Importance of a user-friendly design to ensure full adoption and utilization.
-\end{itemize}
+Error rates and handling domain-specific content remain ongoing challenges. A comprehensive study by 
+Thompson et al. (2021) analyzed error patterns in AI-powered image tagging across various industries, 
+revealing that error rates increased significantly (up to 25\%) when dealing with highly specialized or technical imagery
 
-These findings will be validated through empirical data collection.
+To address this issue, Nguyen and Patel (2022) proposed a hybrid approach combining pre-trained models with 
+domain-specific fine-tuning, reducing error rates by 40\% in niche industries such as medical imaging and aerospace engineerin
 
-% ===== Section 5: Conclusion =====
-\section{Conclusion}
-The **industrial economics perspective** enriches the **technical development** of DAM systems by identifying **critical business considerations**.  
-This pre-study establishes a foundation for further research into the **organizational and strategic factors** necessary for successful DAM adoption in **SMEs operating within premium manufacturing**.
+Despite these challenges, the benefits of AI-powered image tagging in DAM systems are substantial. A large-scale study by Garcia et al. (2023)
+ across 500 organizations found that implementing AI-powered tagging led to a 60\% reduction in manual tagging time and 
+ a 35\% improvement in asset discoverability
 
-% ===== Section 6: References =====
+
+Entangled states are an important part of quantum cryptography, but also relevant in other
+domains. This concept might be relevant for neutrinos, see for example [2].
+
+\subsubsection{Major background area\#1\#2}
+Computational methods are increasingly used as a third method of carrying out scientific
+investigations. For example, computational experiments were used to find the amount of wear in a
+polyethylene liner of a hip prosthesis in [3].
+
+\subsection{Major background area\#2}
+The application of AI-powered image tagging in DAM systems extends beyond large corporations 
+to small and medium-sized enterprises (SMEs), particularly in premium manufacturing sectors. A case study 
+by Hoffmann and Schulz (2022) examined the implementation of AI-powered DAM in a high-end carpentry 
+company similar to Veermakers
+The study found that AI-assisted tagging improved product catalog management 
+efficiency by 45\% and reduced time-to-market for new designs by 30\%.
+
+However, Chen et al. (2023) noted that SMEs in specialized manufacturing often 
+face unique challenges in adopting AI-powered DAM systems, including limited datasets 
+and highly specific visual content. 
+To address these issues, the authors proposed a transfer learning approach, adapting pre-trained 
+models to domain-specific tasks with minimal additional data, achieving a 75\% reduction in required 
+training data while maintaining 90\% of the original accuracy.
+
+While academic research has made significant strides in advancing AI-powered image tagging techniques, 
+commercial implementations often lag behind in adopting cutting-edge methods. A comprehensive survey by Martinez 
+and Lee (2022) of 50 leading DAM vendors revealed that only 30\% had implemented transformer-based models, despite 
+their superior performance in academic studies
+The authors attributed this gap to factors such as implementation complexity, computational requirements, and the need 
+for backward compatibility with existing systems.
+
+
+
+
+\subsubsection{Major background area\#2\#1}
+The integration of AI-powered image tagging in DAM systems raises important ethical, societal, and legal considerations.
+ Privacy concerns are paramount, as highlighted by a study by Johnson and Smith (2022), which found that 35\% of 
+ automatically generated tags in a sample of 10,000 images contained potentially sensitive information22. The authors 
+ emphasized the need for robust privacy-preserving techniques in AI-powered DAM systems.
+ Algorithmic bias presents another significant challenge. Research by Park et al. (2023) revealed systematic biases 
+ in AI-generated tags across gender, ethnicity, and age dimensions, with error rates up to 20\% higher for underrepresented groups
+ This study underscores the importance of diverse and representative training data in mitigating bias in AI-powered DAM systems.
+\subsubsection{Major background area\#2\#2}
+The potential impact on employment is also a concern. While Garcia et al. (2023) found that AI-powered tagging led to significant 
+efficiency gains, they also noted a 15\% reduction in human tagging roles across surveyed organizations
+However, the same study observed a 10\% increase in higher-skilled positions related to AI model management and quality 
+assurance, suggesting a shift rather than a net loss in employment.
+
+
+\subsection{Related work}
+\subsubsection{Major related work}
+Do not use the title of the paper/book/… as the title of the section. Instead summarize what the contribution of this work is in your own words.
+
+Geo-distributed data centers are increasingly used to provide increased availability and reduce
+latency; however, the physically nearest data center may not be the best choice as shown by Kirill
+Bogdanov, et al. in their paper “The Nearest Replica Can Be Farther Than You Think” [4].
+Exploring decentralized approaches to AI model training, allowing organizations to collaborate on improving tagging accuracy while preserving data privacy.
+
+\subsubsection{Major related work}
+Carrier clouds have been suggested as a way to reduce the delay between the users and the cloud
+server that is providing them with content. However, there is a question of how to find the available
+resources in such a carrier cloud. One approach has been to disseminate resource information using
+an extension to OSPF-TE, see Roozbeh, Sefidcon, and Maguire [5].
+
+\subsubsection{Minor related work}
+Do not use the title of the paper/book/… as the title of the section. Instead summarize what the contribution of this work is in your own words.
+
+\subsection{Summary}
+It is nice to bring this chapter to a close with a summary. For example, you might include a table that summarizes the ideas of others and the advantages and disadvantages of each – so that later you can compare your solution to each of these. This will also help guide you in defining the metrics that you will use for your evaluation.
+
+
+% ===== Section 3: Methodology =====
+\section{<Engineering-related content, Methodologies and Methods>
+Use a self-explaining title}
+
+The contents and structure of this chapter will change with your choice of methodology and methods.
+For example, if you have implemented an artifact, what did you do and why? How will your evaluate it.
+
+
+Describe the engineering-related contents (preferably with models) and the research methodology
+and methods that are used in the degree project.
+Give a theoretical description of the scientific or engineering methodology are you going to use
+and why have you chosen this method. What other methods did you consider and why did you reject
+them.
+In this chapter, you describe what engineering-related and scientific skills you are going to
+apply, such as modeling, analyzing, developing, and evaluating engineering-related and scientific
+content. The choice of these methods should be appropriate for the problem. Additionally, you
+should be consciousness of aspects relating to society and ethics (if applicable). The choices should
+also reflect your goals and what you (or someone else) should be able to do as a result of your
+solution - which could not be done well before you started.
+The purpose of this chapter is to provide an overview of the research method used in this thesis.
+Section 3.1 describes the research process. Section 3.2 details the research paradigm. Section 3.3
+focuses on the data collection techniques used for this research. Section 3.4 describes the
+experimental design. Section 3.5 explains the techniques used to evaluate the reliability and validity
+of the data collected. Section 3.6 describes the method used for the data analysis. Finally, Section 3.7
+describes the framework selected to evaluate xxx.
+
+\subsection{Research Process}
+Image of: steps conducted to do the research 
+Fig: research processes
+
+
+\subsection{Research Paradigm}
+
+\subsection{Data Collection}
+(This should also show that you are aware of the social and ethical concerns that might be relevant
+to your data collection method.)
+
+\subsubsection{Sampling}
+1. Aa
+2. Bb
+3. Cc
+
+\subsubsection{Sample Size}
+
+\subsubsection{Target Population}
+
+
+\subsection{Experimental design/Planned Measurements}
+
+
+\subsubsection{Test environment/test bed/model}
+Describe everything that someone else would need to reproduce your test environment/test
+bed/model/…
+
+\subsubsection{Hardware/Software to be used}
+
+
+\subsection{Assessing reliability and validity of the data collected}
+
+\subsubsection{Reliability}
+How will you know if your results are reliable?
+
+\subsection{Validity}
+How will you know if your results are valid?
+
+
+
+\subsection{Planned Data Analysis}
+
+\subsubsection{Data Analysis Technique}
+\subsubsection{Software Tools}
+
+
+\subsection{Evaluation framework}
+
+
+
+
+% ===== Section 4: WHAT has been Done =====
+\section{[What you did – Choose your own chapter title to describe this]}
+What have you done? How did you do it? What design decisions did you make? How did what you
+did help you to meet your goals?
+
+\subsection{Hardware/Software design …/ModelSimulation model parameters/…}
+Figure 4-1 shows a simple icon for a home page. The time to access this page when served will be
+quantified in a series of experiments. The configurations that have been tested in the test bed are
+listed in Table 4-1.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\linewidth]{kthLogga.png}  % Replace with actual image file
+    \caption{An example figure in Section.}
+    \label{fig:ldone}  
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Column 1 & Column 2 \\
+        \hline
+        Data 1 & Data 2 \\
+        Data 3 & Data 4 \\
+        \hline
+    \end{tabular}
+    \caption{An example table in Section.}
+    \label{tab:done}  
+\end{table}
+
+
+\ref{fig:ldone} is an image 
+\ref{tab:done} is a table
+
+
+\subsection{Implementation …/Modeling/Simulation/…}
+
+
+
+
+
+
+% ===== Section 5: Results and analysis  =====
+\section{Results and Analysis}
+In this chapter, we present the results and discuss them.
+
+Keep in mind: How you are going to evaluate what you have done? What are your metrics?
+Analysis of your data and proposed solution
+Does this meet the goals which you had when you started?
+
+\subsection{Major results}
+Some statistics of the delay measurements are shown in Table 5-1.
+The delay has been computed from the time the GET request is received until the response is
+sent.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Column 1 & Column 2 \\
+        \hline
+        Data 1 & Data 2 \\
+        Data 3 & Data 4 \\
+        \hline
+    \end{tabular}
+    \caption{An example table in Section}
+    \label{tab:res}  
+\end{table}
+
+\ref{tab:res} is a table
+
+\subsection{Reliability Analysis}
+LALALA
+
+\subsection{Validity Analysis}
+LALALA
+
+
+\subsection{Discussion}
+
+
+
+
+
+% ===== Section 6: CONCLUSION  =====
+\section{Conclusions and Future work}
+<<Add text to introduce the subsections of this chapter.>>
+
+\subsection{Conclusions}
+Describe the conclusions (reflect on the whole introduction given in Chapter 1).
+Discuss the positive effects and the drawbacks.
+Describe the evaluation of the results of the degree project.
+Did you meet your goals?
+What insights have you gained?
+What suggestions can you give to others working in this area?
+If you had it to do again, what would you have done differently?
+
+\subsection{Limitations}
+What did you find that limited your efforts? What are the limitations of your results?
+
+\subsection{Future work}
+Describe valid future work that you or someone else could or should do.
+Consider: What you have left undone? What are the next obvious things to be done? What hints
+can you give to the next person who is going to follow up on your work?
+
+\subsection{Reflections}
+What are the relevant economic, social, environmental, and ethical aspects of your work?
+
+
+
+
+
+% ===== Section 7: References =====
+\onecolumn
 \section{References}
 \bibliographystyle{apalike}
+\nocite{*}
 \bibliography{references} % Ensure your references.bib file includes all cited sources
 
-\end{document}
 
 
 
-
-
-
-% Abstract
-\begin{abstract}
-Två trender som blivit alltmer påtagliga de senaste åren är ökade datamängder och ökat fokus på klimatförändringar. Denna rapport undersöker hur hållbarhetsdata kan integreras i Business Intelligence (BI) för greentech-företag.
-\end{abstract}
-
-\tableofcontents
+% ===== Appendices =====
 \newpage
+\appendix  % This marks the start of the appendices
+\phantomsection
+\addcontentsline{toc}{section}{Appendices} % Adds "Appendices" to Table of Contents
+\section*{Appendices} % Title for Appendices
+\renewcommand{\thesubsection}{\Alph{subsection}} % Number subsections as A, B, C
 
-\section{Introduction}
-Här beskriver du bakgrunden till ditt arbete och dess syfte, med referenser enligt \citet{author2025} eller \citep{author2025}.
+\section{Appendix A: Example Appendix Title}
+\label{appendix:A}
+This is an example appendix entry. You can include figures, tables, or additional details relevant to your research.
 
-\section{Method}
-Beskriv hur du genomför din undersökning, vilka metoder du använder och varför. Använd \citet{example2025} för att nämna författaren i texten eller \citep{example2025} för att ha referensen inom parentes.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.4\linewidth]{kthLogga.png}  % Replace with actual image file
+    \caption{An example figure in Appendix A.}
+    \label{fig:appendixA}  
+\end{figure}
 
-\section{Resultat}
-Presentera de resultat du har fått fram.
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Column 1 & Column 2 \\
+        \hline
+        Data 1 & Data 2 \\
+        Data 3 & Data 4 \\
+        \hline
+    \end{tabular}
+    \caption{An example table in Appendix A.}
+    \label{tab:appendixA}  
+\end{table}
 
-\section{Diskussion}
-Analysera och diskutera resultaten i relation till tidigare forskning och teorier.
+\newpage
+\section{Appendix B: Another Appendix Example}
+\label{appendix:B}
+You can continue adding appendices in a similar manner.
 
-\section{Slutsatser}
-Sammanfatta de viktigaste insikterna och eventuella framtida forskningsmöjligheter.
-
-\section{Referenser}
-\bibliographystyle{apalike}
-\bibliography{referenser} % referenser.bib should contain author2025 and example2025
-
-
-
-
-% ===== Section 1: Introduction =====
-\section{Introduction}
-\subsection{Background and Goals}
-The rapid evolution of digital workflows has led to a growing need for effective Digital Asset Management (DAM) systems, especially within organizations where design and manufacturing departments collaborate closely. Modern DAM systems support version control, access control, and comprehensive metadata management to streamline collaboration and maintain data integrity. 
-
-The client’s interest in this project stems from the need to improve internal processes and facilitate better collaboration between design and manufacturing teams. The overall goal is to identify which open-source DAM solution offers the most efficient support for version management, secure access control, and robust metadata handling. In a broader societal context, such improvements can lead to enhanced productivity, reduced errors in product development, and support sustainable work practices—all of which are increasingly important in today’s globalized economy.
-
-\subsection{Scientific Question and Problem Definition}
-This pre-study focuses on the following research question:
-\begin{quote}
-    \textit{"Which of the two open-source DAM systems, [System A] and [System B], is most effective in improving version control, access control, and metadata management in the collaboration between design and manufacturing departments?"}
-\end{quote}
-The problem definition involves identifying the challenges in integrating these systems into existing workflows, evaluating their technical performance, and understanding how they support collaborative processes. The expected outcome is a set of scientifically and technically validated criteria that can guide the implementation of a DAM solution in industrial settings.
-
-% ===== Section 2: Previous Studies =====
-\section{Previous Studies}
-Recent research has explored various aspects of digital asset management in industrial environments. For instance, \citet{Author2020} demonstrated that effective version control systems can significantly reduce errors in collaborative design processes. Similarly, \citet{AuthorEtAl2019} highlighted that robust access control mechanisms are essential for protecting sensitive design data, while \citet{Author2021} found that well-structured metadata management leads to improved data retrieval and workflow efficiency. 
-
-These studies collectively underline the importance of integrating technical solutions with organizational practices. Although approaches vary, a common conclusion is that a system must address both the technical performance and usability aspects to be successful. This pre-study builds on these findings by comparing two open-source DAM systems and synthesizing previous work into a unified framework for evaluation.
-
-% ===== Section 3: Theory =====
-\section{Theory}
-The theoretical framework for this study is based on principles from software engineering and digital collaboration. Key areas include:
-\begin{itemize}
-    \item \textbf{Version Control:} Methods for tracking and managing changes to digital assets. Modern DAM systems integrate version control features to ensure data consistency and traceability.
-    \item \textbf{Access Control:} Implementation of Role-Based Access Control (RBAC) models to secure sensitive data and enforce user permissions.
-    \item \textbf{Metadata Management:} Techniques for organizing, categorizing, and retrieving digital content, often leveraging structured data formats such as JSON Schema.
-\end{itemize}
-One of the candidate systems, Invenio, is built on Python (Flask) and PostgreSQL, with support for Elasticsearch for search functionality and Redis for caching. Its modular architecture allows for extensive customization using JSON Schema for data modeling. However, technical challenges remain; for example, difficulties in deploying Invenio via Docker highlight potential integration issues that will be further investigated in this study.
-
-% ===== Section 4: Conclusion of Pre-Study: Method =====
-\section{Conclusion and Research Method}
-Based on the literature review and theoretical analysis, the study will undertake a comparative evaluation of two open-source DAM systems ([System A] and [System B]). The research method includes:
-\begin{itemize}
-    \item \textbf{Benchmarking:} Quantitative evaluation of system performance in terms of version control efficiency, access control robustness, and metadata management capabilities.
-    \item \textbf{User Feedback:} Qualitative assessments through interviews and workshops with stakeholders from design and manufacturing departments.
-    \item \textbf{Technical Testing:} Hands-on testing, including deployment experiments (e.g., using Docker) to evaluate practical integration challenges—such as the current difficulties in running Invenio.
-\end{itemize}
-The combined insights from these methods will provide a comprehensive understanding of which DAM system is best suited for enhancing collaborative workflows in an industrial environment.
-
-% ===== Section 5: References =====
-\section{References}
-\bibliographystyle{apalike}
-\bibliography{references} % Ensure your references.bib file includes all cited sources, e.g., Author2020, AuthorEtAl2019, Author2021
+IEEE Editorial Style Manual: 
+	
 
 \end{document}
+
+

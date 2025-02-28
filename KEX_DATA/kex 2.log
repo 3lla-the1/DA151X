@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  28 FEB 2025 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 FEB 2025 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -356,38 +356,54 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 51.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 37.
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 37.
+
+/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex:37: Font T1/phv/m/n/12=phvr8t at 11.39996pt not loadable: Metric (TFM) file not found.
+<to be read again> 
+                   relax 
+l.37 \begin{document}
+                     
+I wasn't able to read the size data for this font,
+so I will ignore the font specification.
+[Wizards can fix TFM files using TFtoPL/PLtoTF.]
+You might try inserting a different font spec;
+e.g., type `I\font<same font id>=<substitute font name>'.
+
+(/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box60
-) (./kex.aux)
+)
+No file kex.aux.
 \openout1 = `kex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
- (/usr/local/texlive/2024basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+(/usr/local/texlive/2024basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count298
 \scratchdimen=\dimen171
@@ -402,12 +418,17 @@ LaTeX Font Info:    ... okay on input line 51.
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 51.
- (./kex.out) (./kex.out)
+Package hyperref Info: Link coloring OFF on input line 37.
 \@outlinefile=\write3
 \openout3 = `kex.out'.
 
@@ -446,229 +467,37 @@ Package hyperref Info: Link coloring OFF on input line 51.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 51.
-Package microtype Info: Applying patch `item' on input line 51.
-Package microtype Info: Applying patch `toc' on input line 51.
-Package microtype Info: Applying patch `eqnum' on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 37.
+Package microtype Info: Applying patch `item' on input line 37.
+Package microtype Info: Applying patch `toc' on input line 37.
+Package microtype Info: Applying patch `eqnum' on input line 37.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 51.
+Package microtype Warning: Unable to apply patch `footnote' on input line 37.
 
-Package microtype Info: Applying patch `verbatim' on input line 51.
+Package microtype Info: Applying patch `verbatim' on input line 37.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 51.
+LaTeX Info: Redefining \showhyphens on input line 37.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(/usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
-<kthLogga.png, id=249, 88.1694pt x 98.2872pt>
-File: kthLogga.png Graphic file (type png)
-<use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 62.
-(pdftex.def)             Requested size: 91.04742pt x 101.50087pt.
- [1
+/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex:37: pdfTeX error (font): invalid font identifier.
+MT@font ->T1/phv/m/n/12 
+                        
+l.37 \begin{document}
+                     
 
-
-
-{/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./kthLogga.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 86.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
-
-
-{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] (./kex.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
- [3
-
-])
-\tf@toc=\write4
-\openout4 = `kex.toc'.
-
- [4] (./kex.lof)
-\tf@lof=\write5
-\openout5 = `kex.lof'.
-
- [5] (./kex.lot)
-\tf@lot=\write6
-\openout6 = `kex.lot'.
-
- [6]
-Overfull \hbox (52.45273pt too wide) in alignment at lines 135--149
- [] [] 
- []
-
-[7]
-Underfull \vbox (badness 3049) has occurred while \output is active []
-
-
-
-Package natbib Warning: Citation `example20251' on page 8 undefined on input line 224.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) Introduce your choice of method-ol-
- []
-
-
-Underfull \hbox (badness 2762) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) Con-trast them with and ex-plain why
- []
-
-
-Underfull \hbox (badness 3482) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) you should present your philo-soph-i-cal
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) as-sump-tion(s), re-search method(s), and
- []
-
-[8
-
-]
-Overfull \hbox (3.32497pt too wide) in paragraph at lines 267--267
-|[][]| 
- []
-
-<4steg.png, id=385, 319.1925pt x 499.8675pt>
-File: 4steg.png Graphic file (type png)
-<use 4steg.png>
-Package pdftex.def Info: 4steg.png  used on input line 279.
-(pdftex.def)             Requested size: 200.35849pt x 313.76645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: kthLogga.png Graphic file (type png)
-<use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 318.
-(pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
- [10 <./4steg.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6348) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 451--451
-|[]\T1/lmr/bx/n/17.28 (+20) <Engineering-related
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
-|[]\T1/lmr/bx/n/14.4 (+20) Experimental de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
-\T1/lmr/bx/n/14.4 (+20) sign/Planned Mea-sure-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-|[]\T1/lmr/bx/n/17.28 (+20) [What you did ^^U
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-\T1/lmr/bx/n/17.28 (+20) Choose your own
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-\T1/lmr/bx/n/17.28 (+20) chap-ter ti-tle to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--532
-\T1/lmr/bx/n/14.4 (+20) .../ModelSimulation
- []
-
-File: kthLogga.png Graphic file (type png)
-<use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 538.
-(pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 562--562
-|[]\T1/lmr/bx/n/14.4 (+20) Implementation
- []
-
-
-Overfull \hbox (20.14105pt too wide) in paragraph at lines 562--562
-\T1/lmr/bx/n/14.4 (-20) .../Modeling/Simulation/...| 
- []
-
-[14] [15
-
-] (./kex.bbl) [16
-
-]
-File: kthLogga.png Graphic file (type png)
-<use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 663.
-(pdftex.def)             Requested size: 182.09486pt x 203.01976pt.
- [17]
-
-Package natbib Warning: There were undefined citations.
-
-[18] (./kex.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-02-20>
- ***********
-Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: B96796DB2993395E9C0E8C7BECB647E3;10219.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 13198 strings out of 475567
- 207417 string characters out of 5777889
- 1942187 words of memory out of 5000000
- 34938 multiletter control sequences out of 15000+600000
- 605456 words of font info for 128 fonts, out of 8000000 for 9000
+ 12540 strings out of 475567
+ 195356 string characters out of 5777889
+ 1925187 words of memory out of 5000000
+ 34565 multiletter control sequences out of 15000+600000
+ 559131 words of font info for 38 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,12n,79p,1046b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (19 pages, 279521 bytes).
-PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
- 27123 words of extra memory for PDF output out of 29859 (max. 10000000)
-
+ 75i,0n,79p,1046b,113s stack positions out of 10000i,1000n,20000p,200000b,200000s
+/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex:37:  ==> Fatal error occurred, no output PDF file produced!

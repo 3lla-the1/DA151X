@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  28 FEB 2025 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  27 FEB 2025 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -356,38 +356,37 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 51.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 36.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box60
-) (./kex.aux)
+)
+No file kex.aux.
 \openout1 = `kex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
- (/usr/local/texlive/2024basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+(/usr/local/texlive/2024basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count298
 \scratchdimen=\dimen171
@@ -402,12 +401,17 @@ LaTeX Font Info:    ... okay on input line 51.
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2024basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/local/texlive/2024basic/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 51.
- (./kex.out) (./kex.out)
+Package hyperref Info: Link coloring OFF on input line 36.
 \@outlinefile=\write3
 \openout3 = `kex.out'.
 
@@ -446,229 +450,465 @@ Package hyperref Info: Link coloring OFF on input line 51.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 51.
-Package microtype Info: Applying patch `item' on input line 51.
-Package microtype Info: Applying patch `toc' on input line 51.
-Package microtype Info: Applying patch `eqnum' on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 36.
+Package microtype Info: Applying patch `item' on input line 36.
+Package microtype Info: Applying patch `toc' on input line 36.
+Package microtype Info: Applying patch `eqnum' on input line 36.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 51.
+Package microtype Warning: Unable to apply patch `footnote' on input line 36.
 
-Package microtype Info: Applying patch `verbatim' on input line 51.
+Package microtype Info: Applying patch `verbatim' on input line 36.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 51.
+LaTeX Info: Redefining \showhyphens on input line 36.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-<kthLogga.png, id=249, 88.1694pt x 98.2872pt>
+<kthLogga.png, id=4, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 62.
+Package pdftex.def Info: kthLogga.png  used on input line 47.
 (pdftex.def)             Requested size: 91.04742pt x 101.50087pt.
  [1
 
 
 
 {/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./kthLogga.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 86.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 66.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [1
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 \newpage
+              [1
 
 
-{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2] (./kex.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
+{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [2]
+No file kex.toc.
+\tf@toc=\write4
+\openout4 = `kex.toc'.
+
+[3
+
+]
+No file kex.lof.
+\tf@lof=\write5
+\openout5 = `kex.lof'.
+
+[4]
+No file kex.lot.
+\tf@lot=\write6
+\openout6 = `kex.lot'.
+
+[5]
+Overfull \hbox (52.45273pt too wide) in alignment at lines 115--129
+ [] [] 
+ []
+
+[6]
+Underfull \vbox (badness 2237) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 
+       [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
+|[]\T1/lmr/bx/n/14.4 (+20) Major back-ground
+ []
+
+File: kthLogga.png Graphic file (type png)
+<use kthLogga.png>
+Package pdftex.def Info: kthLogga.png  used on input line 239.
+(pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+[]\T1/lmr/m/n/12 (+20) Figure 2-1: []An ex-am-ple fig-ure in Sec-tion
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 246.
+(/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 246.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 246.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 246.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <12> on input line 246.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 246.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
- [3
+(Font)              <6> on input line 246.
 
-])
-\tf@toc=\write4
-\openout4 = `kex.toc'.
-
- [4] (./kex.lof)
-\tf@lof=\write5
-\openout5 = `kex.lof'.
-
- [5] (./kex.lot)
-\tf@lot=\write6
-\openout6 = `kex.lot'.
-
- [6]
-Overfull \hbox (52.45273pt too wide) in alignment at lines 135--149
- [] [] 
- []
-
-[7]
-Underfull \vbox (badness 3049) has occurred while \output is active []
-
-
-
-Package natbib Warning: Citation `example20251' on page 8 undefined on input line 224.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) Introduce your choice of method-ol-
+Underfull \hbox (badness 10000) in paragraph at lines 254--254
+[]\T1/lmr/m/n/12 (+20) Table 2.1: []An ex-am-ple ta-ble in Sec-tion
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) Con-trast them with and ex-plain why
+LaTeX Warning: Reference `fig:lit_review' on page 2 undefined on input line 259.
+
+
+LaTeX Warning: Reference `tab:lit_review' on page 2 undefined on input line 260.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+|[]\T1/lmr/bx/n/14.4 (+20) Major back-ground
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) you should present your philo-soph-i-cal
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) as-sump-tion(s), re-search method(s), and
- []
-
-[8
-
-]
-Overfull \hbox (3.32497pt too wide) in paragraph at lines 267--267
-|[][]| 
- []
-
-<4steg.png, id=385, 319.1925pt x 499.8675pt>
-File: 4steg.png Graphic file (type png)
-<use 4steg.png>
-Package pdftex.def Info: 4steg.png  used on input line 279.
-(pdftex.def)             Requested size: 200.35849pt x 313.76645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: kthLogga.png Graphic file (type png)
-<use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 318.
-(pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
- [10 <./4steg.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 6348) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 451--451
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.281 
+       [2]
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
 |[]\T1/lmr/bx/n/17.28 (+20) <Engineering-related
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/lmr/bx/n/17.28 (+20) con-tent, Method-olo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/lmr/bx/n/17.28 (+20) gies and Meth-ods>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--301
+\T1/lmr/bx/n/17.28 (+20) Use a self-explaining
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.324 
+       [3]
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
 |[]\T1/lmr/bx/n/14.4 (+20) Experimental de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
 \T1/lmr/bx/n/14.4 (+20) sign/Planned Mea-sure-
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 349--349
+|[]\T1/lmr/bx/n/12 (+20) Test en-vi-ron-ment/test
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 353--353
+|[]\T1/lmr/bx/n/12 (+20) Hardware/Software to be
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
+|[]\T1/lmr/bx/n/14.4 (+20) Assessing re-li-a-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--356
+\T1/lmr/bx/n/14.4 (+20) and va-lid-ity of the data
+ []
+
+
+Underfull \vbox (badness 3396) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 |[]\T1/lmr/bx/n/17.28 (+20) [What you did ^^U
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
 \T1/lmr/bx/n/17.28 (+20) Choose your own
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-\T1/lmr/bx/n/17.28 (+20) chap-ter ti-tle to
+Underfull \hbox (badness 10000) in paragraph at lines 376--376
+\T1/lmr/bx/n/17.28 (+20) chap-ter ti-tle to de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--532
-\T1/lmr/bx/n/14.4 (+20) .../ModelSimulation
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
+|[]\T1/lmr/bx/n/14.4 (+20) Hardware/Software de-
  []
 
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 538.
+Package pdftex.def Info: kthLogga.png  used on input line 386.
 (pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 562--562
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:ldone' on page 4 undefined on input line 406.
+
+
+LaTeX Warning: Reference `tab:done' on page 4 undefined on input line 407.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 |[]\T1/lmr/bx/n/14.4 (+20) Implementation
  []
 
 
-Overfull \hbox (20.14105pt too wide) in paragraph at lines 562--562
+Overfull \hbox (20.14105pt too wide) in paragraph at lines 410--410
 \T1/lmr/bx/n/14.4 (-20) .../Modeling/Simulation/...| 
  []
 
-[14] [15
 
-] (./kex.bbl) [16
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.419 K
+       eep in mind: How you are going to evaluate what you have done? What a... [4]
+
+LaTeX Warning: Reference `tab:res' on page 5 undefined on input line 442.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--456
+|[]\T1/lmr/bx/n/17.28 (+20) Conclusions and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--481
+|[]\T1/lmr/bx/n/14.4 (+20) Connection to the
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.485 
+       [5]
+
+Package natbib Warning: Citation `tillvaxtverket2021' on page 6 undefined on input line 498.
+
+
+Package natbib Warning: Citation `teng2022' on page 6 undefined on input line 505.
+
+
+Package natbib Warning: Citation `barney1991' on page 6 undefined on input line 521.
+
+
+Package natbib Warning: Citation `Chumphong2020' on page 6 undefined on input line 522.
+
+
+Package natbib Warning: Citation `Chumphong2020' on page 6 undefined on input line 525.
+
+
+Package natbib Warning: Citation `Civelek2023' on page 6 undefined on input line 531.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 
+       [6]
+
+Package natbib Warning: Citation `simons1995' on page 7 undefined on input line 544.
+
+
+Package natbib Warning: Citation `Mladenova2024' on page 7 undefined on input line 554.
+
+
+Package natbib Warning: Citation `wernerfelt1984' on page 7 undefined on input line 557.
+
+
+Package natbib Warning: Citation `barney1991' on page 7 undefined on input line 560.
+
+
+Package natbib Warning: Citation `wernerfelt1984' on page 7 undefined on input line 562.
+
+
+Package natbib Warning: Citation `teece1997' on page 7 undefined on input line 567.
+
+
+Package natbib Warning: Citation `Mladenova2024' on page 7 undefined on input line 569.
+
+
+Package natbib Warning: Citation `simons1995' on page 7 undefined on input line 575.
+
+
+Package natbib Warning: Citation `eisenhardt2000' on page 7 undefined on input line 577.
+
+
+Package natbib Warning: Citation `Civelek2023' on page 7 undefined on input line 582.
+
+
+Package natbib Warning: Citation `oecd2018oslo' on page 7 undefined on input line 587.
+
+
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [7]
+Overfull \hbox (1.287pt too wide) in paragraph at lines 601--602
+[]\T1/lmr/m/n/12 (-20) Process and mar-ket-ing in-no-va-tion strate-
+ []
+
+
+Overfull \hbox (15.2401pt too wide) in paragraph at lines 610--610
+|[]\T1/lmr/bx/n/14.4 (-20) Economic and Or-ga-ni-za-tional
+ []
+
+(./kex.bbl [8])
+Overfull \hbox (0.17307pt too wide) in paragraph at lines 651--653
+\T1/lmr/m/n/12 (-20) eras i Busi-ness In-tel-li-gence (BI) f�r greentech-
+ []
+
+
+Package natbib Warning: Citation `author2025' on page 9 undefined on input line 656.
+
+
+Package natbib Warning: Citation `author2025' on page 9 undefined on input line 656.
+
+
+Package natbib Warning: Citation `example2025' on page 9 undefined on input line 659.
+
+
+Package natbib Warning: Citation `example2025' on page 9 undefined on input line 659.
+
+
+Overfull \hbox (0.31209pt too wide) in paragraph at lines 677--678
+\T1/lmr/m/n/12 (-20) all goal is to iden-tify which open-source DAM
+ []
+
+
+Overfull \hbox (19.16125pt too wide) in paragraph at lines 679--679
+|[]\T1/lmr/bx/n/14.4 (-20) Scientific Ques-tion and Prob-
+ []
+
+
+Overfull \hbox (3.49565pt too wide) in paragraph at lines 682--683
+[]\T1/lmr/m/it/12 (-20) "Which of the two open-source DAM
+ []
+
+[9]
+
+Package natbib Warning: Citation `Author2020' on page 10 undefined on input line 688.
+
+
+Package natbib Warning: Citation `AuthorEtAl2019' on page 10 undefined on input line 688.
+
+
+Package natbib Warning: Citation `Author2021' on page 10 undefined on input line 688.
+
+
+Overfull \hbox (4.63455pt too wide) in paragraph at lines 697--698
+\T1/lmr/m/n/12 (-20) Role-Based Ac-cess Con-trol (RBAC) mod-
+ []
+
+
+Overfull \hbox (4.5128pt too wide) in paragraph at lines 698--699
+\T1/lmr/m/n/12 (-20) ing dig-i-tal con-tent, of-ten lever-ag-ing struc-
+ []
+
+
+Overfull \hbox (5.23358pt too wide) in paragraph at lines 698--699
+\T1/lmr/m/n/12 (-20) tured data for-mats such as JSON Schema. 
+ []
+
+
+Overfull \hbox (21.11992pt too wide) in paragraph at lines 703--703
+|[]\T1/lmr/bx/n/17.28 (-20) Conclusion and Re-search
+ []
+
+
+Overfull \hbox (1.8764pt too wide) in paragraph at lines 707--708
+\T1/lmr/m/n/12 (-20) ments through in-ter-views and work-shops
+ []
+
+(./kex.bbl
+pdfTeX warning (ext4): destination with the same identifier (name{cite.example2025}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 ...item[Exempelförfattare, 2025]{example2025}
+                                                   [10]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.author2025}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 \bibitem[Författare, 2025]{author2025}
+                                           ) [11
 
 ]
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 663.
+Package pdftex.def Info: kthLogga.png  used on input line 732.
 (pdftex.def)             Requested size: 182.09486pt x 203.01976pt.
- [17]
+ [12
+
+]
 
 Package natbib Warning: There were undefined citations.
 
-[18] (./kex.aux)
+[13] (./kex.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: B96796DB2993395E9C0E8C7BECB647E3;10219.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `kex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `kex.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  6F3C61DDB5AA4ABDC5565C5D0AA706C4;14440.
  ) 
 Here is how much of TeX's memory you used:
- 13198 strings out of 475567
- 207417 string characters out of 5777889
- 1942187 words of memory out of 5000000
- 34938 multiletter control sequences out of 15000+600000
- 605456 words of font info for 128 fonts, out of 8000000 for 9000
+ 13146 strings out of 475567
+ 206634 string characters out of 5777889
+ 1940187 words of memory out of 5000000
+ 34859 multiletter control sequences out of 15000+600000
+ 606137 words of font info for 137 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,12n,79p,1046b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1046b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (19 pages, 279521 bytes).
+Output written on kex.pdf (20 pages, 222518 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
- 27123 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 26630 words of extra memory for PDF output out of 29859 (max. 10000000)
 
