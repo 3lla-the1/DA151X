@@ -10,6 +10,11 @@ Författare, A. (2025).
 \newblock Artikelns titel.
 \newblock {\em Journalnamn}, 10(2):123--135.
 
+\bibitem[Jobin et~al., 2019]{jobin2019global}
+Jobin, A., Ienca, M., and Vayena, E. (2019).
+\newblock The global landscape of ai ethics guidelines.
+\newblock {\em Nature Machine Intelligence}, 1:389--399.
+
 \bibitem[Krogh, 2009]{krogh2009}
 Krogh, P. (2009).
 \newblock {\em The DAM book: Digital asset management for photographers}.
@@ -25,5 +30,10 @@ McCain, E., Mara, N., Van~Malssen, K., Carner, D., Reilly, B., Willette, K., Sch
 \newblock {\em Endangered but not too late: The state of digital news preservation}.
 \newblock Donald W. Reynolds Journalism Institute, University of Missouri--Columbia Libraries.
 \newblock OpenAccess. Licensed under CC BY 4.0.
+
+\bibitem[{United Nations}, 2015]{UN2030Agenda}
+{United Nations} (2015).
+\newblock Transforming our world: The 2030 agenda for sustainable development.
+\newblock Accessed: February 28, 2025.
 
 \end{thebibliography}

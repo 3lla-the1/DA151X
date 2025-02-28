@@ -133,8 +133,10 @@ I would like to thank xxxx for having yyyy.
 \renewcommand{\arraystretch}{1.2} % Adjust row height for readability
 \begin{flushleft} % Align the table properly with the heading
 \begin{longtable}{p{5cm} p{12cm}} % Adjust column width for proper alignment
-  
+    
+    AI   & Artificial Intelligence \\
     DAM  & Digital Asset Management \\
+    DSR  & Design Science Research \\
     ERP  & Enterprise Resource Planning \\
     IT   & Information Technology \\
     MCS  & Management Control Systems \\
@@ -196,34 +198,171 @@ delimit what you are going to do and what others have done or will do.
 As one can find in RFC 1235 [1] multicast is useful for xxxx
 
 \subsection{Problem}
-Longer problem statement
-If possible, end this section with a question as a problem statement.
+As companies scale, managing digital assets efficiently—ranging from product images and marketing 
+materials to technical documentation—becomes essential for maintaining brand consistency and operational efficiency.
+However, existing DAM solutions, particularly open-source systems, often lack specialized 
+automation for high-end manufacturing contexts, making adoption and maintenance difficult for SMEs with 
+limited IT infrastructure.
+\vspace{0.3cm}
 
-\begin{quote}
-    \textit{"To what extent does DAM adoption contribute to improved operational efficiency and strategic positioning in a premium manufacturing company?"}
-\end{quote}
+A core function of DAM is image tagging, sorting, and categorization, directly influencing asset 
+retrievability and structural organization. Although AI has been integrated into some DAM solutions,
+ these implementations typically rely on large pre-trained models that offer broad object classification 
+ rather than domain-specific tagging and vocabulary. In premium manufacturing, where products may be visually similar yet functionally 
+ distinct, this lack of tailored recognition can lead to misclassification and inefficient asset management.
+\vspace{0.3cm}
+
+Recent advancements in computer vision, particularly through algorithms like YOLO (You Only Look Once), 
+offer an opportunity to overcome these limitations. However, deploying a YOLO-powered system in this domain
+ requires adapting the model to the specific features and vocabulary of the manufacturing sector. Rather than
+  training a YOLO model from scratch—a process that demands extensive annotated data and computational resources—a 
+  more feasible approach is to fine-tune a pre-trained model using company-specific data. This raises key challenges: 
+  Can fine-tuning effectively capture the subtle distinctions of assets? 
+
 
 \subsection{Purpose}
+% State the purpose of your thesis and the purpose of your degree project.
+% Describe who benefits and how they benefit if you achieve your goals. Include anticipated
+% ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections
+% in Section 6.4.) /
 
-This section should not begin “The project is about” even though this can be included in the purpose section. If so, state the purpose of the project after purpose of the thesis).
+The primary aim of this thesis is to assess the feasibility and impact of a YOLO-powered DAM system 
+that has been fine-tuned on company-specific data to address the unique needs of premium manufacturing SMEs. 
+The research will benchmark the performance of this fine-tuned system against a conventional open-source DAM 
+platform (ResourceSpace), focusing on improvements in asset categorization accuracy
+and retrieval efficiency. 
+\vspace{0.3cm}
 
-State the purpose of your thesis and the purpose of your degree project.
-Describe who benefits and how they benefit if you achieve your goals. Include anticipated
-ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections
-in Section 6.4.)
+\subsubsection{Anticipated Benefits and Implications}
+\vspace{0.2cm}
+This study is structured around a systematic process 
+encompassing data collection, model fine-tuning, and system testing. 
+These phases represent essential steps that a 
+company would need to undertake. 
+By addressing both the positive impacts and
+the possible challenges, the aim is to
+to inform stakeholders about whether the
+benefits of adopting this AI-based solution
+justify the necessary investments and efforts
+The project’s outcomes are expected to contribute to 
+academic knowledge in the field of AI-powered asset management, 
+fostering further innovation. 
+
+\vspace{0.3cm}
+\subsubsection{Ethical considerations}
+\vspace{0.2cm}
+Ethically, the project will investigate issues related to data privacy, 
+ transparency, and bias, which are critical in ensuring that 
+automated systems operate fairly and without unintended consequences. 
+These concerns are highlighted in the literature on AI ethics, which emphasizes 
+the need for clear guidelines to mitigate risks associated with autonomous decision-making.
+\citep{jobin2019global}
+
+\vspace{0.3cm}
+\subsubsection{Sustainability, and social considerations}
+\vspace{0.2cm}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\linewidth]{targets.png}  % Replace with actual image file
+    \caption{Sustainable Development Target 9.5 and 12.6}
+    \label{fig:targets}  
+\end{figure}
+
+From a sustainability perspective, this research contributes to the United Nations Sustainable 
+Development Goals (SDGs), specifically SDG 9, Industry, Innovation, and Infrastructure, and SDG 12, 
+Responsible Consumption and Production, \citep{UN2030Agenda}. 
+In relation to SDG 9, and more precisely 
+target 9.5 as seen in Figure \ref{fig:targets}, the project seeks to enhance scientific 
+research and upgrade the technological capabilities
+ within industrial sectors. Similarly, under SDG 12 target 12.6 also shown in \ref{fig:targets}, 
+ this project supports sustainable business practices by optimizing digital 
+asset management. By enhancing asset categorization and retrieval, the system makes it easier 
+for companies to track and store metrics. This dual focus ensures that the technological advancements 
+proposed are not only efficient and innovative but also ethically sound and socially beneficial.
+
+\vspace{0.3cm}
+Further reflection will be revisited in Section 6.4.
+
+
 \subsection{Goals}
-State the goal/goals of this degree project.
-The goal of this project is XXX. This has been divided into the following three sub-goals:
-1. Subgoal \#1
-2. Subgoal \#2
-3. Subgoal \#3
-In addition to presenting the goal(s), you might also state what the deliverables and results of
-the project are.
+% State the goal/goals of this degree project.
+% The goal of this project is XXX. This has been divided into the following three sub-goals:
+% 1. Subgoal \#1
+% 2. Subgoal \#2
+% 3. Subgoal \#3
+% In addition to presenting the goal(s), you might also state what the deliverables and results of
+% the project are.
 
-Note that in the literature study and even the alpha draft, these are your expected goals, deliverables, and results – which may change over the course of the project – hence you will revise this in the final report to describe what you actually achieved, delivered, and produced as results.
-\citep{example20251}
+% Note that in the literature study and even the alpha draft, 
+% these are your expected goals, deliverables, and results – which may change over the course 
+% of the project – hence you will revise this in the final report to describe what you actually 
+% achieved, delivered, and produced as results.
+
+The primary goal is evaluating the feasibility of a YOLO-powered DAM
+system that has been fine-tuned using company-specific data, 
+in comparison to the open-source solution RecourceSpace.
+To achieve this, the project has been divided into the following three sub-goals:
+
+\begin{enumerate} 
+    
+    \item \textbf{Dataset Development and Annotation:}
+    Develop a robust methodology for collecting a domain-specific dataset that 
+    accurately captures the visual and functional nuances of digital assets 
+    in premium manufacturing. The annotation process will involve: 
+    \begin{itemize} 
+        \item Using bounding boxes to precisely delineate asset regions. 
+        \item Assigning appropriate class labels using a standardized labeling schema 
+        to ensure consistency and relevance to the manufacturing domain. 
+    \end{itemize}
+    
+    This dataset will serve as the foundation for model fine-tuning.
+
+    \item \textbf{Model Fine-Tuning and Optimization:}  
+    Fine-tune a pre-trained YOLO model on the annotated dataset. 
+    The objective is to enhance the model’s 
+    accuracy in tagging, sorting, and categorizing.
+    \begin{itemize}
+        \item Adjusting hyperparameters and leveraging transfer learning techniques.
+        \item Implementing regularization and validation strategies.
+    \end{itemize}
+
+    \item \textbf{Performance Benchmarking and Comparative Analysis:}  
+    Benchmark the performance of the fine-tuned YOLO-based DAM system against a 
+    conventional open-source DAM called ResourceSpace. Evaluation metrics will include:
+    \begin{itemize}
+        \item Asset categorization accuracy.
+        \item Retrieval efficiency.
+        \item Overall system usability.
+    \end{itemize}
+\end{enumerate}
+
+A comparative analysis will be conducted to assess whether the customized 
+system offers significant improvements over traditional solutions. 
+Resulting in practical recommendations 
+and guidelines for manufacturing SMEs 
+considering the adoption of AI-powered
+DAM solutions
+
 
 \subsection{Research Methodology}
+The methodology is designed to address both technical 
+performance and stakeholder perspectives by integrating 
+quantitative and qualitative approaches.
+
+\subsubsection{Design Science Approach}
+This research is grounded in a pragmatic philosophy that 
+emphasizes practical impact and utility, aligning well with 
+the design science research (DSR) paradigm. DSR is particularly suited for technology-driven projects as it promotes the iterative design, development, and evaluation of artifacts to solve real-world problems
+
+At the core of this project is a design science research (DSR) approach.
+ This approach supports the iterative development and refinement of the
+ YOLO-powered DAM system while simultaneously providing a framework 
+ for its evaluation. By designing, implementing, and empirically testing 
+ the system, the study aims to generate actionable knowledge that 
+ bridges theory and practice.
+
+
+
 Introduce your choice of methodology/methodologies and method/methods – and the reason why
 you chose them. Contrast them with and explain why you did not choose other methodologies or
 methods. (The details of the actual methodology and method you have chosen will be given in
@@ -553,6 +692,7 @@ listed in Table 4-1.
     \caption{An example table in Section.}
     \label{tab:done}  
 \end{table}
+
 
 
 \ref{fig:ldone} is an image 

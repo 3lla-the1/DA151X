@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  28 FEB 2025 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  28 FEB 2025 18:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -467,7 +467,7 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-<kthLogga.png, id=249, 88.1694pt x 98.2872pt>
+<kthLogga.png, id=265, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
 Package pdftex.def Info: kthLogga.png  used on input line 62.
@@ -521,154 +521,161 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout6 = `kex.lot'.
 
  [6]
-Overfull \hbox (52.45273pt too wide) in alignment at lines 135--149
+Overfull \hbox (52.45273pt too wide) in alignment at lines 135--151
  [] [] 
  []
 
 [7]
 Underfull \vbox (badness 3049) has occurred while \output is active []
 
+ [8
+
+]
+<targets.png, id=405, 438.63875pt x 293.095pt>
+File: targets.png Graphic file (type png)
+<use targets.png>
+Package pdftex.def Info: targets.png  used on input line 266.
+(pdftex.def)             Requested size: 155.83475pt x 104.1277pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Package natbib Warning: Citation `example20251' on page 8 undefined on input line 224.
+Underfull \hbox (badness 4279) in paragraph at lines 314--316
+\T1/lmr/m/n/12 (+20) us-ing a stan-dard-ized la-bel-ing
+ []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--234
-\T1/lmr/m/n/12 (+20) Introduce your choice of method-ol-
+[9 <./targets.png>]
+Underfull \hbox (badness 2635) in paragraph at lines 329--332
+\T1/lmr/m/n/12 (+20) the per-for-mance of the fine-tuned
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 227--234
+Underfull \hbox (badness 5260) in paragraph at lines 366--373
+[]\T1/lmr/m/n/12 (+20) Introduce your choice of method-ol-
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 366--373
 \T1/lmr/m/n/12 (+20) Con-trast them with and ex-plain why
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 227--234
+Underfull \hbox (badness 3482) in paragraph at lines 366--373
 \T1/lmr/m/n/12 (+20) you should present your philo-soph-i-cal
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 227--234
+Underfull \hbox (badness 1142) in paragraph at lines 366--373
 \T1/lmr/m/n/12 (+20) as-sump-tion(s), re-search method(s), and
  []
 
-[8
-
-]
-Overfull \hbox (3.32497pt too wide) in paragraph at lines 267--267
+[10]
+Overfull \hbox (3.32497pt too wide) in paragraph at lines 406--406
 |[][]| 
  []
 
-<4steg.png, id=385, 319.1925pt x 499.8675pt>
+<4steg.png, id=429, 319.1925pt x 499.8675pt>
 File: 4steg.png Graphic file (type png)
 <use 4steg.png>
-Package pdftex.def Info: 4steg.png  used on input line 279.
+Package pdftex.def Info: 4steg.png  used on input line 418.
 (pdftex.def)             Requested size: 200.35849pt x 313.76645pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+[11 <./4steg.png>]
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 318.
+Package pdftex.def Info: kthLogga.png  used on input line 457.
 (pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
- [10 <./4steg.png>]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 6348) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 451--451
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 590--590
 |[]\T1/lmr/bx/n/17.28 (+20) <Engineering-related
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
 |[]\T1/lmr/bx/n/14.4 (+20) Experimental de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--496
+Underfull \hbox (badness 10000) in paragraph at lines 635--635
 \T1/lmr/bx/n/14.4 (+20) sign/Planned Mea-sure-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+|[]\T1/lmr/bx/n/17.28 (+20) [What you did ^^U
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+\T1/lmr/bx/n/17.28 (+20) Choose your own
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--667
+\T1/lmr/bx/n/17.28 (+20) chap-ter ti-tle to
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-|[]\T1/lmr/bx/n/17.28 (+20) [What you did ^^U
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-\T1/lmr/bx/n/17.28 (+20) Choose your own
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-\T1/lmr/bx/n/17.28 (+20) chap-ter ti-tle to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--532
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
 \T1/lmr/bx/n/14.4 (+20) .../ModelSimulation
  []
 
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 538.
+Package pdftex.def Info: kthLogga.png  used on input line 677.
 (pdftex.def)             Requested size: 89.04745pt x 99.27077pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 562--562
+Underfull \hbox (badness 10000) in paragraph at lines 702--702
 |[]\T1/lmr/bx/n/14.4 (+20) Implementation
  []
 
 
-Overfull \hbox (20.14105pt too wide) in paragraph at lines 562--562
+Overfull \hbox (20.14105pt too wide) in paragraph at lines 702--702
 \T1/lmr/bx/n/14.4 (-20) .../Modeling/Simulation/...| 
  []
 
-[14] [15
-
-] (./kex.bbl) [16
+[15] [16] (./kex.bbl) [17
 
 ]
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 663.
+Package pdftex.def Info: kthLogga.png  used on input line 803.
 (pdftex.def)             Requested size: 182.09486pt x 203.01976pt.
- [17]
-
-Package natbib Warning: There were undefined citations.
-
-[18] (./kex.aux)
+ [18] [19] (./kex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: B96796DB2993395E9C0E8C7BECB647E3;10219.
+(rerunfilecheck)             Checksum: AD42EAE5A816EF34059CAB2A9119B2CB;11133.
  ) 
 Here is how much of TeX's memory you used:
- 13198 strings out of 475567
- 207417 string characters out of 5777889
- 1942187 words of memory out of 5000000
- 34938 multiletter control sequences out of 15000+600000
- 605456 words of font info for 128 fonts, out of 8000000 for 9000
+ 13235 strings out of 475567
+ 208044 string characters out of 5777889
+ 1941187 words of memory out of 5000000
+ 34958 multiletter control sequences out of 15000+600000
+ 605633 words of font info for 131 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,12n,79p,1046b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1046b,649s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (19 pages, 279521 bytes).
+Output written on kex.pdf (20 pages, 338795 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
- 27123 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 489 compressed objects within 5 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 27160 words of extra memory for PDF output out of 29859 (max. 10000000)
 

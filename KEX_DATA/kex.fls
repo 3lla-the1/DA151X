@@ -206,7 +206,11 @@ INPUT ./kex.lot
 INPUT kex.lot
 OUTPUT kex.lot
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT ./targets.png
+INPUT ./targets.png
+INPUT ./targets.png
+INPUT ./targets.png
+INPUT ./targets.png
 INPUT ./4steg.png
 INPUT ./4steg.png
 INPUT ./4steg.png
@@ -223,6 +227,7 @@ INPUT ./kthLogga.png
 INPUT ./kex.bbl
 INPUT ./kex.bbl
 INPUT kex.bbl
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT ./kthLogga.png
 INPUT ./kthLogga.png
 INPUT ./kthLogga.png
