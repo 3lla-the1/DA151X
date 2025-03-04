@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex kex"] 1740164254.66163 "kex.aux" "kex.bbl" "kex" 1740164526.17776 0
+["bibtex kex"] 1740657071.81166 "kex.aux" "kex.bbl" "kex" 1741123831.58389 0
   "./references.bib" 1740160734.32487 3995 404d30aea8e3e3e3aa356a773c99dd62 ""
   "/usr/local/texlive/2024basic/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "kex.aux" 1740164526.06913 3880 0265de6fa6044d6b171bd9f9f0efd0fd "pdflatex"
+  "kex.aux" 1741123831.45744 3880 0265de6fa6044d6b171bd9f9f0efd0fd "pdflatex"
   (generated)
   "kex.bbl"
   "kex.blg"
   (rewritten before read)
-["pdflatex"] 1740164525.17925 "/Users/ellakarlsson/Desktop/DA151X /KEX_INDEK/kex.tex" "kex.pdf" "kex" 1740164526.17796 0
-  "/Users/ellakarlsson/Desktop/DA151X /KEX_INDEK/kex.tex" 1740164524.83071 13404 abec6f933e6391863411d35d4a21f220 ""
+["pdflatex"] 1741123830.44653 "/Users/ellakarlsson/Desktop/DA151X /KEX_INDEK/kex.tex" "kex.pdf" "kex" 1741123831.58412 0
+  "/Users/ellakarlsson/Desktop/DA151X /KEX_INDEK/kex.tex" 1741123830.20572 13413 a50221ce2ec60a36652d09d79aad6478 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -101,11 +101,11 @@
   "/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1739283312.53947 79187 3707ba1a1c2304ab6bb6cb291e5e6f79 ""
   "/usr/local/texlive/2024basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1739283267 7536457 e831a56ef34d8ed53ab17c56d6b9bd60 ""
   "/usr/local/texlive/2024basic/texmf.cnf" 1710011638 628 8b896f7d9d41b43f4346b9091e52171f ""
-  "kex.aux" 1740164526.06913 3880 0265de6fa6044d6b171bd9f9f0efd0fd "pdflatex"
-  "kex.bbl" 1740164254.85852 2504 c90689563875ba70c8caf0f5ee90a8d0 "bibtex kex"
-  "kex.out" 1740164526.07012 3555 3474512281037ab293dd49938845760f "pdflatex"
-  "kex.tex" 1740164524.83071 13404 abec6f933e6391863411d35d4a21f220 ""
-  "kex.toc" 1740164526.07043 1809 a48006c5a5f52e98d61c3607c52757c4 "pdflatex"
+  "kex.aux" 1741123831.45744 3880 0265de6fa6044d6b171bd9f9f0efd0fd "pdflatex"
+  "kex.bbl" 1740657071.91005 2504 c90689563875ba70c8caf0f5ee90a8d0 "bibtex kex"
+  "kex.out" 1741123831.45856 3555 3474512281037ab293dd49938845760f "pdflatex"
+  "kex.tex" 1741123830.20572 13413 a50221ce2ec60a36652d09d79aad6478 ""
+  "kex.toc" 1741123831.45893 1809 a48006c5a5f52e98d61c3607c52757c4 "pdflatex"
   "kthLogga.png" 1739875066.43544 100879 2a4c0a0ec123f208339bbc47da6c3819 ""
   (generated)
   "kex.aux"

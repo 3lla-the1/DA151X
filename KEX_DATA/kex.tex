@@ -1,10 +1,11 @@
-\documentclass[a4paper,12pt,twocolumn]{article}
+\documentclass[a4paper,10pt,twocolumn]{article}
 
 
 \usepackage[utf8]{inputenc} % Support for UTF-8 encoding
 \usepackage[T1]{fontenc}    % Better font rendering
 \usepackage{graphicx}       % For including images
-\usepackage{hyperref}       % For clickable links in the PDF
+\usepackage{tabularx}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=blue]{hyperref}
 \usepackage{geometry}       % To adjust margins
 \geometry{margin=2.5cm}
 \usepackage{titlesec}       % For custom section headings
@@ -16,6 +17,8 @@
 \usepackage[protrusion=true,expansion=true]{microtype} % Better text spacing
 \usepackage{longtable}
 \usepackage{amsmath}        % Provides \numberwithin
+\usepackage{makecell}
+\usepackage{enumitem}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
 \renewcommand{\thefigure}{\thesection-\arabic{figure}}
@@ -30,7 +33,6 @@
 % ---- Header settings ----
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{BACHELOR’S THESIS}
 \rhead{KTH}
 \cfoot{\thepage}
 
@@ -139,6 +141,7 @@ I would like to thank xxxx for having yyyy.
     DSR  & Design Science Research \\
     ERP  & Enterprise Resource Planning \\
     IT   & Information Technology \\
+    ML   & Machine Learning \\
     MCS  & Management Control Systems \\
     MDM  & Metadata Management \\
     RBAC & Role-based access control \\
@@ -170,54 +173,79 @@ I would like to thank xxxx for having yyyy.
 
 \section{Introduction}
 
-This chapter describes the specific problem that this thesis addresses, the context of the problem,
-the goals of this thesis project, and outlines the structure of the thesis.
-Give a general introduction to the area. (Remember to use appropriate references in this and all
-other sections.)
+To be added 
+% This chapter describes the specific problem that this thesis addresses, the context of the problem,
+% the goals of this thesis project, and outlines the structure of the thesis.
+% Give a general introduction to the area. (Remember to use appropriate references in this and all
+% other sections.)
 
-The first paragraph after a heading is not indented, all of the subsequent paragraphs have their first line indented.
+\subsection{Background}
+Digital Asset Management (DAM) emerged in the late 1990s as organizations began grappling 
+with the rapid increase in digital content \citep{krogh2009}. Early DAM systems were primarily on-premises 
+solutions designed to store and manage assets such as images, videos, and documents. 
+In the early 2000s, these systems transitioned to cloud-based platforms, offering 
+improved scalability and accessibility \citep{mccain2021}.
+\vspace{0.3cm}
 
+More recently, the integration of Artificial Intelligence (AI) and machine learning (ML) has transformed 
+DAM by automating key processes like image tagging, sorting, and categorization. Advanced computer 
+vision techniques now enable systems to analyze and tag images automatically, 
+reducing manual effort and increasing accuracy \citep{MINGfANG}.
 
-\subsection{Backgorund}
-The concept of Digital Asset Management emerged in the late 1990s as organizations began to grapple with the 
-increasing volume of digital content. In the early 2000s, DAM systems evolved from on-premises solutions to cloud-based platforms, 
-offering greater scalability and accessibility \citep{mccain2021}
-The integration of AI and machine learning technologies in DAM systems began in the mid-2010s, 
-marking a significant advancement in automating asset tagging and improving search capabilitie
-This technology leverages advanced computer vision techniques to analyze and tag images automatically, 
-reducing manual effort and enhancing the accuracy of asset categorization
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{DAMC.png}  % Replace with actual image file
+%     \caption{Illustrating components of a modern DAM system}
+%     \label{fig:DAMC}  
+% \end{figure}
 
-
-Present the background for the area. Set the context for your project – so that your reader can
-understand both your project and this thesis. (Give detailed background information in Chapter 2 -
-together with related work.)
-Sometimes it is useful to insert a system diagram here so that the reader knows what are the
-different elements and their relationship to each other. This also introduces the names/terms/…
-that you are going to use throughout your thesis (be consistent). This figure will also help you later
-delimit what you are going to do and what others have done or will do.
-As one can find in RFC 1235 [1] multicast is useful for xxxx
+% Present the background for the area. Set the context for your project – so that your reader can
+% understand both your project and this thesis. (Give detailed background information in Chapter 2 -
+% together with related work.)
+% Sometimes it is useful to insert a system diagram here so that the reader knows what are the
+% different elements and their relationship to each other. This also introduces the names/terms/…
+% that you are going to use throughout your thesis (be consistent). This figure will also help you later
+% delimit what you are going to do and what others have done or will do.
+% As one can find in RFC 1235 [1] multicast is useful for xxxx
 
 \subsection{Problem}
-As companies scale, managing digital assets efficiently—ranging from product images and marketing 
-materials to technical documentation—becomes essential for maintaining brand consistency and operational efficiency.
-However, existing DAM solutions, particularly open-source systems, often lack specialized 
-automation for high-end manufacturing contexts, making adoption and maintenance difficult for SMEs with 
-limited IT infrastructure.
+As bespoke manufacturers scale, managing digital assets—spanning product imagery, design renderings,
+and technical specifications—becomes essential for brand consistency and operational efficiency.
+However, most DAM solutions, especially open-source systems, lack the necessary automation, 
+posing adoption and maintenance challenges for small and medium-sized enterprises (SMEs) with limited IT infrastructure. 
+Wu et al. studied automated metadata annotation for cultural heritage and found that AI-generated 
+captions often oversimplify context, such as describing a medieval knight merely as a “man on a horse” \citep{MINGfANG} 
+This reflects similar challenges in design-driven manufacturing, where internal product terminology and industry-specific 
+references require more precise and context-aware interpretation.
 \vspace{0.3cm}
 
 A core function of DAM is image tagging, sorting, and categorization, directly influencing asset 
 retrievability and structural organization. Although AI has been integrated into some DAM solutions,
  these implementations typically rely on large pre-trained models that offer broad object classification 
- rather than domain-specific tagging and vocabulary. In premium manufacturing, where products may be visually similar yet functionally 
- distinct, this lack of tailored recognition can lead to misclassification and inefficient asset management.
-\vspace{0.3cm}
-
-Recent advancements in computer vision, particularly through algorithms like YOLO (You Only Look Once), 
+ rather than domain-specific tagging and vocabulary. Recent advancements in computer vision, 
+ particularly through algorithms such as YOLO (You Only Look Once), 
 offer an opportunity to overcome these limitations. However, deploying a YOLO-powered system in this domain
  requires adapting the model to the specific features and vocabulary of the manufacturing sector. Rather than
-  training a YOLO model from scratch—a process that demands extensive annotated data and computational resources—a 
-  more feasible approach is to fine-tune a pre-trained model using company-specific data. This raises key challenges: 
-  Can fine-tuning effectively capture the subtle distinctions of assets? 
+  training a model from scratch—a process that demands extensive annotated data and computational resources—a 
+  more feasible approach is to fine-tune a pre-trained model using company-specific data. 
+
+\vspace{0.3cm}
+\subsubsection{Research questions}
+\vspace{0.3cm}
+
+\begin{enumerate}[label=(\alph*)]
+    \item To what extent does fine-tuning YOLOv11 on company-specific data improve metadata accuracy in DAM for manufacturing assets? 
+    What are the trade-offs in computational efficiency between the model and conventional DAM tagging methods? (DATA)
+    
+    \item How does fine-tuning affect model performance across different asset types in a high-end manufacturing context? (DATA)
+    
+    \item How does fine-tuning affect model performance across different asset types in a high-end manufacturing context? (INDEK)
+\end{enumerate}
+
+
+Can fine-tuning effectively capture the subtle distinctions of assets? 
+
+
 
 
 \subsection{Purpose}
@@ -233,17 +261,26 @@ platform (ResourceSpace), focusing on improvements in asset categorization accur
 and retrieval efficiency. 
 \vspace{0.3cm}
 
-\subsubsection{Anticipated Benefits and Implications}
+\subsubsection{Societal Impact}
 \vspace{0.2cm}
+Digital transformation has a significant impact on SMEs.
+These companies account for approximately 60\% of total turnover and value-added 
+contributions in Sweden’s private sector, employing around 65\% of the 
+workforce \citep{tillvaxtverket2021}.
+The adoption of DAM systems is an integral part of this transformation, 
+improving operational efficiency and reducing manual work,
+which contributes to broader economic growth. A cost-benefit analysis of 319 SMEs 
+found that digital transformation enhances organizational resilience, reduces 
+operational costs, and improves long-term scalability \citep{teng2022}.
+
+\vspace{0.3cm}
 This study is structured around a systematic process 
-encompassing data collection, model fine-tuning, and system testing. 
-These phases represent essential steps that a 
-company would need to undertake. 
-By addressing both the positive impacts and
-the possible challenges, the aim is to
-to inform stakeholders about whether the
-benefits of adopting this AI-based solution
-justify the necessary investments and efforts
+encompassing data collection, annotation, model fine-tuning, and testing. 
+These phases represent essential steps that an SME would need to undertake 
+if they were to implement a similar AI-based solution. 
+By addressing both the positive impacts and the possible challenges, the aim is to
+to show if the benefits of adopting this solution
+justify the necessary investments and efforts.
 The project’s outcomes are expected to contribute to 
 academic knowledge in the field of AI-powered asset management, 
 fostering further innovation. 
@@ -255,15 +292,13 @@ Ethically, the project will investigate issues related to data privacy,
  transparency, and bias, which are critical in ensuring that 
 automated systems operate fairly and without unintended consequences. 
 These concerns are highlighted in the literature on AI ethics, which emphasizes 
-the need for clear guidelines to mitigate risks associated with autonomous decision-making.
-\citep{jobin2019global}
+the need for clear guidelines to mitigate risks associated with autonomous decision-making\citep{jobin2019global}.
 
 \vspace{0.3cm}
 \subsubsection{Sustainability, and social considerations}
-\vspace{0.2cm}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\linewidth]{targets.png}  % Replace with actual image file
+    \includegraphics[width=0.6\linewidth]{targets.png}  % Replace with actual image file
     \caption{Sustainable Development Target 9.5 and 12.6}
     \label{fig:targets}  
 \end{figure}
@@ -284,6 +319,7 @@ proposed are not only efficient and innovative but also ethically sound and soci
 Further reflection will be revisited in Section 6.4.
 
 
+
 \subsection{Goals}
 % State the goal/goals of this degree project.
 % The goal of this project is XXX. This has been divided into the following three sub-goals:
@@ -300,7 +336,7 @@ Further reflection will be revisited in Section 6.4.
 
 The primary goal is evaluating the feasibility of a YOLO-powered DAM
 system that has been fine-tuned using company-specific data, 
-in comparison to the open-source solution RecourceSpace.
+in comparison to the open-source solution ResourceSpace.
 To achieve this, the project has been divided into the following three sub-goals:
 
 \begin{enumerate} 
@@ -345,63 +381,128 @@ DAM solutions
 
 
 \subsection{Research Methodology}
-The methodology is designed to address both technical 
-performance and stakeholder perspectives by integrating 
-quantitative and qualitative approaches.
+This research employs a mixed-methods approach to address both the 
+technical performance of the system and stakeholder perspectives. 
+Mixed-methods research combines quantitative techniques 
+(e.g., controlled experiments and statistical analyses) with 
+qualitative techniques (e.g., semi-structured interviews and thematic analysis)
+to provide a comprehensive evaluation of complex systems \citep{johnson2004mixed}.
+\vspace{0.3cm}
 
+Alternative methodologies—such as exclusively quantitative performance evaluations 
+or purely qualitative case studies—were considered but ultimately rejected because 
+they would not fully capture the multifaceted challenges of deploying an AI-powered 
+system in a dynamic industrial environment.
+
+\vspace{0.3cm}
 \subsubsection{Design Science Approach}
-This research is grounded in a pragmatic philosophy that 
-emphasizes practical impact and utility, aligning well with 
-the design science research (DSR) paradigm. DSR is particularly suited for technology-driven projects as it promotes the iterative design, development, and evaluation of artifacts to solve real-world problems
+\vspace{0.3cm}
 
-At the core of this project is a design science research (DSR) approach.
- This approach supports the iterative development and refinement of the
- YOLO-powered DAM system while simultaneously providing a framework 
- for its evaluation. By designing, implementing, and empirically testing 
- the system, the study aims to generate actionable knowledge that 
- bridges theory and practice.
+% Introduce your choice of methodology/methodologies and method/methods – and the reason why
+% you chose them. Contrast them with and explain why you did not choose other methodologies or
+% methods. (The details of the actual methodology and method you have chosen will be given in
+% Chapter 3. Note that in Chapter 3, the focus could be research strategies, data collection, data
+% analysis, and quality assurance.)
+% In this section you should present your philosophical assumption(s), research method(s), and
+% research approach(es).
 
+Grounded in a pragmatic philosophy that emphasizes practical impact and utility, 
+this study adopts the design science research (DSR) paradigm. DSR is particularly 
+well-suited for technology-driven projects because it promotes the iterative design, 
+development, and rigorous evaluation of IT artifacts to solve 
+real-world problems \citep{hevner2004design}. In this project, 
+the YOLO-powered digital asset management system represents 
+the artifact developed and refined through iteration.
 
+\vspace{0.3cm}
+\subsubsection{Quantitative and Qualitative Methods }
+\vspace{0.3cm}
+Controlled experiments will be conducted to measure key performance 
+metrics—such as asset categorization accuracy, retrieval efficiency, 
+and overall system usability. Statistical analysis w
+ill be used to validate the improvements brought about by model fine-tuning, 
+following best practices in empirical research \citep{creswell2014, yin2014case}.
+\vspace{0.3cm}
 
-Introduce your choice of methodology/methodologies and method/methods – and the reason why
-you chose them. Contrast them with and explain why you did not choose other methodologies or
-methods. (The details of the actual methodology and method you have chosen will be given in
-Chapter 3. Note that in Chapter 3, the focus could be research strategies, data collection, data
-analysis, and quality assurance.)
-In this section you should present your philosophical assumption(s), research method(s), and
-research approach(es).
+Complementing this, qualitative methods will capture contextual insights and 
+stakeholder perspectives. Semi-structured interviews and thematic analysis 
+will be employed to understand user experiences and organizational challenges 
+associated with implementing the DAM system. 
+\vspace{0.3cm}
 
-(footnote?)
+Moreover, to develop a standardized 
+labeling schema for the dataset, a targeted collaboration with a designated 
+expert from the company will be undertaken. This focused approach is 
+preferred over a large-scale survey. Not all employees interact 
+with digital assets and the expert can ensure domain-specific 
+terminology is accurately captured and applied consistently during annotation.
+
 \subsection{Delimitations}
-Describe the boundary/limits of your thesis project and what you are explicitly not going to do. This
-will help you bound your efforts – as you have clearly defined what is out of the scope of this
-thesis project. Explain the delimitations. These are all the things that could affect the study if they
-were examined and included in the degree project.
+% Describe the boundary/limits of your thesis project and what you are explicitly not going to do. This
+% will help you bound your efforts – as you have clearly defined what is out of the scope of this
+% thesis project. Explain the delimitations. These are all the things that could affect the study if they
+% were examined and included in the degree project.
+This thesis focuses exclusively on evaluating a YOLO-powered digital asset management 
+system for premium manufacturing SMEs. The study is limited to a specific company’s 
+environment and a predefined dataset.
+The research investigates only the fine-tuning of an existing pre-trained YOLO model. 
+Training a model from scratch, which requires vast amounts of data and computational resources, 
+is beyond the scope of this project.
+\vspace{0.3cm}
+
+Instead of conducting a large-scale survey, the study uses semi-structured interviews with key 
+stakeholders—particularly a designated domain expert—to develop a standardized labeling schema. 
+This focused approach is chosen because only a few employees directly manage digital assets.
+
+\vspace{0.3cm}
+The assessment will concentrate on technical performance indicators such as asset categorization accuracy, 
+retrieval efficiency, and overall system usability. Broader issues such as integration with other enterprise systems 
+and macroeconomic impacts are beyond the scope of this project.
 
 \subsection{Structure of the thesis}
-Chapter 2 presents relevant background information about xxx. Chapter 3 presents the
-methodology and method used to solve the problem. …
+% Chapter 2 presents relevant background information about xxx. Chapter 3 presents the
+% methodology and method used to solve the problem. …
+% Exclude the first chapter , references, and appendix/appendices. 
 
-Exclude the first chapter , references, and appendix/appendices. 
+This thesis is organized into the following main chapters, 
+excluding the introductory chapter, references, and appendices; 
+Chapter 2 provides the necessary background and reviews related work,
+ establishing the context for DAM and identifying the key gaps this project addresses. 
+ Chapter 3 outlines the methodology—including the design science approach, 
+ mixed-methods strategy, data collection, experimental design, and evaluation 
+ criteria—used to assess the YOLO-powered DAM system. 
+ Chapter 4 details the implementation, covering system design, 
+ model fine-tuning, dataset development, and the technical setup for testing. 
+ Chapter 5 presents the results and analysis, discussing both quantitative 
+ metrics and qualitative insights to evaluate whether the project’s goals have been met. 
+ Finally, Chapter 6 summarizes the key findings, reflects on the limitations of the study, 
+ and outlines potential directions for future work.
+
+
+
 
 % --------------------------------------------------------------------------------------------------------------------------------------------
 
 % ===== Section 2: Background =====
 \section{Background}
-This chapter provides basic background information about xxx. Additionally, this chapter describes
-xxx. The chapter also describes related work xxxx.
-What does a reader (another x student -- where x is your study line) need to know to understand
-your report?
-What have others already done? (This is the “related work”.) Explain what and how prior work /
-prior research will be applied on or used in the degree project /work (described in this thesis).
-Explain why and what is not used in the degree project and give valid reasons for rejecting the
-work/research.
+% This chapter provides basic background information about xxx. Additionally, this chapter describes
+% xxx. The chapter also describes related work xxxx.
+% What does a reader (another x student -- where x is your study line) need to know to understand
+% your report?
+% What have others already done? (This is the “related work”.) Explain what and how prior work /
+% prior research will be applied on or used in the degree project /work (described in this thesis).
+% Explain why and what is not used in the degree project and give valid reasons for rejecting the
+% work/research.
 
-When you do your literature study, you should have a nearly complete Chapters 1, 2.
+% When you do your literature study, you should have a nearly complete Chapters 1, 2.
 
-You may also find it convenient to introduce the future work section into your report early – so that you can put things that you think about but decide not to do now into this section.
+% You may also find it convenient to introduce the 
+% future work section into your report early – so that you can 
+% put things that you think about but decide not to do now into this section.
 
-Note that later you can move things between this future work section and what you have done as you may change your mind about what to do now versus what to put off to future work.
+% Note that later you can move things between this future work section and what 
+% you have done as you may change your mind about w
+% hat to do now versus what to put off to future work.
 
 \subsection{\mbox{Digital Asset Management}}
 Krogh (2009) presents DAM as an essential system for managing digital photography in a way that prioritizes protection, 
@@ -415,7 +516,7 @@ categorized into five stages as illustrated in Figure~\ref{fig:4steg}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth]{4steg.png}  % Replace with actual image file
+    \includegraphics[width=0.5\linewidth]{4steg.png}  % Replace with actual image file
     \caption{Illustrating the main stages of digital asset management.}
     \label{fig:4steg}  
 \end{figure}
@@ -427,7 +528,36 @@ Love and Matthews (2019) demonstrated through a series of case studies that the 
 is not unlocked simply by adopting new technology but only when companies embrace two 
 fundamental principles.
 
-First, that technology alone does not create value but must be accompanied by organizational process reengineering, and second, that the benefits of DAM are maximized only through continuous strategic governance to monitor and sustain its impact.
+First, that technology alone does not create value but must be accompanied by 
+organizational process reengineering, and second, that the benefits of DAM 
+are maximized only through continuous strategic governance to monitor and sustain its impact.
+
+\subsection{The Resource-Based View}
+The Resource-Based View (RBV) suggests that organizations derive competitive advantage by leveraging valuable, rare, inimitable, 
+and non-substitutable (VRIN) resources \cite{barney1991}. DAM systems fulfill these criteria by providing centralized governance,
+metadata standardization, and automation, transforming digital assets into strategic resources \cite{Chumphong2020}.
+
+\vspace{0.3cm}
+Empirical findings support this perspective. \cite{Chumphong2020} report that SMEs achieving full DAM integration 
+demonstrate 23\% higher operational resilience during market disruptions compared to those with only partial implementation. 
+This aligns with RBV’s emphasis on resource orchestration and its role in maintaining competitiveness.
+
+Nevertheless, some scholars argue that
+resource possession alone does not guarantee successful 
+digital transformation. 
+\cite{Civelek2023} found no significant link be-
+tween dynamic capabilities—a key aspect
+of RBV that involves adapting, integrating,
+and reconfiguring resources—and successful
+digital transformation among Czech manu-
+facturing SMEs. Their findings suggest that
+merely possessing dynamic capabilities is
+insufficient for digital transformation unless
+supported by complementary factors such as
+digital literacy and IT infrastructure matu-
+rity.
+
+
 
 The first principle is a recognition that technology does not automatically create value. 
 Rather, its benefits are realized only when organizations actively re-engineer their processes 
@@ -518,7 +648,232 @@ Despite these challenges, the benefits of AI-powered image tagging in DAM system
 Entangled states are an important part of quantum cryptography, but also relevant in other
 domains. This concept might be relevant for neutrinos, see for example [2].
 
-\subsubsection{Major background area\#1\#2}
+\subsubsection{What is the YOLO model + how does it work from a higher level perspective}
+\vspace{0.3cm}
+
+Object detection algotithm. It locates object in an image
+It is ine stage detection, it is fater than two stage. 
+It is just a algoritm... so you have to do a lot around it?
+
+\paragraph{Scheme}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.2\linewidth]{YOLOSTEP.png}  % Replace with actual image file
+    \caption{YOLOv11 performance comparison (Ultralytics Inc., 2025).}
+    \label{fig:Scheme}  
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{YOLOARC.png}  % Replace with actual image file
+    \caption{The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head.}
+    \label{fig:Arc}  
+\end{figure}
+
+The YOLOv11 model follows the standard three-part structure of the YOLO family: 
+Backbone, Neck, and Head, as shown in Figure \ref{fig:Arc}.
+According to Hidayatullah et al. (2025), the Backbone extracts features using 
+convolutional layers and downsampling, generating hierarchical feature maps.
+The Neck refines these features through the SPPF block for multi-scale detection 
+and the C2PSA module to enhance the recognition of small and occluded objects. 
+Upsampling and feature concatenation further improve resolution and information 
+retention. Finally, the Head produces the model’s output, predicting class probabilities 
+and bounding boxes across three detection layers (small, medium and large), 
+each specialized for different object sizes \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
+\vspace{0.3cm}
+
+and the Head 
+Create bounding boxes and pair it to a class.
+
+step 1. Overlay image with a grid in size sxs 
+Each grid cell produces 2 things:
+- 1. a set of bounding boxes centered on a point inside the grid
+ with conficence scores that an object exists inside each bounding box 
+
+ - 2 a class probability map for each cell: which tells what object class is most 
+ likely to be in that cell given that an object exists within the cell.
+
+It combines this info to yeild the object detections 
+
+\paragraph{Architecture}
+
+
+\paragraph{Loss Function}
+
+
+\subsubsection{The YOLO model}
+\vspace{0.3cm}
+As demonstrated in table \ref{tab:yolo_versions} the YOLO series has
+ evolved significantly since its inception, introducing progressive improvements
+  in object detection, computational efficiency, and feature extraction. 
+\vspace{0.3cm}
+
+\begin{table}[htbp]
+    \centering
+    {\small
+    \begin{tabularx}{\linewidth}{|c|X|}
+        \hline
+        \textbf{Release} & \textbf{Capabilities} \\
+        \hline
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V1}\\
+            {\scriptsize Darknet}\\
+            {\tiny JUN 2015}
+        \end{tabular}
+        &
+        A single-stage object detector with basic classification
+        \citep{redmon2016you}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V2}\\
+            {\scriptsize Darknet}\\
+            {\tiny DEC 2016}
+        \end{tabular}
+        &
+        Object detection. Darknet-19 architecture, anchor boxes, and higher resolution inputs
+        \citep{redmon2016yolo9000betterfasterstronger}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V3}\\
+            {\scriptsize Darknet}\\
+            {\tiny MAR 2018}
+        \end{tabular}
+        &
+        Object detection. Darknet-53 network \& multi-scale predictions for varying object sizes.
+        \citep{redmon2018yolov3}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V4}\\
+            {\scriptsize Darknet}\\
+            {\tiny APR 2020}
+        \end{tabular}
+        &
+        Object detection. Basic object tracking with BCSPDarknet53 and SPP.
+        \citep{bochkovskiy2020yolov4}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V5}\\
+            {\scriptsize PyTorch}\\
+            {\tiny JUN 2020}
+        \end{tabular}
+        &
+        Object detection. Basic instance segmentation. PyTorch framework,
+        multi-GPU support, and exports \citep{ultralytics2024yolov5}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V6}\\
+            {\scriptsize PyTorch}\\
+            {\tiny SEP 2022}
+        \end{tabular}
+        &
+        Object detection \& instance segmentation. Reparameterizable backbone for model scaling.
+        \citep{li2022yolov6}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V7}\\
+            {\scriptsize PyTorch}\\
+            {\tiny JUL 2022}
+        \end{tabular}
+        &
+        Object detection, tracking \& instance segmentation.
+        \citep{wang2022yolov7}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V8}\\
+            {\scriptsize PyTorch}\\
+            {\tiny JAN 2023}
+        \end{tabular}
+        &
+        Object detection, tracking, instance segmentation, panoptic segmentation, keypoint estimation.
+        NVIDIA GPUs, Jetson systems and macOS.
+        \citep{ultralytics2025yolov8}
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V9}\\
+            {\scriptsize PyTorch}\\
+            {\tiny FEB 2024}
+        \end{tabular}
+        &
+        Object detection \& instance segmentation.
+        PGI for better gradient reliability.
+        GELAN network \citep{wang2024yolov9}.
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V10}\\
+            {\scriptsize PyTorch}\\
+            {\tiny MAY 2024}
+        \end{tabular}
+        &
+        Object detection \& NMS-free training
+        \citep{wang2024yolov10}
+        \\
+        \hline
+
+        \begin{tabular}[t]{@{}c@{}}
+            \textbf{V11}\\
+            {\scriptsize PyTorch}\\
+            {\tiny SEP 2024}
+        \end{tabular}
+        &
+        Object detection, instance segmentation, pose estimation \& oriented object detection (OBB).
+        \citep{UltralyticsYOLO11}.
+        \\
+        \hline
+
+    \end{tabularx}
+    }
+    \caption{Summary of YOLO Model Evolution}
+    \label{tab:yolo_versions}
+\end{table}
+
+
+YOLOv11 is the best choice for the project due to its superior accuracy, 
+efficiency, and versatility. As Khanam and Hussain (2024) highlight, 
+its architectural upgrades enhance feature extraction while minimizing 
+computational costs, making it ideal for real-time applications requiring 
+both speed and precision \citep{khanam2024yolov11overviewkeyarchitectural}.
+
+\vspace{0.3cm}
+Beyond object detection, YOLOv11 supports instance segmentation, 
+pose estimation, and oriented object detection, offering greater adaptability 
+to the project’s needs. Its optimized balance of accuracy and processing speed 
+ensures strong performance across different computing environments, from edge 
+devices to high-performance systems, making it the most effective solution
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{YOLOV11.png}  % Replace with actual image file
+    \caption{YOLOv11 performance comparison (Ultralytics Inc., 2025).}
+    \label{fig:bench}  
+\end{figure}
+
+The selection of YOLOv11 for the project is driven by its superior architectural 
+enhancements, versatile task support, and optimized balance between accuracy and 
+efficiency. 
+  Each version has incorporated refinements aimed at enhancing real-time performance, 
+  with YOLOv11 representing the most advanced iteration to date \citep{khanam2024yolov11overviewkeyarchitectural}.
+\vspace{0.3cm}
+
 Computational methods are increasingly used as a third method of carrying out scientific
 investigations. For example, computational experiments were used to find the amount of wear in a
 polyethylene liner of a hip prosthesis in [3].
@@ -777,17 +1132,23 @@ What are the relevant economic, social, environmental, and ethical aspects of yo
 
 
 % ===== Section 7: References =====
-\onecolumn
-\section{References}
+
+\addcontentsline{toc}{section}{References}  % Lägg till i innehållsförteckningen
 \bibliographystyle{apalike}
 \nocite{*}
-\bibliography{references} % Ensure your references.bib file includes all cited sources
+\bibliography{references} % Hänvisar till din references.bib-fil
+
+
+% \bibliographystyle{apalike}
+% \nocite{*}
+% \bibliography{references} % Ensure your references.bib file includes all cited sources
 
 
 
 
 % ===== Appendices =====
 \newpage
+\onecolumn
 \appendix  % This marks the start of the appendices
 \phantomsection
 \addcontentsline{toc}{section}{Appendices} % Adds "Appendices" to Table of Contents

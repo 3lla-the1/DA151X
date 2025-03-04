@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  21 FEB 2025 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  4 MAR 2025 22:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -517,22 +517,22 @@ l.124
        [1
 
 {/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (4.21844pt too wide) in paragraph at lines 140--146
+Overfull \hbox (4.21844pt too wide) in paragraph at lines 142--148
 []\T1/lmr/m/n/12 (-20) Simons[] ([]1995[]) Levers of Con-trol (LOC) frame-
  []
 
 [2]
-Overfull \hbox (1.287pt too wide) in paragraph at lines 197--198
+Overfull \hbox (1.287pt too wide) in paragraph at lines 199--200
 []\T1/lmr/m/n/12 (-20) Process and mar-ket-ing in-no-va-tion strate-
  []
 
 
-Overfull \hbox (3.30278pt too wide) in paragraph at lines 205--206
+Overfull \hbox (3.30278pt too wide) in paragraph at lines 207--208
 []\T1/lmr/m/n/12 (-20) Business con-sid-er-a-tions in-flu-enc-ing adop-
  []
 
 
-Overfull \hbox (15.2401pt too wide) in paragraph at lines 211--211
+Overfull \hbox (15.2401pt too wide) in paragraph at lines 213--213
 |[]\T1/lmr/bx/n/14.4 (-20) Economic and Or-ga-ni-za-tional
  []
 
@@ -558,7 +558,7 @@ Here is how much of TeX's memory you used:
  319 hyphenation exceptions out of 8191
  75i,11n,79p,1047b,500s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (6 pages, 200954 bytes).
+Output written on kex.pdf (6 pages, 200995 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams

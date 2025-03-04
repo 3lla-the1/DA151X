@@ -3,44 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: kex.aux
 The style file: apalike.bst
 Database file #1: references.bib
-You've used 7 entries,
+Warning--I didn't find a database entry for "author2025"
+Warning--I didn't find a database entry for "barney1991"
+Warning--I didn't find a database entry for "Chumphong2020"
+Warning--I didn't find a database entry for "Civelek2023"
+You've used 25 entries,
             1935 wiz_defined-function locations,
-            515 strings with 4770 characters,
-and the built_in function-call counts, 2526 in all, are:
-= -- 238
-> -- 107
-< -- 5
-+ -- 42
-- -- 36
-* -- 203
-:= -- 462
-add.period$ -- 22
-call.type$ -- 7
-change.case$ -- 51
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 94
-empty$ -- 172
-format.name$ -- 45
-if$ -- 480
-int.to.chr$ -- 1
+            610 strings with 8134 characters,
+and the built_in function-call counts, 9165 in all, are:
+= -- 876
+> -- 497
+< -- 15
++ -- 179
+- -- 172
+* -- 760
+:= -- 1705
+add.period$ -- 75
+call.type$ -- 25
+change.case$ -- 210
+chr.to.int$ -- 24
+cite$ -- 25
+duplicate$ -- 315
+empty$ -- 524
+format.name$ -- 207
+if$ -- 1712
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 39
-num.names$ -- 21
-pop$ -- 46
+missing$ -- 17
+newline$ -- 128
+num.names$ -- 75
+pop$ -- 175
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 211
 quote$ -- 0
-skip$ -- 71
+skip$ -- 246
 stack$ -- 0
-substring$ -- 154
-swap$ -- 6
-text.length$ -- 0
+substring$ -- 446
+swap$ -- 23
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 142
 warning$ -- 0
-while$ -- 18
+while$ -- 62
 width$ -- 0
-write$ -- 93
+write$ -- 314
+(There were 4 warnings)

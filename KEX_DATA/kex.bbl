@@ -1,24 +1,46 @@
 \begin{thebibliography}{}
 
-\bibitem[Exempelförfattare, 2025]{example2025}
-Exempelförfattare, B. (2025).
-\newblock {\em Exempelbokens Titel}.
-\newblock Förlag AB.
+\bibitem[Bochkovskiy et~al., 2020]{bochkovskiy2020yolov4}
+Bochkovskiy, A., Wang, C.-Y., and Liao, H.-Y.~M. (2020).
+\newblock Yolov4: Optimal speed and accuracy of object detection.
+\newblock arXiv:2004.10934v1, 23 Apr 2020.
 
-\bibitem[Författare, 2025]{author2025}
-Författare, A. (2025).
-\newblock Artikelns titel.
-\newblock {\em Journalnamn}, 10(2):123--135.
+\bibitem[Creswell, 2014]{creswell2014}
+Creswell, J.~W. (2014).
+\newblock {\em Research Design: Qualitative, Quantitative, and Mixed Methods Approaches}.
+\newblock SAGE Publications, 4th edition.
+
+\bibitem[Hevner et~al., 2004]{hevner2004design}
+Hevner, A.~R., March, S.~T., Park, J., and Ram, S. (2004).
+\newblock Design science in information systems research.
+\newblock {\em MIS Quarterly}, 28(1):75--105.
+
+\bibitem[Hidayatullah et~al., 2025]{hidayatullah2025yolov8yolo11comprehensivearchitecture}
+Hidayatullah, P., Syakrani, N., Sholahuddin, M.~R., Gelar, T., and Tubagus, R. (2025).
+\newblock Yolov8 to yolo11: A comprehensive architecture in-depth comparative review.
 
 \bibitem[Jobin et~al., 2019]{jobin2019global}
 Jobin, A., Ienca, M., and Vayena, E. (2019).
 \newblock The global landscape of ai ethics guidelines.
 \newblock {\em Nature Machine Intelligence}, 1:389--399.
 
+\bibitem[Johnson and Onwuegbuzie, 2004]{johnson2004mixed}
+Johnson, R.~B. and Onwuegbuzie, A.~J. (2004).
+\newblock Mixed methods research: A research paradigm whose time has come.
+\newblock {\em Educational Researcher}, 33(7):14--26.
+
+\bibitem[Khanam and Hussain, 2024]{khanam2024yolov11overviewkeyarchitectural}
+Khanam, R. and Hussain, M. (2024).
+\newblock Yolov11: An overview of the key architectural enhancements.
+
 \bibitem[Krogh, 2009]{krogh2009}
 Krogh, P. (2009).
 \newblock {\em The DAM book: Digital asset management for photographers}.
 \newblock O'Reilly, Sebastopol, California, 2nd edition.
+
+\bibitem[Li et~al., 2022]{li2022yolov6}
+Li, C., Li, L., Jiang, H., Weng, K., Geng, Y., Li, L., Ke, Z., Li, Q., Cheng, M., Nie, W., Li, Y., Zhang, B., Liang, Y., Zhou, L., Xu, X., Chu, X., Wei, X., and Wei, X. (2022).
+\newblock Yolov6: A single-stage object detection framework for industrial applications.
 
 \bibitem[Love and Matthews, 2019]{LOVE2019102930}
 Love, P.~E. and Matthews, J. (2019).
@@ -31,9 +53,76 @@ McCain, E., Mara, N., Van~Malssen, K., Carner, D., Reilly, B., Willette, K., Sch
 \newblock Donald W. Reynolds Journalism Institute, University of Missouri--Columbia Libraries.
 \newblock OpenAccess. Licensed under CC BY 4.0.
 
+\bibitem[Redmon et~al., 2016]{redmon2016you}
+Redmon, J., Divvala, S., Girshick, R., and Farhadi, A. (2016).
+\newblock You only look once: Unified, real-time object detection.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 779--788.
+
+\bibitem[Redmon and Farhadi, 2016]{redmon2016yolo9000betterfasterstronger}
+Redmon, J. and Farhadi, A. (2016).
+\newblock Yolo9000: Better, faster, stronger.
+
+\bibitem[Redmon and Farhadi, 2018]{redmon2018yolov3}
+Redmon, J. and Farhadi, A. (2018).
+\newblock Yolov3: An incremental improvement.
+\newblock arXiv:1804.02767v1.
+
+\bibitem[Teng et~al., 2022]{teng2022}
+Teng, X., Wu, Z., and Yang, F. (2022).
+\newblock Impact of the digital transformation of small- and medium-sized listed companies on performance: Based on a cost-benefit analysis framework.
+\newblock {\em Journal of Mathematics}, 2022:1--15.
+
+\bibitem[Tillväxtverket, 2021]{tillvaxtverket2021}
+Tillväxtverket (2021).
+\newblock Små och medelstora företags digitalisering - vad har betydelse?
+\newblock Technical Report 0366, Tillväxtverket.
+\newblock Accessed: 2025-02-15.
+
+\bibitem[Ultralytics, 2020]{ultralytics2024yolov5}
+Ultralytics (2020).
+\newblock Comprehensive guide to ultralytics yolov5.
+\newblock Accessed: 21 February 2025.
+
+\bibitem[Ultralytics, 2023]{ultralytics2025yolov8}
+Ultralytics (2023).
+\newblock Yolov8: A unified architecture for object detection, classification, and segmentation.
+\newblock \url{https://yolov8.com/}.
+\newblock Accessed: 2025-03-01.
+
+\bibitem[{Ultralytics Inc.}, 2025]{UltralyticsYOLO11}
+{Ultralytics Inc.} (2025).
+\newblock {Ultralytics YOLO11}.
+\newblock \url{https://docs.ultralytics.com/models/yolo11/}.
+\newblock Accessed: 3 March 2025.
+
 \bibitem[{United Nations}, 2015]{UN2030Agenda}
 {United Nations} (2015).
 \newblock Transforming our world: The 2030 agenda for sustainable development.
 \newblock Accessed: February 28, 2025.
+
+\bibitem[Wang et~al., 2024a]{wang2024yolov10}
+Wang, A., Chen, H., Liu, L., Chen, K., Lin, Z., Han, J., and Ding, G. (2024a).
+\newblock Yolov10: Real-time end-to-end object detection.
+
+\bibitem[Wang et~al., 2022]{wang2022yolov7}
+Wang, C.-Y., Bochkovskiy, A., and Liao, H.-Y.~M. (2022).
+\newblock Yolov7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors.
+\newblock {\em arXiv preprint arXiv:2207.02696}.
+\newblock Version 1, 6 Jul 2022.
+
+\bibitem[Wang et~al., 2024b]{wang2024yolov9}
+Wang, C.-Y., Yeh, I.-H., and Liao, H.-Y.~M. (2024b).
+\newblock Yolov9: Learning what you want to learn using programmable gradient information.
+\newblock {\em arXiv preprint arXiv:2402.13616}.
+
+\bibitem[Wu et~al., 2022]{MINGfANG}
+Wu, M., Brandhorst, H., Marinescu, m.-c., Moré, J., Hlava, M., and Busch, J. (2022).
+\newblock Automated metadata annotation: What is and is not possible with machine learning.
+\newblock {\em Data Intelligence}, 5:1--17.
+
+\bibitem[Yin, 2014]{yin2014case}
+Yin, R.~K. (2014).
+\newblock {\em Case Study Research: Design and Methods}.
+\newblock SAGE Publications, 5th edition.
 
 \end{thebibliography}
