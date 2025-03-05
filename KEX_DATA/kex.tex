@@ -139,6 +139,7 @@ I would like to thank xxxx for having yyyy.
     AI   & Artificial Intelligence \\
     DAM  & Digital Asset Management \\
     DSR  & Design Science Research \\
+    DT   & Digital Transformation \\
     ERP  & Enterprise Resource Planning \\
     IT   & Information Technology \\
     ML   & Machine Learning \\
@@ -229,37 +230,39 @@ offer an opportunity to overcome these limitations. However, deploying a YOLO-po
   training a model from scratch—a process that demands extensive annotated data and computational resources—a 
   more feasible approach is to fine-tune a pre-trained model using company-specific data. 
 
-\vspace{0.3cm}
-\subsubsection{Research questions}
-\vspace{0.3cm}
-
-\begin{enumerate}[label=(\alph*)]
-    \item To what extent does fine-tuning YOLOv11 on company-specific data improve metadata accuracy in DAM for manufacturing assets? 
-    What are the trade-offs in computational efficiency between the model and conventional DAM tagging methods? (DATA)
-    
-    \item How does fine-tuning affect model performance across different asset types in a high-end manufacturing context? (DATA)
-    
-    \item How does fine-tuning affect model performance across different asset types in a high-end manufacturing context? (INDEK)
-\end{enumerate}
-
-
-Can fine-tuning effectively capture the subtle distinctions of assets? 
-
-
-
 
 \subsection{Purpose}
 % State the purpose of your thesis and the purpose of your degree project.
 % Describe who benefits and how they benefit if you achieve your goals. Include anticipated
 % ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections
 % in Section 6.4.) /
-
 The primary aim of this thesis is to assess the feasibility and impact of a YOLO-powered DAM system 
 that has been fine-tuned on company-specific data to address the unique needs of premium manufacturing SMEs. 
 The research will benchmark the performance of this fine-tuned system against a conventional open-source DAM 
 platform (ResourceSpace), focusing on improvements in asset categorization accuracy
 and retrieval efficiency. 
+
 \vspace{0.3cm}
+\subsubsection{Technical Research questions (DATA)}
+\vspace{0.3cm}
+
+\begin{enumerate}[label=(\alph*)]
+    \item To what extent does fine-tuning YOLOv11 on company-specific data improve metadata accuracy in DAM for manufacturing assets?
+    Can it effectively capture the subtle distinctions of assets? 
+    
+    \item What are the trade-offs between the YOLOv11 model and ResourceSpace DAM tagging methods?
+\end{enumerate}
+
+\subsubsection{Business Research questions (INDEK)}
+\vspace{0.3cm}
+Technological advancements alone do not guarantee successful integration. To complement this,
+the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
+
+\begin{enumerate}[label=(\alph*), resume]
+    \item How does employee adaptation, the necessity of training, and any role adjustments impact a bespoke manufacturing company? 
+    \item (add / incorporate something about process innovation? )
+    \item In what way does improved tagging strangthen brand consistency, customer engagement, and scalability?
+\end{enumerate}   
 
 \subsubsection{Societal Impact}
 \vspace{0.2cm}
@@ -298,7 +301,7 @@ the need for clear guidelines to mitigate risks associated with autonomous decis
 \subsubsection{Sustainability, and social considerations}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\linewidth]{targets.png}  % Replace with actual image file
+    \includegraphics[width=0.48\linewidth]{targets.png}  % Replace with actual image file
     \caption{Sustainable Development Target 9.5 and 12.6}
     \label{fig:targets}  
 \end{figure}
@@ -376,8 +379,7 @@ A comparative analysis will be conducted to assess whether the customized
 system offers significant improvements over traditional solutions. 
 Resulting in practical recommendations 
 and guidelines for manufacturing SMEs 
-considering the adoption of AI-powered
-DAM solutions
+considering the adoption of AI-powered DAM.
 
 
 \subsection{Research Methodology}
@@ -387,9 +389,7 @@ Mixed-methods research combines quantitative techniques
 (e.g., controlled experiments and statistical analyses) with 
 qualitative techniques (e.g., semi-structured interviews and thematic analysis)
 to provide a comprehensive evaluation of complex systems \citep{johnson2004mixed}.
-\vspace{0.3cm}
-
-Alternative methodologies—such as exclusively quantitative performance evaluations 
+\vspace{0.3cm} Alternative methodologies—such as exclusively quantitative performance evaluations 
 or purely qualitative case studies—were considered but ultimately rejected because 
 they would not fully capture the multifaceted challenges of deploying an AI-powered 
 system in a dynamic industrial environment.
@@ -411,7 +411,7 @@ this study adopts the design science research (DSR) paradigm. DSR is particularl
 well-suited for technology-driven projects because it promotes the iterative design, 
 development, and rigorous evaluation of IT artifacts to solve 
 real-world problems \citep{hevner2004design}. In this project, 
-the YOLO-powered digital asset management system represents 
+the YOLO-powered DAM system represents 
 the artifact developed and refined through iteration.
 
 \vspace{0.3cm}
@@ -422,14 +422,10 @@ metrics—such as asset categorization accuracy, retrieval efficiency,
 and overall system usability. Statistical analysis w
 ill be used to validate the improvements brought about by model fine-tuning, 
 following best practices in empirical research \citep{creswell2014, yin2014case}.
-\vspace{0.3cm}
-
 Complementing this, qualitative methods will capture contextual insights and 
 stakeholder perspectives. Semi-structured interviews and thematic analysis 
 will be employed to understand user experiences and organizational challenges 
 associated with implementing the DAM system. 
-\vspace{0.3cm}
-
 Moreover, to develop a standardized 
 labeling schema for the dataset, a targeted collaboration with a designated 
 expert from the company will be undertaken. This focused approach is 
@@ -445,16 +441,12 @@ terminology is accurately captured and applied consistently during annotation.
 This thesis focuses exclusively on evaluating a YOLO-powered digital asset management 
 system for premium manufacturing SMEs. The study is limited to a specific company’s 
 environment and a predefined dataset.
-The research investigates only the fine-tuning of an existing pre-trained YOLO model. 
+The research investigates only the fine-tuning of an existing pre-trained YOLOv11 model. 
 Training a model from scratch, which requires vast amounts of data and computational resources, 
 is beyond the scope of this project.
-\vspace{0.3cm}
-
 Instead of conducting a large-scale survey, the study uses semi-structured interviews with key 
 stakeholders—particularly a designated domain expert—to develop a standardized labeling schema. 
 This focused approach is chosen because only a few employees directly manage digital assets.
-
-\vspace{0.3cm}
 The assessment will concentrate on technical performance indicators such as asset categorization accuracy, 
 retrieval efficiency, and overall system usability. Broader issues such as integration with other enterprise systems 
 and macroeconomic impacts are beyond the scope of this project.
@@ -470,7 +462,7 @@ Chapter 2 provides the necessary background and reviews related work,
  establishing the context for DAM and identifying the key gaps this project addresses. 
  Chapter 3 outlines the methodology—including the design science approach, 
  mixed-methods strategy, data collection, experimental design, and evaluation 
- criteria—used to assess the YOLO-powered DAM system. 
+ criteria—used to assess the system. 
  Chapter 4 details the implementation, covering system design, 
  model fine-tuning, dataset development, and the technical setup for testing. 
  Chapter 5 presents the results and analysis, discussing both quantitative 
@@ -482,7 +474,7 @@ Chapter 2 provides the necessary background and reviews related work,
 
 
 % --------------------------------------------------------------------------------------------------------------------------------------------
-
+\newpage
 % ===== Section 2: Background =====
 \section{Background}
 % This chapter provides basic background information about xxx. Additionally, this chapter describes
@@ -505,42 +497,61 @@ Chapter 2 provides the necessary background and reviews related work,
 % hat to do now versus what to put off to future work.
 
 \subsection{\mbox{Digital Asset Management}}
-Krogh (2009) presents DAM as an essential system for managing digital photography in a way that prioritizes protection, 
-accessibility, and longevity. While the components of a DAM system are deeply interwoven, the guiding principles 
-remain consistent: images must be preserved, findable, and future-proofed\citep{krogh2009}. 
-\vspace{0.3cm}
+\cite{krogh2009} describes DAM as an essential framework for protecting, 
+organizing, and prolonging the usability of digital files by emphasizing 
+metadata, suitable file formats, and efficient workflows. As shown in Figure \ref{fig:4steg}, 
+five interconnected stages—creation, management, distribution, archiving, and retrieval—collectively 
+ensure that digital assets remain discoverable and relevant long after their initial production.
+Although Krogh does not explicitly align his approach with the Resource-Based View (RBV), 
+his emphasis on preserving assets as integral organizational resources parallels RBV’s 
+tenet that competitive advantage relies on valuable, rare, inimitable, and non-substitutable 
+(VRIN) capabilities \citep{barney1991}. By structuring DAM processes around rigorous 
+metadata management, secure storage, and ongoing accessibility, organizations can treat 
+their digital repositories as strategic assets, safeguarding long-term benefits that are 
+difficult for competitors to replicate.
 
-By structuring digital archives with careful attention to metadata, file formats, and workflow efficiency, he argues photographers and organizations can ensure 
-that their collections remain valuable and usable over time. The primary stages of DAM can be 
-categorized into five stages as illustrated in Figure~\ref{fig:4steg}.
-
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.5\linewidth]{4steg.png}  % Replace with actual image file
-    \caption{Illustrating the main stages of digital asset management.}
+    \caption{Illustrating the five main stages of DAM.}
     \label{fig:4steg}  
 \end{figure}
 
 \vspace{0.3cm}
-\subsubsection{Technology Alone is Not Enough}
+\subsubsection{Technological Tools Demand Continuous Organizational Adaptation}
+\vspace{0.3cm}
 
-Love and Matthews (2019) demonstrated through a series of case studies that the promise of DAM
-is not unlocked simply by adopting new technology but only when companies embrace two 
-fundamental principles.
-
-First, that technology alone does not create value but must be accompanied by 
-organizational process reengineering, and second, that the benefits of DAM 
-are maximized only through continuous strategic governance to monitor and sustain its impact.
-
-\subsection{The Resource-Based View}
-The Resource-Based View (RBV) suggests that organizations derive competitive advantage by leveraging valuable, rare, inimitable, 
-and non-substitutable (VRIN) resources \cite{barney1991}. DAM systems fulfill these criteria by providing centralized governance,
-metadata standardization, and automation, transforming digital assets into strategic resources \cite{Chumphong2020}.
+\cite{LOVE2019102930} identify a critical gap in the construction industry: knowing “why” 
+to adopt digital technologies is relatively straightforward, but knowing “how” to translate 
+technological potential into real value remains largely underexplored. Their case studies underscore 
+the fact that digital transformation does not happen automatically; organizations must actively
+ invest in processes such as benefits management and the development of a Business Dependency 
+ Network (BDN) to realize tangible gains from their digital initiatives \citep{LOVE2019102930}.
+In a broader context, Hanelt et al. (2020) posit that digital transformation (DT) goes beyond 
+any single disruptive episode; it is a continual, structural adjustment propelled by digital 
+technologies. Their systematic review of 279 peer-reviewed articles frames DT across three 
+dimensions—Contextual Conditions (e.g., technological advances, shifting consumer habits), 
+Mechanisms (e.g., the innovative strategies organizations adopt), and Outcomes 
+(e.g., changes to organizational structures and industry norms). By proposing 
+a typology that spans technology impact, compartmentalized adaptation, systemic 
+shift, and holistic co‐evolution, they challenge the idea of one-off change, 
+advocating instead for an iterative, agile approach to transformation \citep{Haneltarticle}.
 
 \vspace{0.3cm}
-Empirical findings support this perspective. \cite{Chumphong2020} report that SMEs achieving full DAM integration 
-demonstrate 23\% higher operational resilience during market disruptions compared to those with only partial implementation. 
-This aligns with RBV’s emphasis on resource orchestration and its role in maintaining competitiveness.
+Taken together, these two perspectives highlight that while there is strong motivation to 
+deploy new technologies (“why”), sustained, organization-wide benefits only materialize 
+when there is a concerted effort to integrate, evaluate, and adapt these digital tools 
+in an ongoing manner (“how”). Both studies imply that true success hinges on long-term 
+structural and cultural shifts rather than static, one-off solutions.
+
+that the promise of DAM
+is not unlocked simply by adopting new technology but only when companies embrace two 
+fundamental principles. First, that technology alone does not create value but must be accompanied by 
+organizational process reengineering, and second, that the benefits of DAM 
+are maximized only through continuous strategic governance to monitor and sustain its impact 
+
+
+A missing perspective in
 
 Nevertheless, some scholars argue that
 resource possession alone does not guarantee successful 
@@ -559,49 +570,11 @@ rity.
 
 
 
-The first principle is a recognition that technology does not automatically create value. 
-Rather, its benefits are realized only when organizations actively re-engineer their processes 
-and align them with strategic governance \citep{LOVE2019102930}. 
-
-Building on these insights, Peppard (2016) argued that technology benefits cannot be achieved 
-without organizational change, and change efforts must produce tangible benefits to be sustainable. 
-He emphasized the need for strategic oversight to keep DAM systems adaptable and aligned with business 
-needs rather than letting them become static and ineffective\citep{LOVE2019102930}.
+% What about the benefits? A missing perspective in software engineering
+% There are xxx characteristics that distinguish yyy from other information and communication
+% technology (ICT) system, as shown in Figure 2-1. Table 2.1 summarizes these characteristics.
 
 
-Building on these insights, Peppard (2016) argued that the realization of technology benefits 
-is inseparable from organizational transformation, stating that "benefits are unable to be delivered 
-without change, and change without benefits cannot be sustained."
-He underscored the necessity of strategic oversight to ensure that DAM systems evolve alongside business needs rather than remaining static implementations
-
-
-
-
-
-What about the benefits? A missing perspective in software engineering
-There are xxx characteristics that distinguish yyy from other information and communication
-technology (ICT) system, as shown in Figure 2-1. Table 2.1 summarizes these characteristics.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.4\linewidth]{kthLogga.png}  % Replace with actual image file
-    \caption{An example figure in Section 2.1.}
-    \label{fig:lit_review}  
-\end{figure}
-
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        Column 1 & Column 2 \\
-        \hline
-        Data 1 & Data 2 \\
-        Data 3 & Data 4 \\
-        \hline
-    \end{tabular}
-    \caption{An example table in Section 2.1.}
-    \label{tab:lit_review}  
-\end{table}
 
 
 \ref{fig:lit_review} is an image 
@@ -657,12 +630,12 @@ It is just a algoritm... so you have to do a lot around it?
 
 \paragraph{Scheme}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1.2\linewidth]{YOLOSTEP.png}  % Replace with actual image file
-    \caption{YOLOv11 performance comparison (Ultralytics Inc., 2025).}
-    \label{fig:Scheme}  
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=1.2\linewidth]{YOLOSTEP.png}  % Replace with actual image file
+%     \caption{YOLOv11 performance comparison (Ultralytics Inc., 2025).}
+%     \label{fig:Scheme}  
+% \end{figure}
 
 \begin{figure}[h]
     \centering
@@ -707,9 +680,20 @@ It combines this info to yeild the object detections
 As demonstrated in table \ref{tab:yolo_versions} the YOLO series has
  evolved significantly since its inception, introducing progressive improvements
   in object detection, computational efficiency, and feature extraction. 
-\vspace{0.3cm}
+YOLOv11 is the best choice for the project due to its superior accuracy, 
+efficiency, and versatility. As Khanam and Hussain (2024) highlight, 
+its architectural upgrades enhance feature extraction while minimizing 
+computational costs, making it ideal for real-time applications requiring 
+both speed and precision \citep{khanam2024yolov11overviewkeyarchitectural}.
 
-\begin{table}[htbp]
+\vspace{0.3cm}
+Beyond object detection, YOLOv11 supports instance segmentation, 
+pose estimation, and oriented object detection, offering greater adaptability 
+to the project’s needs. Its optimized balance of accuracy and processing speed 
+ensures strong performance across different computing environments, from edge 
+devices to high-performance systems, making it the most effective solution
+
+\begin{table}[t]
     \centering
     {\small
     \begin{tabularx}{\linewidth}{|c|X|}
@@ -844,20 +828,6 @@ As demonstrated in table \ref{tab:yolo_versions} the YOLO series has
     \caption{Summary of YOLO Model Evolution}
     \label{tab:yolo_versions}
 \end{table}
-
-
-YOLOv11 is the best choice for the project due to its superior accuracy, 
-efficiency, and versatility. As Khanam and Hussain (2024) highlight, 
-its architectural upgrades enhance feature extraction while minimizing 
-computational costs, making it ideal for real-time applications requiring 
-both speed and precision \citep{khanam2024yolov11overviewkeyarchitectural}.
-
-\vspace{0.3cm}
-Beyond object detection, YOLOv11 supports instance segmentation, 
-pose estimation, and oriented object detection, offering greater adaptability 
-to the project’s needs. Its optimized balance of accuracy and processing speed 
-ensures strong performance across different computing environments, from edge 
-devices to high-performance systems, making it the most effective solution
 
 
 \begin{figure}[h]

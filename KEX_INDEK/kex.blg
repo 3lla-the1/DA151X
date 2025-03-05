@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: kex.aux
 The style file: apalike.bst
 Database file #1: references.bib
-You've used 11 entries,
+You've used 6 entries,
             1935 wiz_defined-function locations,
-            549 strings with 5397 characters,
-and the built_in function-call counts, 4006 in all, are:
-= -- 389
-> -- 133
-< -- 8
-+ -- 48
-- -- 42
-* -- 340
-:= -- 711
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 74
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 152
-empty$ -- 300
-format.name$ -- 57
-if$ -- 779
+            516 strings with 4625 characters,
+and the built_in function-call counts, 2208 in all, are:
+= -- 211
+> -- 76
+< -- 4
++ -- 26
+- -- 24
+* -- 188
+:= -- 391
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 40
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 84
+empty$ -- 167
+format.name$ -- 34
+if$ -- 430
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 12
-newline$ -- 59
-num.names$ -- 33
-pop$ -- 56
+missing$ -- 8
+newline$ -- 33
+num.names$ -- 18
+pop$ -- 35
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 42
 quote$ -- 0
-skip$ -- 114
+skip$ -- 63
 stack$ -- 0
-substring$ -- 302
-swap$ -- 11
-text.length$ -- 1
+substring$ -- 162
+swap$ -- 6
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 62
+type$ -- 32
 warning$ -- 0
-while$ -- 32
+while$ -- 17
 width$ -- 0
-write$ -- 146
+write$ -- 79

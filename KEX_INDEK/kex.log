@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  4 MAR 2025 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  5 MAR 2025 13:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -447,7 +447,7 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-<kthLogga.png, id=88, 88.1694pt x 98.2872pt>
+<kthLogga.png, id=76, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
 Package pdftex.def Info: kthLogga.png  used on input line 40.
@@ -500,28 +500,21 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 86
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (0.24792pt too wide) in paragraph at lines 121--124
-\T1/lmr/m/n/12 (-20) SMEs achiev-ing full DAM in-te-gra-tion demon-
- []
-
-
-Overfull \hbox (2.13866pt too wide) in paragraph at lines 121--124
-\T1/lmr/m/n/12 (-20) with only par-tial im-ple-men-ta-tion. This aligns
+Overfull \hbox (4.21844pt too wide) in paragraph at lines 142--148
+[]\T1/lmr/m/n/12 (-20) Simons[] ([]1995[]) Levers of Con-trol (LOC) frame-
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.124 
-       [1
+l.171 H
+       owever, for DAM to function as interactive control, management must a... [1
 
 {/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-Overfull \hbox (4.21844pt too wide) in paragraph at lines 142--148
-[]\T1/lmr/m/n/12 (-20) Simons[] ([]1995[]) Levers of Con-trol (LOC) frame-
- []
+Underfull \vbox (badness 8056) has occurred while \output is active []
 
-[2]
+
 Overfull \hbox (1.287pt too wide) in paragraph at lines 199--200
 []\T1/lmr/m/n/12 (-20) Process and mar-ket-ing in-no-va-tion strate-
  []
@@ -536,32 +529,32 @@ Overfull \hbox (15.2401pt too wide) in paragraph at lines 213--213
 |[]\T1/lmr/bx/n/14.4 (-20) Economic and Or-ga-ni-za-tional
  []
 
-[3] (./kex.bbl
-Underfull \hbox (badness 1178) in paragraph at lines 19--22
+[2] (./kex.bbl
+Underfull \hbox (badness 1178) in paragraph at lines 9--12
 \T1/lmr/m/it/12 (+20) Strate-gic Man-age-ment Jour-nal\T1/lmr/m/n/12 (+20) , 21(10-
  []
 
-) [4] (./kex.aux)
+) [3] (./kex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: 3474512281037AB293DD49938845760F;3555.
+(rerunfilecheck)             Checksum: 5DE76167FEF5BDD8E6465225BBEB49CE;3036.
  ) 
 Here is how much of TeX's memory you used:
- 12935 strings out of 475567
- 203387 string characters out of 5777889
- 1940187 words of memory out of 5000000
- 34748 multiletter control sequences out of 15000+600000
- 605356 words of font info for 127 fonts, out of 8000000 for 9000
+ 12886 strings out of 475567
+ 202650 string characters out of 5777889
+ 1939187 words of memory out of 5000000
+ 34730 multiletter control sequences out of 15000+600000
+ 604311 words of font info for 116 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,11n,79p,1047b,500s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1047b,542s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on kex.pdf (6 pages, 200995 bytes).
+Output written on kex.pdf (5 pages, 193836 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 37 named destinations out of 1000 (max. 500000)
- 26798 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 26774 words of extra memory for PDF output out of 29859 (max. 10000000)
 

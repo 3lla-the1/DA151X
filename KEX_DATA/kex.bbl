@@ -1,14 +1,29 @@
 \begin{thebibliography}{}
 
+\bibitem[Barney, 1991]{barney1991}
+Barney, J. (1991).
+\newblock Firm resources and sustained competitive advantage.
+\newblock {\em Journal of Management}, 17(1):99--120.
+
 \bibitem[Bochkovskiy et~al., 2020]{bochkovskiy2020yolov4}
 Bochkovskiy, A., Wang, C.-Y., and Liao, H.-Y.~M. (2020).
 \newblock Yolov4: Optimal speed and accuracy of object detection.
 \newblock arXiv:2004.10934v1, 23 Apr 2020.
 
+\bibitem[Civelek et~al., 2023]{Civelek2023}
+Civelek, M., Kraj{\v{c}}{\'i}k, V., and Klju{\v{c}}nikov, A. (2023).
+\newblock The impacts of dynamic capabilities on smes' digital transformation process: The resource-based view perspective.
+\newblock {\em Oeconomia Copernicana}, 14(4):1367--1392.
+
 \bibitem[Creswell, 2014]{creswell2014}
 Creswell, J.~W. (2014).
 \newblock {\em Research Design: Qualitative, Quantitative, and Mixed Methods Approaches}.
 \newblock SAGE Publications, 4th edition.
+
+\bibitem[Hanelt et~al., 2020]{Haneltarticle}
+Hanelt, A., Bohnsack, R., Marz, D., and Antunes~Marante, C. (2020).
+\newblock A systematic review of the literature on digital transformation: Insights and implications for strategy and organizational change.
+\newblock {\em Journal of Management Studies}.
 
 \bibitem[Hevner et~al., 2004]{hevner2004design}
 Hevner, A.~R., March, S.~T., Park, J., and Ram, S. (2004).
