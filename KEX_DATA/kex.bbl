@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Angulo et~al., 2019]{Angulo_2019}
+Angulo, A., Vega-Fernández, J.~A., Aguilar-Lobo, L.~M., Natraj, S., and Ochoa-Ruiz, G. (2019).
+\newblock {\em Road Damage Detection Acquisition System Based on Deep Neural Networks for Physical Asset Management}, page 3–14.
+\newblock Springer International Publishing.
+
 \bibitem[Barney, 1991]{barney1991}
 Barney, J. (1991).
 \newblock Firm resources and sustained competitive advantage.
@@ -20,10 +25,19 @@ Creswell, J.~W. (2014).
 \newblock {\em Research Design: Qualitative, Quantitative, and Mixed Methods Approaches}.
 \newblock SAGE Publications, 4th edition.
 
+\bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
+Goodfellow, I., Bengio, Y., and Courville, A. (2016).
+\newblock {\em Deep Learning}.
+\newblock MIT Press.
+
 \bibitem[Hanelt et~al., 2020]{Haneltarticle}
 Hanelt, A., Bohnsack, R., Marz, D., and Antunes~Marante, C. (2020).
 \newblock A systematic review of the literature on digital transformation: Insights and implications for strategy and organizational change.
 \newblock {\em Journal of Management Studies}.
+
+\bibitem[He et~al., 2024]{he2024comprehensiveperformanceevaluationyolov11}
+He, Z., Wang, K., Fang, T., Su, L., Chen, R., and Fei, X. (2024).
+\newblock Comprehensive performance evaluation of yolov11, yolov10, yolov9, yolov8 and yolov5 on object detection of power equipment.
 
 \bibitem[Hevner et~al., 2004]{hevner2004design}
 Hevner, A.~R., March, S.~T., Park, J., and Ram, S. (2004).
@@ -44,9 +58,20 @@ Johnson, R.~B. and Onwuegbuzie, A.~J. (2004).
 \newblock Mixed methods research: A research paradigm whose time has come.
 \newblock {\em Educational Researcher}, 33(7):14--26.
 
+\bibitem[Karbouj et~al., 2024]{KARBOUJ2024527}
+Karbouj, B., Topalian-Rivas, G.~A., and Krüger, J. (2024).
+\newblock Comparative performance evaluation of one-stage and two-stage object detectors for screw head detection and classification in disassembly processes.
+\newblock {\em Procedia CIRP}, 122:527--532.
+\newblock 31st CIRP Conference on Life Cycle Engineering (LCE 2024).
+
 \bibitem[Khanam and Hussain, 2024]{khanam2024yolov11overviewkeyarchitectural}
 Khanam, R. and Hussain, M. (2024).
 \newblock Yolov11: An overview of the key architectural enhancements.
+
+\bibitem[Khanam et~al., 2024]{10589380}
+Khanam, R., Hussain, M., Hill, R., and Allen, P. (2024).
+\newblock A comprehensive review of convolutional neural networks for defect detection in industrial applications.
+\newblock {\em IEEE Access}, 12:94250--94295.
 
 \bibitem[Krogh, 2009]{krogh2009}
 Krogh, P. (2009).
@@ -68,6 +93,11 @@ McCain, E., Mara, N., Van~Malssen, K., Carner, D., Reilly, B., Willette, K., Sch
 \newblock Donald W. Reynolds Journalism Institute, University of Missouri--Columbia Libraries.
 \newblock OpenAccess. Licensed under CC BY 4.0.
 
+\bibitem[Rane, 2023]{articleRANE}
+Rane, N. (2023).
+\newblock Yolo and faster r-cnn object detection for smart industry 4.0 and industry 5.0: applications, challenges, and opportunities.
+\newblock {\em SSRN Electronic Journal}.
+
 \bibitem[Redmon et~al., 2016]{redmon2016you}
 Redmon, J., Divvala, S., Girshick, R., and Farhadi, A. (2016).
 \newblock You only look once: Unified, real-time object detection.
@@ -81,6 +111,16 @@ Redmon, J. and Farhadi, A. (2016).
 Redmon, J. and Farhadi, A. (2018).
 \newblock Yolov3: An incremental improvement.
 \newblock arXiv:1804.02767v1.
+
+\bibitem[Sapkota et~al., 2025]{Sapkota2025YOLOv11}
+Sapkota, R., Qureshi, R., Flores-Calero, M., Badgujar, C., Nepal, U., Poulose, A., Zeno, P., Vaddevolu, U. B.~P., Khan, S., Shoman, M., Yan, H., and Karkee, M. (2025).
+\newblock Yolo11 to its genesis: A decadal and comprehensive review of the you only look once (yolo) series.
+\newblock {\em arXiv}, 2406(19407v5).
+
+\bibitem[Soori et~al., 2023]{SOORI202354}
+Soori, M., Arezoo, B., and Dastres, R. (2023).
+\newblock Artificial intelligence, machine learning and deep learning in advanced robotics, a review.
+\newblock {\em Cognitive Robotics}, 3:54--70.
 
 \bibitem[Teng et~al., 2022]{teng2022}
 Teng, X., Wu, Z., and Yang, F. (2022).
@@ -115,6 +155,11 @@ Ultralytics (2023).
 \newblock Transforming our world: The 2030 agenda for sustainable development.
 \newblock Accessed: February 28, 2025.
 
+\bibitem[Vina, 2024]{vina2024yolo11}
+Vina, A. (2024).
+\newblock The benefits of ultralytics yolo11 being an anchor-free detector.
+\newblock {\em Ultralytics Blog}.
+
 \bibitem[Wang et~al., 2024a]{wang2024yolov10}
 Wang, A., Chen, H., Liu, L., Chen, K., Lin, Z., Han, J., and Ding, G. (2024a).
 \newblock Yolov10: Real-time end-to-end object detection.
@@ -139,5 +184,10 @@ Wu, M., Brandhorst, H., Marinescu, m.-c., Moré, J., Hlava, M., and Busch, J. (2
 Yin, R.~K. (2014).
 \newblock {\em Case Study Research: Design and Methods}.
 \newblock SAGE Publications, 5th edition.
+
+\bibitem[Zhang et~al., 2025]{ZhangLei2025RoMH}
+Zhang, L., Sun, Z., Tao, H., Wang, M., and Yi, W. (2025).
+\newblock Research on mine-personnel helmet detection based on multi-strategy-improved yolov11.
+\newblock {\em Sensors (Basel, Switzerland)}, 25(1):170--.
 
 \end{thebibliography}

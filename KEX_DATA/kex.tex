@@ -65,6 +65,7 @@
     {\large BACHELOR'S THESIS IN COMPUTER SCIENCE AND INDUSTRIAL ECONOMICS}\\[0.5cm]
     {\large UNDERGRADUATE LEVEL 15 CREDITS}\\[3cm]
     {\Huge \textbf{A Comparative Evaluation of Open-Source Digital Asset Management Systems}}\\[0.5cm]
+    
     {\Large Exploring Organizational and Marketing Criteria for Process and Marketing Innovation in SMEs}\\[1cm]
     \vfill
     {\Large \textbf{ELLA KARLSSON}}\\[1cm]
@@ -74,6 +75,10 @@
 \end{titlepage}
 
 % --------------------------------------------------------------------------------------------------------------------------------------------
+% The Influence of Neural
+% Network-based Image
+% Enhancements on Object
+% Detection
 
 % ===== Section 1: abstract och sammanfattning... =====
 \newpage
@@ -241,7 +246,7 @@ platform (ResourceSpace), focusing on improvements in asset categorization accur
 and retrieval efficiency. 
 
 \vspace{0.3cm}
-\subsubsection{Technical Research questions (DATA)}
+\subsubsection{Technical Research questions}
 \vspace{0.3cm}
 
 \begin{enumerate}[label=(\alph*)]
@@ -251,7 +256,7 @@ and retrieval efficiency.
     \item What are the trade-offs between the YOLOv11 model and ResourceSpace DAM tagging methods?
 \end{enumerate}
 
-\subsubsection{Business Research questions (INDEK)}
+\subsubsection{Business Research questions}
 \vspace{0.3cm}
 Technological advancements alone do not guarantee successful integration. To complement this,
 the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
@@ -499,6 +504,474 @@ Chapter 2 provides the necessary background and reviews related work,
 % you have done as you may change your mind about w
 % hat to do now versus what to put off to future work.
 
+\subsection{\mbox{Artificial Inteligence}}
+Artificial Intelligence (AI) is a field of computer science 
+that focuses on systems built on algorithms, 
+which are formalized sets of instructions that 
+process input data to produce outputs \citep{10589380}. 
+Machine Learning (ML), a subset of AI, represents a shift away 
+from manually encoded rules toward data-driven learning. 
+Instead of being explicitly programmed for specific tasks, 
+ML models identify patterns in large datasets and 
+use statistical techniques to make predictions or classify new data.
+
+\cite{10589380} describe deep learning (DL) as a machine learning 
+approach that utilizes multi-layered computational models to 
+extract patterns from data at varying levels of abstraction. 
+Inspired by the human brain, DL models excel at recognizing 
+intricate patterns in large datasets, making them essential 
+in fields such as image recognition, natural language processing, 
+and autonomous systems \citep{SOORI202354}.
+
+Within DL, different neural network architectures are designed to process
+ specific types of data and perform specialized tasks. 
+ One of the most effective architectures for structured, 
+ grid-like data—such as images and time-series signals—is 
+ the Convolutional Neural Network (CNN). 
+ CNNs employ convolutional operations to automatically 
+ learn spatial hierarchies of features, allowing them to 
+ capture patterns and structures in data with high accuracy. 
+ As a result, CNNs have become a cornerstone of computer vision, 
+ powering applications in object detection, image classification, 
+ and other visual recognition tasks \citep[pp. 326-328]{Goodfellow-et-al-2016}.
+
+\vspace{0.3cm}
+\subsubsection{Object Detection}
+\vspace{0.3cm}
+Object detection involves both the ability to recognize the classes of multiple objects in an image
+and determining their positions, whereas image classification assigns a single 
+class to the entire image without distinguishing individual objects.
+
+\cite{ZhangLei2025RoMH} outline how DL-based object 
+detection methods are primarily divided into two categories: 
+two-stage and single-stage networks. 
+Two-stage networks, such as Region-Based Convolutional Neural Networks (R-CNNs), 
+rely on generating region proposals before classifying and refining object 
+locations. In contrast, single-stage networks, such as You Only Look Once (YOLO),
+ eliminate this intermediate step by predicting object classes
+ and bounding boxes in a single pass. This approach significantly improves 
+ detection speed and efficiency. As Zhang et al. (2025) emphasize, 
+ single-stage models have become widely adopted in various industries 
+ due to their ability to perform real-time object detection accurately.
+\vspace{0.3cm}
+\subsubsection{\mbox{YOLOv11 model}}
+\vspace{0.3cm}
+
+The YOLOv11 model, developed by Ultralytics marks the latest milestone in the continuous evolution
+ of the YOLO series, building on a decade of refinement and optimization,
+  as summarized in Table \ref{tab:yolo_versions}. Since its introduction
+   by \cite{redmon2016you}, it has revolutionized real-time object
+    detection with its single-stage pipeline, offering a faster and
+     more efficient alternative to traditional region-based 
+     approaches like R-CNNs.
+
+\begin{table}[htbp]
+    \centering
+    {\small
+    \begin{tabularx}{\linewidth}{|c|X|}
+        \hline
+        \textbf{Release} & \textbf{Capabilities} \\
+        \hline
+        \makecell[t]{\textbf{V1} \\ \\ {\tiny JUN 2015}} 
+        & {\footnotesize Darknet. A single-stage object detector with basic classification
+        \citep{redmon2016you}.} \\
+        \hline
+        \makecell[t]{\textbf{V2} \\ \\ {\tiny DEC 2016}} 
+        & {\footnotesize Darknet. Object detection. Darknet-19 architecture, anchor boxes, and higher resolution inputs
+        \citep{redmon2016yolo9000betterfasterstronger}.} \\
+        \hline
+        \makecell[t]{\textbf{V3} \\ \\ {\tiny MAR 2018}} 
+        & {\footnotesize Darknet. Object detection. Darknet-53 network \& multi-scale predictions for varying object sizes.
+        \citep{redmon2018yolov3}.} \\
+        \hline
+        \makecell[t]{\textbf{V4} \\ \\ {\tiny APR 2020}} 
+        & {\footnotesize Darknet. Object detection. Basic object tracking with BCSPDarknet53 and SPP.
+        \citep{bochkovskiy2020yolov4}.} \\
+        \hline
+        \makecell[t]{\textbf{V5} \\ \\ {\tiny JUN 2020}} 
+        & {\footnotesize PyTorch. Object detection. Basic instance segmentation. Multi-GPU support, and exports 
+        \citep{ultralytics2024yolov5}.} \\
+        \hline
+        \makecell[t]{\textbf{V6} \\ \\ {\tiny SEP 2022}} 
+        & {\footnotesize PyTorch. Object detection \& instance segmentation. Reparameterizable backbone for model scaling.
+        \citep{li2022yolov6}.} \\
+        \hline
+        \makecell[t]{\textbf{V7} \\ \\ {\tiny JUL 2022}} 
+        & {\footnotesize PyTorch. Object detection, tracking \& instance segmentation.
+        \citep{wang2022yolov7}.} \\
+        \hline
+        \makecell[t]{\textbf{V8} \\ \\ {\tiny JAN 2023}} 
+        & {\footnotesize PyTorch. Object detection, instance \& panoptic segmentation, keypoint estimation,
+        NVIDIA GPUs, Jetson.
+        \citep{ultralytics2025yolov8}.} \\
+        \hline
+        \makecell[t]{\textbf{V9} \\ \\ {\tiny FEB 2024}} 
+        & {\footnotesize PyTorch. Object detection \& instance segmentation.
+        PGI for better gradient reliability.
+        GELAN network \citep{wang2024yolov9}.} \\
+        \hline
+        \makecell[t]{\textbf{V10} \\ \\ {\tiny MAY 2024}} 
+        & {\footnotesize PyTorch. Object detection \& NMS-free training
+        \citep{wang2024yolov10}.} \\
+        \hline
+        \makecell[t]{\textbf{V11} \\ \\ {\tiny SEP 2024}} 
+        & {\footnotesize PyTorch. Object detection, instance segmentation, pose estimation \& oriented object detection (OBB).
+        \citep{UltralyticsYOLO11}.} \\
+        \hline
+    \end{tabularx}
+    }
+    \caption{Summary of YOLO Model Evolution}
+    \label{tab:yolo_versions}
+\end{table}
+
+
+Early versions of YOLO were built on the Darknet framework, 
+developed by Joseph Redmon, with core implementations written in 
+C and CUDA for fast GPU execution. A framework is a pre-built structure that simplifies software 
+development by providing reusable code, tools, and libraries
+allowing developers to focus on higher-level abstraction.
+As shown in Table 
+\ref{tab:yolo_versions}, the transition to PyTorch occurred 
+with YOLOv5, developed by Ultralytics. 
+PyTorch, originally introduced by Facebook AI Research (FAIR), 
+offered a more flexible and scalable environment, 
+facilitating development in Python and enhancing integration
+ with mainstream deep learning research \citep{ultralytics2024yolov5}.
+
+ \cite{Sapkota2025YOLOv11} conducted a comprehensive review of YOLO-based 
+ object detection applications, highlighting its extensive adoption across 
+ multiple domains, including healthcare (e.g., pill identification, diagnostics), 
+ surveillance (e.g., face mask detection, surveillance), 
+ autonomous vehicles, and industrial quality control. 
+ The study underscores YOLO’s efficiency in real-time processing, 
+ making it a preferred choice for applications requiring rapid inference.
+
+ While YOLO excels in speed, its grid-based detection approach and anchor-free
+  methodology maintained in YOLOv6 and subsequent models introduce inherent limitations. 
+  Both \cite{Sapkota2025YOLOv11}
+   and \cite{he2024comprehensiveperformanceevaluationyolov11} note that, despite 
+   its computational efficiency, YOLO may struggle with fine-grained detail detection, 
+   making it less suitable for tasks requiring high-resolution texture analysis, 
+   such as road damage assessment or material surface inspection \citep{Angulo_2019}. 
+   While this thesis primarily addresses the application of YOLO within DAM in bespoke manufacturing, 
+   insights into the limitations remain highly relevant, particularly in scenarios 
+   where accurate detection and classification of subtle material textures effect performance.
+    
+   The trade-off between speed and accuracy is further emphasized in comparative 
+   analyses, such as \cite{articleRANE}, which contrasts YOLO with Faster R-CNN. 
+   While YOLO excels in inference speed—making it well-suited for real-time applications 
+   such as inventory management, checkout automation, and e-commerce visual search—Faster 
+   R-CNN offers superior object localization and classification accuracy. 
+   This aligns with the findings of \cite{Sapkota2025YOLOv11}, making it the preferred choice 
+   for scenarios demanding precise differentiation and high recall, such as medical imaging. 
+   However, Faster R-CNN's reliance on a region proposal 
+   network (RPN) results in significantly higher computational demands, limiting its 
+   viability for real-time deployment \citep{articleRANE}.
+
+   In contrast, the study by \cite{KARBOUJ2024527} on object detection for screw head identification 
+   in disassembly systems presents a different perspective. Their findings demonstrate that 
+   YOLOv5 outperforms Faster R-CNN across multiple key metrics, including precision, recall, 
+   inference speed (FPS), and training efficiency. This discrepancy arises from the nature of
+   the application and dataset size. As discussed by \cite{articleRANE} Faster R-CNN tends to perform 
+   better in tasks requiring high-detail object recognition. Its RPN helps it generalize
+   more effectively when training data is limited, making it 
+   particularly useful for small datasets 
+   with high precision requirements.
+   Conversely, YOLO's ability to efficiently learn broad patterns makes it a superior choice for 
+   large-scale, high-variance datasets. The findings of \cite{KARBOUJ2024527} reinforce this perspective, 
+   demonstrating YOLOv5’s balance between computational speed and adaptability, making it 
+   particularly effective in real-time, resource-constrained environments.
+
+
+\vspace{0.3cm}
+\subsubsection{\mbox{Convolutional Neural Networks}}
+\vspace{0.3cm}
+
+A bounding box is a rectangle drawn around an object in an image to 
+define its position and size. It is the final output of an object detection 
+model, indicating where the detected object is located as seen in Figure \ref{fig:bounding}.
+
+The evolution of object detection has taken a significant leap with 
+the transition from anchor-based to anchor-free detection models. 
+Anchor-based detectors, such as YOLOv4 and its predicesors in Table 
+\ref{tab:yolo_versions}, use predefined anchor boxes to estimate object locations,
+which requires careful selection and tuning. However, these methods can struggle 
+with detecting objects of varying shapes, sizes, and occlusions.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{bounding.png}  % Replace with actual image file
+    \caption{Bounding box for table with legs.}
+    \label{fig:bounding}  
+\end{figure}
+
+
+
+
+
+TEST
+
+% yolo is trained on https://arxiv.org/pdf/1405.0312
+
+On one hand, YOLO’s real-time inference speed, lightweight architecture, 
+and open-source nature make it a compelling choice for applications 
+requiring fast, on-device processing. 
+
+ As for relating to this thesis. there is limited research on the use of YOLO 
+directly relating for Digital Asset Management (DAM) applications. with only one identified 
+study—Angulo et al. 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ YOLOv1 unified architecture divided the image into a grid, predicting bounding boxes and
+ class probabilities directly for each cell, enabling end-to-end learning
+Since then it has been applied in healthcare including but not limited to pill identification, diagnostic processes and treatment outcomes, 
+survailance for social distancing and face mask detection during pandemics and identification, and 
+autonomous vihechecls and also in detect and classify crops \cite{Sapkota2025YOLOv11}. 
+
+There is also use of YOLO in industry. nspection processes to detect defects and anomalies
+and moreso ensuring quality control in manufacturing and production.
+
+There is limited sources of 
+
+cite{Sapkota2025YOLOv11}. 
+
+
+
+Since then a lot has happened. In the beginning. Yolov1 - v4 relied on anchor boxes. 
+
+\paragraph{The improvements of Yolov11}
+
+
+OLOv11 outperformed previous versions in mean average precision (mAP), recall, and precision, demonstrating superior object detection performance.
+The recall rate, which measures how well the model detects all ground-truth objects, was highest for YOLOv11 (64.8%), outperforming earlier versions.
+YOLOv11 also exhibited fewer false detections compared to its predecessors.
+YOLOv11 displayed higher attention concentration on relevant objects, meaning it focused better on wires and transformers, reducing errors in object localization.
+
+Introduction of the C3K2 module (a new CSP bottleneck layer with smaller convolutional layers), improving feature extraction and detection efficiency.
+Integration of the C2PSA module, which enhances spatial and channel information processing for more accurate detections.
+Optimized adaptive anchor box mechanism, improving the model's adaptability across different object sizes and datasets.
+
+
+\paragraph{bounding box vs achor boxes}
+ A bounding box is a rectangular region that is used to 
+ enclose an object or a specific region of interest 
+ within an image. It is represented by four 
+ coordinates (xmin, ymin) representing 
+ the top-left corner, and (xmax, ymax) 
+ representing the bottom-right corner of the 
+ rectangle. Bounding boxes are used to localize 
+ objects within an image and are commonly annotated 
+ in object detection datasets to provide ground-truth 
+ information about the object’s location.
+
+ Anchor boxes, also known as anchor priors or default 
+ boxes, are pre-defined bounding boxes with specific 
+ sizes, aspect ratios, and positions that are used as 
+ reference templates during object detection. 
+ These anchor boxes are placed at various positions
+  across an image, often in a grid-like pattern, to
+   capture objects of different scales and shapes. 
+   During training and inference, anchor boxes are 
+   used to predict the locations and shapes of objects
+    relative to these reference boxes.
+
+    Bounding boxes are provided as annotations in object detection datasets, representing ground-truth object locations.
+    The model predicts adjustments to anchor boxes to match objects’ actual locations.
+
+\paragraph{The kernel operation}
+At the core of CNNs is the convolution operation, a specialized linear process that replaces 
+the typical matrix multiplication found in other neural network layers. Convolution involves 
+computing a weighted average over the input, where a kernel (or filter) systematically processes
+ the input data to produce a feature map. The figure \ref{fig:kernel} showcases the convolutional 
+ operation.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{kernel.png}  % Replace with actual image file
+    \caption{The sliding kernel operation}
+    \label{fig:kernel}  
+\end{figure}
+
+Convolutional filters, also called Local Receptive Feilds or kernels are used
+to detect patterns or features in input data. 
+
+The pixel values of an image are the features, because each pixel value represents the intensity of light at a given location. We want to learn the relationship between those features in an image in order to detect objects, faces etc. 
+
+For example, in image processing, filters might be designed to detect edges, 
+corners, or textures. In deep learning, the weights of these filters are learned automatically through training on large datasets.
+
+
+
+
+
+
+\subsection{\mbox{Object Detection with YOLOv11}}
+Computer vision (CV) makes it possible for machines to interpret and understand 
+visual data. In this feild, Object detection which lallala defines as
+s the precise identification and localization of objects within
+images or video streams has seen d remarkable progress in algorithmic approaches to address this
+challenge 
+
+state-of-the-art one-stage object detection algorithm 
+renowned for its efficiency and simplicity
+
+construction of a object detection dataset
+
+image preprocessing, 
+
+model training using the object detection training dataset,
+
+and validation of results using a verification dataset
+
+YOLO’s backbone network has undergone
+substantial advancements, integrating deeper feature fusion
+and multiscale feature extraction to enhance its capability for
+power equipment object detection. 
+
+Starting from YOLOv8 [13], the series adopted an 
+anchorfree mechanism for the first time, allowing 
+greater adaptability to detect power equipment 
+targets of varying sizes.
+
+Since YOLOv5 [12], the
+algorithm has significantly improved detection efficiency and
+accuracy through the introduction of the CSPNet framework,
+which optimizes feature propagation and network capacity
+
+updates to the YOLO series have included
+innovative enhancements to the loss function, further refining
+the model’s detection precision. While the original YOLO
+algorithm offered remarkable detection speed, its accuracy
+lagged behind two-stage detection algorithms. H
+
+The incorporation of a spatial
+pyramid pooling (SPP) layer into the backbone network further
+expanded the model’s receptive field, enhancing its feature
+extraction capabilities. YOLOv5 advanced these capabilities
+by adopting the C3 module in its backbone network, which
+reduced computational complexity and improved inference
+speed. It also introduced Mosaic data augmentation, particularly Mosaic4, which combines and transforms four images
+randomly to enhance feature representation and model learning. Adaptive anchor box optimization was added, enabling
+the model to better handle objects of different sizes.YOLOv8
+refined the architecture further by replacing the C3 module
+with the C2f module, enhancing feature extraction efficiency.
+
+It also introduced an Anchor-Free detection mechanism to
+improve the detection of small targets. The Mosaic augmentation process was optimized to exclude its use in the final
+ten training epochs, thereby improving model generalization.
+Additionally, task-specific loss optimizations were integrated
+to further enhance detection performance. YYOLOv9 [16] introduced progressive gradient integration (PGI), addressing
+limitations of deep supervision in extremely deep architectures and making lightweight architectures more practical. A
+new network architecture, called generalized high-efficiency
+layer aggregation network (GELAN), was proposed. GELAN
+integrates cross stage partial network (CSPNet) and efficient
+layer aggregation network (ELAN) designs, balancing model
+lightweight design, inference speed, and accuracy. Crossstage partial connections were employed to link feature maps
+across stages, enriching semantic information and improving
+
+
+The most recent iteration, YOLOv11, replaced the
+C2f module with the C3K2 module, a custom CSP bottleneck
+layer featuring two smaller convolutional layers, improving
+processing speed without compromising performance. While
+retaining the SPPF module from YOLOv8, YOLOv11 introduced the C2PSA module, which integrates channel and spatial
+information with multi-head attention mechanisms for more
+efficient feature extraction. An adaptive anchor box mechanism was also refined to optimize configurations across diverse
+datasets, boosting detection accuracy. Beyond object detection
+in power equipment, YOLOv11 extends its capabilities to
+instance segmentation, image classification, pose estimation,
+and oriented bounding box detection (OBB), add
+
+
+
+Among these, You only
+look once (YOLO) , a real-time object detection algorithm,
+has gained widespread attention. Unlike traditional methods,
+YOLO eliminates the need for pre-generated candidate regions, directly predicting the class and location of targets
+within an image. Since its inception in 2015, YOLO has
+undergone significant advancements, with the latest version,
+YOLOv11, demonstrating substantial improvements in 
+detection speed and performance
+
+
+Architectures within the object detection domain can be 
+classified into single-stage or two-stage detectors
+
+YOLO significantly enhances the speed, efficiency, and accuracy of medical object detection compared to traditional methods.
+
+Typical neural network:
+Input neuron (each connected to each next leyer)- hidden leyer - ouptut layers
+
+In a concolutional network it is not mandatory all neurons are connected
+to each in the next hidden layer. 
+
+Filters: the fixed square called a patch or local receptive field
+
+Feature map: The feature map is the output of one filter applied 
+to the previous layer. 
+
+The filter moves across the input layer. (multyply the values within th 
+filter with the values in the inpur layer). A new matrix with less diemnsions is compartmentalized
+
+input layer is called local receptive fieilds. 
+
+
+Activation and Pooling layers:
+Activation: transforming to the output using Activation functional like Resulting(discard the negative
+values and replace them with zeros) 
+
+Pooling: The feature map dimensionallytyy is reduced using pooling 
+(only improtant features remain... man, min pooling etc i.e  to the only largest)
+
+1. convolutional layers 
+2. ppoling layers
+3. fully connected layers
+
+\subsection{\mbox{LOSS}}
+
+The YOLOv11 object detection method enhances its performance by minimizing a comprehensive loss function that integrates multiple components. This loss function encompasses
+distributed focal loss, bounding box regression loss, and class
+probability loss. The optimization process involves combining
+these individual loss components and employing advanced
+optimization algorithms to refine the model’s performance
+in object detection tasks
+
+architecture:
+serves as the foundation for extracting multi-scale feature
+maps from input images. This is achieved through a series
+of convolutional layers and specialized modules, designed to
+generate feature maps at varying resolutions. These feature
+maps capture the spatial and semantic information necessary for subsequent processing. The Neck functions as an
+intermediate stage, tasked with aggregating and enhancing
+features from multiple scales before passing them to the Head
+network for prediction. This process often involves upsampling
+and concatenation of feature maps, enabling the model to
+efficiently capture and utilize multi-scale information. The
+Neck plays a crucial role in bridging the Backbone and Head
+components, enhancing feature expressiveness and supporting
+robust predictions. The Head is responsible for generating the
+final outputs, including object bounding boxes and object classes
+labels. It processes the enriched feature maps from the Neck to
+predict object locations and classifications with high precision.
+In summary, the Backbone extracts essential feature representations, the Neck aggregates and refines these features
+across scales, and the Head produces the final predictions.
+The Neck serves as a pivotal link, combining multi-scale
+features from the Backbone and augmenting their expressiveness through upsampling and concatenation, thereby providing
+a strong foundation for the Head’s accurate and reliable
+predictions.
+
 \subsection{\mbox{Digital Asset Management}}
 \cite{krogh2009} describes DAM as an essential framework for protecting, 
 organizing, and prolonging the usability of digital files by emphasizing 
@@ -520,6 +993,18 @@ difficult for competitors to replicate.
     \caption{Illustrating the five main stages of DAM.}
     \label{fig:4steg}  
 \end{figure}
+
+\vspace{0.3cm}
+\subsubsection{Choosing a DAM and the key tasks}
+\vspace{0.3cm}
+What tools are available in DAM? 
+Bechmark? 
+What are the most important shit in it?
+What do most companies need? 
+What do they usually have and how or 
+why do they choose to adopt a DAM
+
+A missing perspective is 
 
 \vspace{0.3cm}
 \subsubsection{Technological Tools Demand Continuous Organizational Adaptation}
@@ -575,13 +1060,54 @@ digital literacy and IT infrastructure matu-
 rity.
 
 
+\vspace{0.3cm}
+\subsubsection{Why to make our own and not use a service}
+\vspace{0.3cm}
 
 % What about the benefits? A missing perspective in software engineering
 % There are xxx characteristics that distinguish yyy from other information and communication
 % technology (ICT) system, as shown in Figure 2-1. Table 2.1 summarizes these characteristics.
 
+Bynder
+
+% https://en.wikipedia.org/wiki/DBGallery
+
+Adobe Experince Manager 
+
+Cloudinary:  custom pricing for enterprise solutions.
+
+Adobe sensei 
+enerally means auto-tagging images based on recognizable 
+generic objects, scenes, and concepts. It typically uses 
+generalized, pre-trained models that identify common objects'
+
+most DAM platforms rely on third-party integrations 
+for company-specific tagging
 
 
+Clarifai Custom Models
+Provides APIs that integrate into DAM platforms.
+
+
+Amazon Rekognition Custom Labels: Pay-per-use
+
+
+Google Vertex AI (formerly AI Platform Vision)
+Pricing depends on training hours and predictions
+Custom vision API: Trained specifically on your images and product labels.
+
+Microsoft Azure Custom Vision: Training: 20 dollaar per compute hour 
+
+Integrates via REST API to enhance tagging accuracy in DAM solutions.
+
+CV consutling 
+% https://ventionteams.com/services/computer-vision
+
+Image annotation 
+% https://www.anolytics.ai/image-annotation-services/
+
+Different types of CV:
+% https://towardsdatascience.com/5-neural-network-architectures-you-must-know-for-computer-vision-31d2991fe24e/
 
 \ref{fig:lit_review} is an image 
 \ref{tab:lit_review} is a table
@@ -699,141 +1225,8 @@ to the project’s needs. Its optimized balance of accuracy and processing speed
 ensures strong performance across different computing environments, from edge 
 devices to high-performance systems, making it the most effective solution
 
-\begin{table}[t]
-    \centering
-    {\small
-    \begin{tabularx}{\linewidth}{|c|X|}
-        \hline
-        \textbf{Release} & \textbf{Capabilities} \\
-        \hline
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V1}\\
-            {\scriptsize Darknet}\\
-            {\tiny JUN 2015}
-        \end{tabular}
-        &
-        A single-stage object detector with basic classification
-        \citep{redmon2016you}.
-        \\
-        \hline
 
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V2}\\
-            {\scriptsize Darknet}\\
-            {\tiny DEC 2016}
-        \end{tabular}
-        &
-        Object detection. Darknet-19 architecture, anchor boxes, and higher resolution inputs
-        \citep{redmon2016yolo9000betterfasterstronger}.
-        \\
-        \hline
 
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V3}\\
-            {\scriptsize Darknet}\\
-            {\tiny MAR 2018}
-        \end{tabular}
-        &
-        Object detection. Darknet-53 network \& multi-scale predictions for varying object sizes.
-        \citep{redmon2018yolov3}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V4}\\
-            {\scriptsize Darknet}\\
-            {\tiny APR 2020}
-        \end{tabular}
-        &
-        Object detection. Basic object tracking with BCSPDarknet53 and SPP.
-        \citep{bochkovskiy2020yolov4}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V5}\\
-            {\scriptsize PyTorch}\\
-            {\tiny JUN 2020}
-        \end{tabular}
-        &
-        Object detection. Basic instance segmentation. PyTorch framework,
-        multi-GPU support, and exports \citep{ultralytics2024yolov5}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V6}\\
-            {\scriptsize PyTorch}\\
-            {\tiny SEP 2022}
-        \end{tabular}
-        &
-        Object detection \& instance segmentation. Reparameterizable backbone for model scaling.
-        \citep{li2022yolov6}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V7}\\
-            {\scriptsize PyTorch}\\
-            {\tiny JUL 2022}
-        \end{tabular}
-        &
-        Object detection, tracking \& instance segmentation.
-        \citep{wang2022yolov7}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V8}\\
-            {\scriptsize PyTorch}\\
-            {\tiny JAN 2023}
-        \end{tabular}
-        &
-        Object detection, tracking, instance segmentation, panoptic segmentation, keypoint estimation.
-        NVIDIA GPUs, Jetson systems and macOS.
-        \citep{ultralytics2025yolov8}
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V9}\\
-            {\scriptsize PyTorch}\\
-            {\tiny FEB 2024}
-        \end{tabular}
-        &
-        Object detection \& instance segmentation.
-        PGI for better gradient reliability.
-        GELAN network \citep{wang2024yolov9}.
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V10}\\
-            {\scriptsize PyTorch}\\
-            {\tiny MAY 2024}
-        \end{tabular}
-        &
-        Object detection \& NMS-free training
-        \citep{wang2024yolov10}
-        \\
-        \hline
-
-        \begin{tabular}[t]{@{}c@{}}
-            \textbf{V11}\\
-            {\scriptsize PyTorch}\\
-            {\tiny SEP 2024}
-        \end{tabular}
-        &
-        Object detection, instance segmentation, pose estimation \& oriented object detection (OBB).
-        \citep{UltralyticsYOLO11}.
-        \\
-        \hline
-
-    \end{tabularx}
-    }
-    \caption{Summary of YOLO Model Evolution}
-    \label{tab:yolo_versions}
-\end{table}
 
 
 \begin{figure}[h]
