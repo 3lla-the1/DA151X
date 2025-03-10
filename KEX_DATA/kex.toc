@@ -23,61 +23,62 @@
 \contentsline {subsection}{\numberline {2.1}\mbox {Artificial Inteligence}}{11}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Object Detection}{11}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}\mbox {YOLOv11 model}}{11}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}\mbox {Convolutional Neural Networks}}{12}{subsubsection.2.1.3}%
-\contentsline {paragraph}{The improvements of Yolov11}{13}{figure.2.1}%
-\contentsline {paragraph}{bounding box vs achor boxes}{13}{figure.2.1}%
-\contentsline {paragraph}{The kernel operation}{13}{figure.2.1}%
-\contentsline {subsection}{\numberline {2.2}\mbox {Object Detection with YOLOv11}}{13}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}\mbox {LOSS}}{14}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}\mbox {Digital Asset Management}}{15}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Choosing a DAM and the key tasks}{15}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Technological Tools Demand Continuous Organizational Adaptation}{15}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}Why to make our own and not use a service}{16}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}Major background area\#1\#1}{16}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}What is the YOLO model + how does it work from a higher level perspective}{16}{subsubsection.2.4.5}%
-\contentsline {paragraph}{Scheme}{17}{subsubsection.2.4.5}%
-\contentsline {paragraph}{Architecture}{17}{figure.2.4}%
-\contentsline {paragraph}{Loss Function}{17}{figure.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.6}The YOLO model}{17}{subsubsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.5}Major background area\#2}{17}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Major background area\#2\#1}{18}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Major background area\#2\#2}{18}{subsubsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.6}Related work}{18}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Major related work}{18}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Major related work}{18}{subsubsection.2.6.2}%
-\contentsline {subsubsection}{\numberline {2.6.3}Minor related work}{18}{subsubsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.7}Summary}{18}{subsection.2.7}%
-\contentsline {section}{\numberline {3}<Engineering-related content, Methodologies and Methods> Use a self-explaining title}{18}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Research Process}{19}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Research Paradigm}{19}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Data Collection}{19}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Sampling}{19}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Sample Size}{19}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Target Population}{19}{subsubsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.4}Experimental design/Planned Measurements}{19}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Test environment/test bed/model}{19}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Hardware/Software to be used}{19}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{19}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{19}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Validity}{19}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{19}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{19}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{19}{subsubsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.8}Evaluation framework}{19}{subsection.3.8}%
-\contentsline {section}{\numberline {4}[What you did – Choose your own chapter title to describe this]}{19}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Hardware/Software design …/ModelSimulation model parameters/…}{19}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Implementation …/Modeling/Simulation/…}{19}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Results and Analysis}{19}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Major results}{20}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{20}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Validity Analysis}{20}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Discussion}{20}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Conclusions and Future work}{20}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Conclusions}{20}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Limitations}{20}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Future work}{20}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Reflections}{20}{subsection.6.4}%
-\contentsline {section}{References}{20}{subsection.6.4}%
-\contentsline {section}{Appendices}{22}{section*.8}%
-\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{22}{appendix.A}%
-\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{23}{appendix.B}%
+\contentsline {subsubsection}{\numberline {2.1.3}\mbox {Anchor-free detection models}}{12}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}{The Architecture of a Convolutional Neural Network}}{13}{subsubsection.2.1.4}%
+\contentsline {paragraph}{Architecture}{14}{figure.2.3}%
+\contentsline {paragraph}{The improvements of Yolov11}{15}{figure.2.4}%
+\contentsline {paragraph}{The kernel operation}{15}{figure.2.4}%
+\contentsline {subsection}{\numberline {2.2}\mbox {Object Detection with YOLOv11}}{15}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}\mbox {LOSS}}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}\mbox {Digital Asset Management}}{16}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Choosing a DAM and the key tasks}{17}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Technological Tools Demand Continuous Organizational Adaptation}{17}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Why to make our own and not use a service}{17}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Major background area\#1\#1}{18}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}What is the YOLO model + how does it work from a higher level perspective}{18}{subsubsection.2.4.5}%
+\contentsline {paragraph}{Scheme}{18}{subsubsection.2.4.5}%
+\contentsline {paragraph}{Architecture}{18}{subsubsection.2.4.5}%
+\contentsline {paragraph}{Loss Function}{18}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}The YOLO model}{18}{subsubsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.5}Major background area\#2}{19}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Major background area\#2\#1}{19}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Major background area\#2\#2}{19}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Related work}{19}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Major related work}{19}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Major related work}{19}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}Minor related work}{19}{subsubsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.7}Summary}{19}{subsection.2.7}%
+\contentsline {section}{\numberline {3}<Engineering-related content, Methodologies and Methods> Use a self-explaining title}{20}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Research Process}{20}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Research Paradigm}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Data Collection}{20}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Sampling}{20}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Sample Size}{20}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Target Population}{20}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Experimental design/Planned Measurements}{20}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Test environment/test bed/model}{20}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Hardware/Software to be used}{20}{subsubsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{20}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{20}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Validity}{20}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{20}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{20}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{20}{subsubsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.8}Evaluation framework}{20}{subsection.3.8}%
+\contentsline {section}{\numberline {4}[What you did – Choose your own chapter title to describe this]}{20}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Hardware/Software design …/ModelSimulation model parameters/…}{20}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Implementation …/Modeling/Simulation/…}{21}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Results and Analysis}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Major results}{21}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{21}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Validity Analysis}{21}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Discussion}{21}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusions and Future work}{21}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusions}{21}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Limitations}{21}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Future work}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Reflections}{21}{subsection.6.4}%
+\contentsline {section}{References}{21}{subsection.6.4}%
+\contentsline {section}{Appendices}{24}{section*.8}%
+\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{24}{appendix.A}%
+\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{25}{appendix.B}%

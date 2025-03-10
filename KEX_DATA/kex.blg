@@ -4,45 +4,45 @@ The top-level auxiliary file: kex.aux
 The style file: apalike.bst
 Database file #1: references.bib
 Warning--I didn't find a database entry for "author2025"
-You've used 38 entries,
+You've used 42 entries,
             1935 wiz_defined-function locations,
-            691 strings with 11099 characters,
-and the built_in function-call counts, 14545 in all, are:
-= -- 1375
-> -- 788
-< -- 19
-+ -- 289
-- -- 274
-* -- 1228
-:= -- 2670
-add.period$ -- 114
-call.type$ -- 38
-change.case$ -- 324
-chr.to.int$ -- 37
-cite$ -- 38
-duplicate$ -- 503
-empty$ -- 853
-format.name$ -- 322
-if$ -- 2739
-int.to.chr$ -- 2
+            711 strings with 11655 characters,
+and the built_in function-call counts, 15916 in all, are:
+= -- 1507
+> -- 838
+< -- 22
++ -- 308
+- -- 290
+* -- 1334
+:= -- 2918
+add.period$ -- 127
+call.type$ -- 42
+change.case$ -- 351
+chr.to.int$ -- 40
+cite$ -- 42
+duplicate$ -- 558
+empty$ -- 952
+format.name$ -- 344
+if$ -- 3006
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 31
-newline$ -- 193
-num.names$ -- 114
-pop$ -- 281
+missing$ -- 37
+newline$ -- 214
+num.names$ -- 126
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 327
+purify$ -- 355
 quote$ -- 0
-skip$ -- 392
+skip$ -- 433
 stack$ -- 0
-substring$ -- 752
-swap$ -- 48
+substring$ -- 835
+swap$ -- 52
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 216
+type$ -- 236
 warning$ -- 0
-while$ -- 96
+while$ -- 105
 width$ -- 0
-write$ -- 478
+write$ -- 532
 (There was 1 warning)

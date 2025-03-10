@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Alif and Hussain, 2025]{alif2025yolov12}
+Alif, M. A.~R. and Hussain, M. (2025).
+\newblock Yolov12: A breakdown of the key architectural features.
+\newblock {\em arXiv preprint}, arXiv:2502.14740v1.
+\newblock arXiv.org perpetual non-exclusive license.
+
 \bibitem[Angulo et~al., 2019]{Angulo_2019}
 Angulo, A., Vega-Fernández, J.~A., Aguilar-Lobo, L.~M., Natraj, S., and Ochoa-Ruiz, G. (2019).
 \newblock {\em Road Damage Detection Acquisition System Based on Deep Neural Networks for Physical Asset Management}, page 3–14.
@@ -68,8 +74,13 @@ Karbouj, B., Topalian-Rivas, G.~A., and Krüger, J. (2024).
 Khanam, R. and Hussain, M. (2024).
 \newblock Yolov11: An overview of the key architectural enhancements.
 
-\bibitem[Khanam et~al., 2024]{10589380}
-Khanam, R., Hussain, M., Hill, R., and Allen, P. (2024).
+\bibitem[Khanam et~al., 2024a]{10589380}
+Khanam, R., Hussain, M., Hill, R., and Allen, P. (2024a).
+\newblock A comprehensive review of convolutional neural networks for defect detection in industrial applications.
+\newblock {\em IEEE Access}, 12:94250--94295.
+
+\bibitem[Khanam et~al., 2024b]{10589380TEST}
+Khanam, R., Hussain, M., Hill, R., and Allen, P. (2024b).
 \newblock A comprehensive review of convolutional neural networks for defect detection in industrial applications.
 \newblock {\em IEEE Access}, 12:94250--94295.
 
@@ -92,6 +103,11 @@ McCain, E., Mara, N., Van~Malssen, K., Carner, D., Reilly, B., Willette, K., Sch
 \newblock {\em Endangered but not too late: The state of digital news preservation}.
 \newblock Donald W. Reynolds Journalism Institute, University of Missouri--Columbia Libraries.
 \newblock OpenAccess. Licensed under CC BY 4.0.
+
+\bibitem[Prince, 2023]{prince2023understanding}
+Prince, S.~J. (2023).
+\newblock {\em Understanding Deep Learning}.
+\newblock The MIT Press.
 
 \bibitem[Rane, 2023]{articleRANE}
 Rane, N. (2023).
@@ -154,6 +170,11 @@ Ultralytics (2023).
 {United Nations} (2015).
 \newblock Transforming our world: The 2030 agenda for sustainable development.
 \newblock Accessed: February 28, 2025.
+
+\bibitem[Verdhan, 2021]{VerdhanVaibhav2021CVUD}
+Verdhan, V. (2021).
+\newblock {\em Computer Vision Using Deep Learning: Neural Network Architectures with Python and Keras}.
+\newblock Apress, Berkeley, CA, 1st ed. edition.
 
 \bibitem[Vina, 2024]{vina2024yolo11}
 Vina, A. (2024).

@@ -570,7 +570,7 @@ The YOLOv11 model, developed by Ultralytics marks the latest milestone in the co
     {\small
     \begin{tabularx}{\linewidth}{|c|X|}
         \hline
-        \textbf{Release} & \textbf{Capabilities} \\
+        \textbf{Release} & \textbf{Key capabilities} \\
         \hline
         \makecell[t]{\textbf{V1} \\ \\ {\tiny JUN 2015}} 
         & {\footnotesize Darknet. A single-stage object detector with basic classification
@@ -593,7 +593,7 @@ The YOLOv11 model, developed by Ultralytics marks the latest milestone in the co
         \citep{ultralytics2024yolov5}.} \\
         \hline
         \makecell[t]{\textbf{V6} \\ \\ {\tiny SEP 2022}} 
-        & {\footnotesize PyTorch. Object detection \& instance segmentation. Reparameterizable backbone for model scaling.
+        & {\footnotesize PyTorch. Object detection, instance segmentation, a reparameterizable backbone, anchor aided training (AAT).
         \citep{li2022yolov6}.} \\
         \hline
         \makecell[t]{\textbf{V7} \\ \\ {\tiny JUL 2022}} 
@@ -601,21 +601,25 @@ The YOLOv11 model, developed by Ultralytics marks the latest milestone in the co
         \citep{wang2022yolov7}.} \\
         \hline
         \makecell[t]{\textbf{V8} \\ \\ {\tiny JAN 2023}} 
-        & {\footnotesize PyTorch. Object detection, instance \& panoptic segmentation, keypoint estimation,
+        & {\footnotesize PyTorch. Anchor-free object detection, instance \& panoptic segmentation,
         NVIDIA GPUs, Jetson.
         \citep{ultralytics2025yolov8}.} \\
         \hline
         \makecell[t]{\textbf{V9} \\ \\ {\tiny FEB 2024}} 
-        & {\footnotesize PyTorch. Object detection \& instance segmentation.
+        & {\footnotesize PyTorch. Anchor-free detection \& instance segmentation.
         PGI for better gradient reliability.
         GELAN network \citep{wang2024yolov9}.} \\
         \hline
         \makecell[t]{\textbf{V10} \\ \\ {\tiny MAY 2024}} 
-        & {\footnotesize PyTorch. Object detection \& NMS-free training
+        & {\footnotesize PyTorch. Anchor-free detection \& NMS-free training
         \citep{wang2024yolov10}.} \\
         \hline
         \makecell[t]{\textbf{V11} \\ \\ {\tiny SEP 2024}} 
-        & {\footnotesize PyTorch. Object detection, instance segmentation, pose estimation \& oriented object detection (OBB).
+        & {\footnotesize PyTorch. Anchor-free \& oriented object detection (OBB), instance segmentation, pose estimation.
+        \citep{UltralyticsYOLO11}.} \\
+        \hline
+        \makecell[t]{\textbf{V12} \\ \\ {\tiny FEB 2025}} 
+        & {\footnotesize PyTorch. Anchor-free detection, OBB, instance segmentation, Area Attention Mechanism, pose estimation, R-ELAN.
         \citep{UltralyticsYOLO11}.} \\
         \hline
     \end{tabularx}
@@ -641,7 +645,7 @@ facilitating development in Python and enhancing integration
  \cite{Sapkota2025YOLOv11} conducted a comprehensive review of YOLO-based 
  object detection applications, highlighting its extensive adoption across 
  multiple domains, including healthcare (e.g., pill identification, diagnostics), 
- surveillance (e.g., face mask detection, surveillance), 
+ surveillance (e.g., face mask detection, home security), 
  autonomous vehicles, and industrial quality control. 
  The study underscores YOLO’s efficiency in real-time processing, 
  making it a preferred choice for applications requiring rapid inference.
@@ -673,7 +677,7 @@ facilitating development in Python and enhancing integration
    YOLOv5 outperforms Faster R-CNN across multiple key metrics, including precision, recall, 
    inference speed (FPS), and training efficiency. This discrepancy arises from the nature of
    the application and dataset size. As discussed by \cite{articleRANE} Faster R-CNN tends to perform 
-   better in tasks requiring high-detail object recognition. Its RPN helps it generalize
+   better in tasks requiring high-detail object recognition. The RPN helps it generalize
    more effectively when training data is limited, making it 
    particularly useful for small datasets 
    with high precision requirements.
@@ -684,20 +688,15 @@ facilitating development in Python and enhancing integration
 
 
 \vspace{0.3cm}
-\subsubsection{\mbox{Convolutional Neural Networks}}
+\subsubsection{\mbox{Anchor-free detection models}}
 \vspace{0.3cm}
 
-A bounding box is a rectangle drawn around an object in an image to 
-define its position and size. It is the final output of an object detection 
-model, indicating where the detected object is located as seen in Figure \ref{fig:bounding}.
-
-The evolution of object detection has taken a significant leap with 
-the transition from anchor-based to anchor-free detection models. 
-Anchor-based detectors, such as YOLOv4 and its predicesors in Table 
-\ref{tab:yolo_versions}, use predefined anchor boxes to estimate object locations,
-which requires careful selection and tuning. However, these methods can struggle 
-with detecting objects of varying shapes, sizes, and occlusions.
-
+A bounding box defines an object's position and size within an image using four coordinates. 
+In object detection, it is paired with a class label and a confidence score, indicating both the object's 
+category and the model's certainty in its prediction.
+These boxes act as ground-truth references in training data, helping models learn to localize objects accurately.
+\citep{li2022yolov6}. The prediction represents the 
+final output of an object detection model as illustrated in Figure \ref{fig:bounding}.
 
 \begin{figure}[h]
     \centering
@@ -707,10 +706,211 @@ with detecting objects of varying shapes, sizes, and occlusions.
 \end{figure}
 
 
+\cite{vina2024yolo11} highlights the shift from anchor-based to anchor-free
+object detection as a major advancement in the field. Traditional anchor-based 
+detectors, such as YOLOv4 and its predecessors in Table 
+\ref{tab:yolo_versions}, rely on predefined anchor 
+boxes—fixed-size reference shapes placed across an image at different aspect 
+ratios—to estimate object locations. The model does not predict bounding boxes 
+directly but instead modifies the closest anchor to better fit detected objects.
+Anchor-free models simplify detection and improve speed—critical for 
+real-time tasks like autonomous driving and surveillance. Their
+ key-point-based approach enhances flexibility, making them better at detecting small,
+  irregular, or occluded objects, especially in cluttered environments 
+  where anchor-based methods struggle \citep{wang2024yolov9}.
+
+\vspace{0.3cm}
+\subsubsection{{The Architecture of a Convolutional Neural Network}}
+\vspace{0.3cm}
+
+According to \cite[p. 163]{prince2023understanding} digital images possess 
+three essential properties that demand specialized model architectures.
+Images are high-dimensional. For example, a typical one
+is 224×224 pixels with three color channels (RGB), 
+amounting to 150,528 input dimensions. 
+Fully connected networks would require an enormous number 
+of parameters to process such data. Moreover, 
+nearby pixels tend to be correlated, and the overall 
+content of an image remains recognizable even with small shifts. 
+
+At a fundamental level, CNNs process input through sequential stages, 
+using convolution to detect features, pooling to 
+reduce dimensionality, and activation functions to 
+introduce non-linearity.
+In this setup, convolution identifies spatial features such as
+textures, lines and color variations in the input. 
+With effective training, the network learns to recognize 
+these attributes regardless of their location within an image \citep[Chapter~2]{VerdhanVaibhav2021CVUD}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{kernel.png} 
+    \caption{A simplified grayscale sliding kernel operation.}
+    \label{fig:kernel}  
+\end{figure}
+
+As described by \cite[p. 170]{prince2023understanding} 
+and illustrated in Figure~\ref{fig:kernel}, a convolution 
+operation applies a \(3 \times 3\) kernel \(K\) with 
+learned weights to an input \(I\) in order to generate 
+a feature map \(O\). At each spatial position, 
+the kernel computes a weighted sum over a local \(3 \times 3\) 
+patch of the input. Including a bias term \(b\) and an activation 
+function \(a(\cdot)\), the operation is given by:
+
+\begin{equation}
+    O_{ij} = a\Biggl( b + \sum_{m=1}^{3} \sum_{n=1}^{3} I_{i+m-2,\,j+n-2} \cdot K_{mn} \Biggr),
+    \label{eq:conv_with_bias}
+\end{equation}
+
+where \(O_{ij}\) denotes the output at position \((i,j)\). The indices \(i+m-2\) and \(j+n-2\) center the kernel over the input. When no padding is applied, the output dimensions are reduced compared to the input. However, if a padding of size \(p\) is introduced (e.g., \(p=1\) for a \(3 \times 3\) kernel), the input is effectively extended so that the spatial dimensions of \(O\) can match those of \(I\).
+
+
+
+As described by \cite{VerdhanVaibhav2021CVUD}, Figure~\ref{fig:kernel} 
+illustrates a  simplified example of a convolution operation using a
+\(3 \times 3\) kernel \(K\), also known as a filter or feature detector, which contains learned weights.
+The kernel slides across the \(5 \times 5\) input matrix \(I\) with a stride of \(s = 1\).
+At each step, it overlaps a patch of \(I\)—known as the receptive field—and 
+computes the dot product between its weights and the patch.
+This operation follows Equation~\ref{eq:convolution}: 
+
+\begin{equation}
+    O_{ij} = \sum_{m=1}^{3} \sum_{n=1}^{3} I_{i+m-1,\,j+n-1} \cdot K_{mn},
+    \label{eq:convolution}
+\end{equation}
+\vspace{0.1cm}
+
+where \(O_{ij}\) is the element at the \(i\)-th row and \(j\)-th column of the feature map \(O\), 
+(with \(1 \leq i,j \leq 3\)).
+Notice that because no padding is applied, 
+the dimensions of \(O\) are reduced compared 
+to the input.
+
+Digital images are composed of pixels that encode brightness and color information
+ at specific spatial locations. As explained by \cite{10589380TEST}, 
+ in a standard 8-bit image each pixel is represented by an intensity 
+ value ranging from 0 (darkest) to 255 (brightest).
+
+Figure~\ref{fig:kernel} demonstrates a convolution operation using 
+a simplified \(5 \times 5\) single-channel (grayscale) matrix. 
+Most umages are represented as three-dimensional
+tensors with dimensions \(H \times W \times C\), where \(H\) is the 
+height, \(W\) is the width, and \(C\) is the number of channels. 
+For example, a standard RGB image has \(C=3\) channels corresponding to red, green, 
+and blue\cite[p. 170]{prince2023understanding}. One can visualize this as three separate layers—one for 
+each color—stacked along the depth dimension, much like stacking 
+three copies of \(I\) inside Figure~\ref{fig:kernel} on top of each other.
+
+Similarly, each convolution kernel is represented as a three-dimensional 
+tensor of size \(K \times K \times C\). The depth of the kernel must 
+match the depth of the input (\(C\)) to perform element-wise multiplication
+ correctly, often with an added bias to produce a single scalar output. \cite{VerdhanVaibhav2021CVUD} 
+
+
+
+
+Early layers of a CNN learn low-level features like edges and curves, 
+while deeper layers combine these to form high-level representations 
+such as faces or objects. However, as the network deepens, 
+the number of dimensions and overall complexity increase, 
+especially when image augmentations (like rotations) 
+alter the feature maps. To manage this complexity, 
+downsampling is used, which reduces the resolution of the 
+feature maps. This is achieved through a pooling layer 
+placed after the convolutional layers. Pooling layers 
+operate on each feature map individually, reducing their 
+dimensions—often halving them—by summarizing regions.
+Two common pooling methods are average pooling, which 
+computes the mean value, and max pooling, which selects 
+the maximum value from each region \citep{VerdhanVaibhav2021CVUD}.
+
+
+
+
+These layers apply small, learnable filters, also known as kernels,
+which systematically scan the image, detecting patterns 
+such as edges, textures, and shapes. Each kernel responds 
+to specific features in the input, enabling the network 
+to learn hierarchical representations through multiple layers \citep{alif2025yolov12}.
+
+In digital representation, an image is stored as a numerical matrix of pixel values.
+A color image is typically encoded as a three-dimensional tensor (H × W × C), where C represents the number of color channels—commonly three for RGB images.
+
+Unlike traditional fully connected networks, 
+CNNs utilise spatially local connections and weight 
+sharing to improve computational efficiency and 
+reduce the number of parameters
+
+As described by 
+
+
+When processin images CNNs use convolutional layers. 
+Scanning the image using filters also called kernels that
+can detect features. Each kernel anables the model to learn patterns
+by activates a specific pattern in the input image.
+
+
+
+Following convultion activation functions such as ReLu are used.
+It outputs only positive nombers, zero othewise. This helps the model
+learn nonlinear data for pattern recogition.
+
+Pooling is a downsampling operation where downsampling means to reduce 
+the dimenstionality of the feature map extracted. 
+This reduces the computational cost and also overfitting.
+
+In the end there are fully connected (FC) layers simmilar to those of a 
+neural netwok. These interpret the features.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{CNN.png}  % Replace with actual image file
+    \caption{Depicting a Convolutional Neral Netowk}
+    \label{fig:CNN}  
+\end{figure}
+
+
+\paragraph{Architecture}
+
+Both the YOLOv11 and V12 model follows the standard three-part structure of the YOLO family: 
+Backbone, Neck, and Head, as shown in Figure \ref{fig:Arc}.
+According to Hidayatullah et al. (2025), the Backbone extracts features using 
+convolutional layers and downsampling, generating hierarchical feature maps.
+The Neck refines these features through the SPPF block for multi-scale detection 
+and the C2PSA module to enhance the recognition of small and occluded objects. 
+Upsampling and feature concatenation further improve resolution and information 
+retention. Finally, the Head produces the model’s output, predicting class probabilities 
+and bounding boxes across three detection layers (small, medium and large), 
+each specialized for different object sizes \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
+\vspace{0.3cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{YOLOARC.png}  % Replace with actual image file
+    \caption{The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head.}
+    \label{fig:Arc}  
+\end{figure}
+
+and the Head 
+Create bounding boxes and pair it to a class.
+
+step 1. Overlay image with a grid in size sxs 
+Each grid cell produces 2 things:
+- 1. a set of bounding boxes centered on a point inside the grid
+ with conficence scores that an object exists inside each bounding box 
+
+ - 2 a class probability map for each cell: which tells what object class is most 
+ likely to be in that cell given that an object exists within the cell.
+
+It combines this info to yeild the object detections 
 
 
 
 TEST
+
+\citep{alif2025yolov12}
 
 % yolo is trained on https://arxiv.org/pdf/1405.0312
 
@@ -763,32 +963,6 @@ Integration of the C2PSA module, which enhances spatial and channel information 
 Optimized adaptive anchor box mechanism, improving the model's adaptability across different object sizes and datasets.
 
 
-\paragraph{bounding box vs achor boxes}
- A bounding box is a rectangular region that is used to 
- enclose an object or a specific region of interest 
- within an image. It is represented by four 
- coordinates (xmin, ymin) representing 
- the top-left corner, and (xmax, ymax) 
- representing the bottom-right corner of the 
- rectangle. Bounding boxes are used to localize 
- objects within an image and are commonly annotated 
- in object detection datasets to provide ground-truth 
- information about the object’s location.
-
- Anchor boxes, also known as anchor priors or default 
- boxes, are pre-defined bounding boxes with specific 
- sizes, aspect ratios, and positions that are used as 
- reference templates during object detection. 
- These anchor boxes are placed at various positions
-  across an image, often in a grid-like pattern, to
-   capture objects of different scales and shapes. 
-   During training and inference, anchor boxes are 
-   used to predict the locations and shapes of objects
-    relative to these reference boxes.
-
-    Bounding boxes are provided as annotations in object detection datasets, representing ground-truth object locations.
-    The model predicts adjustments to anchor boxes to match objects’ actual locations.
-
 \paragraph{The kernel operation}
 At the core of CNNs is the convolution operation, a specialized linear process that replaces 
 the typical matrix multiplication found in other neural network layers. Convolution involves 
@@ -796,13 +970,6 @@ computing a weighted average over the input, where a kernel (or filter) systemat
  the input data to produce a feature map. The figure \ref{fig:kernel} showcases the convolutional 
  operation.
 
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{kernel.png}  % Replace with actual image file
-    \caption{The sliding kernel operation}
-    \label{fig:kernel}  
-\end{figure}
 
 Convolutional filters, also called Local Receptive Feilds or kernels are used
 to detect patterns or features in input data. 
@@ -818,11 +985,7 @@ corners, or textures. In deep learning, the weights of these filters are learned
 
 
 \subsection{\mbox{Object Detection with YOLOv11}}
-Computer vision (CV) makes it possible for machines to interpret and understand 
-visual data. In this feild, Object detection which lallala defines as
-s the precise identification and localization of objects within
-images or video streams has seen d remarkable progress in algorithmic approaches to address this
-challenge 
+
 
 state-of-the-art one-stage object detection algorithm 
 renowned for its efficiency and simplicity
@@ -1169,37 +1332,6 @@ It is just a algoritm... so you have to do a lot around it?
 %     \label{fig:Scheme}  
 % \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{YOLOARC.png}  % Replace with actual image file
-    \caption{The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head.}
-    \label{fig:Arc}  
-\end{figure}
-
-The YOLOv11 model follows the standard three-part structure of the YOLO family: 
-Backbone, Neck, and Head, as shown in Figure \ref{fig:Arc}.
-According to Hidayatullah et al. (2025), the Backbone extracts features using 
-convolutional layers and downsampling, generating hierarchical feature maps.
-The Neck refines these features through the SPPF block for multi-scale detection 
-and the C2PSA module to enhance the recognition of small and occluded objects. 
-Upsampling and feature concatenation further improve resolution and information 
-retention. Finally, the Head produces the model’s output, predicting class probabilities 
-and bounding boxes across three detection layers (small, medium and large), 
-each specialized for different object sizes \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
-\vspace{0.3cm}
-
-and the Head 
-Create bounding boxes and pair it to a class.
-
-step 1. Overlay image with a grid in size sxs 
-Each grid cell produces 2 things:
-- 1. a set of bounding boxes centered on a point inside the grid
- with conficence scores that an object exists inside each bounding box 
-
- - 2 a class probability map for each cell: which tells what object class is most 
- likely to be in that cell given that an object exists within the cell.
-
-It combines this info to yeild the object detections 
 
 \paragraph{Architecture}
 
