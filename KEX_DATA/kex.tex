@@ -180,6 +180,8 @@ I would like to thank xxxx for having yyyy.
 \section{Introduction}
 
 To be added 
+state-of-the-art one-stage object detection algorithm 
+renowned for its efficiency and simplicity
 % This chapter describes the specific problem that this thesis addresses, the context of the problem,
 % the goals of this thesis project, and outlines the structure of the thesis.
 % Give a general introduction to the area. (Remember to use appropriate references in this and all
@@ -239,6 +241,9 @@ offer an opportunity to overcome these limitations. However, deploying a YOLO-po
 % Describe who benefits and how they benefit if you achieve your goals. Include anticipated
 % ethical, sustainability, social issues, etc. related to your project. (Return to these in your reflections
 % in Section 6.4.) /
+This study focuses on the metadata generation stage of Digital Asset Management 
+(DAM), particularly automated image tagging using deep learning models.
+
 The primary aim of this thesis is to assess the feasibility and impact of a YOLO-powered DAM system 
 that has been fine-tuned on company-specific data to address the unique needs of premium manufacturing SMEs. 
 The research will benchmark the performance of this fine-tuned system against a conventional open-source DAM 
@@ -250,10 +255,20 @@ and retrieval efficiency.
 \vspace{0.3cm}
 
 \begin{enumerate}[label=(\alph*)]
-    \item To what extent does fine-tuning YOLOv11 on company-specific data improve metadata accuracy in DAM for manufacturing assets?
-    Can it effectively capture the subtle distinctions of assets? 
+    \item To what extent does fine-tuning YOLOv11 and 
+    Faster R-CNN on company-specific manufacturing data 
+    improve object detection accuracy compared to a 
+    baseline model, in terms of precision, recall, 
+    and inference speed?
+
+    \item What are the trade-offs between YOLOv11 and 
+    Faster R-CNN in terms of tagging quality, computational
+    cost, and integration complexity within a DAM workflow?
     
-    \item What are the trade-offs between the YOLOv11 model and ResourceSpace DAM tagging methods?
+    \item How do differences in model performance impact the 
+    usefulness of metadata for downstream tasks such as asset 
+    retrieval and categorization?
+
 \end{enumerate}
 
 \subsubsection{Business Research questions}
@@ -262,9 +277,18 @@ Technological advancements alone do not guarantee successful integration. To com
 the business perspective assesses the organizational and strategic impact after selecting the preferred DAM system. Specifically:
 
 \begin{enumerate}[label=(\alph*), resume]
-    \item How does employee adaptation, the necessity of training, and any role adjustments impact a bespoke manufacturing company? 
-    \item (add / incorporate something about process innovation? )
-    \item In what way does improved tagging strangthen brand consistency, customer engagement, and scalability?
+    \item What organizational and process changes are 
+    required to integrate AI-based image tagging into a manufacturing 
+    SME, and how do these changes affect knowledge structuring and 
+    internal workflows?
+    
+    \item What barriers emerge during implementation, and how are they
+    influenced by the organization’s flexibility, strategic priorities, 
+    and project-based work culture?
+
+    \item How does improved metadata generation contribute to long-term 
+    business value, such as brand consistency, operational scalability, and process innovation?
+    
 \end{enumerate}   
 
 \subsubsection{Societal Impact}
@@ -519,14 +543,12 @@ use statistical techniques to make predictions or classify new data.
 approach that utilizes multi-layered computational models to 
 extract patterns from data at varying levels of abstraction. 
 Inspired by the human brain, DL models excel at recognizing 
-intricate patterns in large datasets, making them essential 
-in fields such as image recognition, natural language processing, 
-and autonomous systems \citep{SOORI202354}.
-
-Within DL, different neural network architectures are designed to process
+intricate patterns in large datasets.
+\citep{SOORI202354} further eplains that within DL, 
+different neural network architectures are designed to process
  specific types of data and perform specialized tasks. 
  One of the most effective architectures for structured, 
- grid-like data—such as images and time-series signals—is 
+ grid-like data—such as images—is 
  the Convolutional Neural Network (CNN). 
  CNNs employ convolutional operations to automatically 
  learn spatial hierarchies of features, allowing them to 
@@ -553,7 +575,198 @@ locations. In contrast, single-stage networks, such as You Only Look Once (YOLO)
  detection speed and efficiency. As Zhang et al. (2025) emphasize, 
  single-stage models have become widely adopted in various industries 
  due to their ability to perform real-time object detection accurately.
+
+ \vspace{0.3cm}
+\subsubsection{\mbox{Anchor-free detection models}}
 \vspace{0.3cm}
+
+A bounding box defines an object's position and size within an image using four coordinates. 
+In object detection, it is paired with a class label and a confidence score, indicating both the object's 
+category and the model's certainty in its prediction.
+These boxes act as ground-truth references in training data, helping models learn to localize objects accurately.
+\citep{li2022yolov6}. The prediction represents the 
+final output of an object detection model as illustrated in Figure \ref{fig:bounding}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{bounding.png}  % Replace with actual image file
+    \caption{Bounding box for table with legs.}
+    \label{fig:bounding}  
+\end{figure}
+
+
+\cite{vina2024yolo11} describes the shift from anchor-based to anchor-free
+object detection as a major advancement in the field. Traditional anchor-based 
+detectors, such as YOLOv4 and its predecessors in Table 
+\ref{tab:yolo_versions}, rely on predefined anchor 
+boxes—fixed-size reference shapes placed across an image at different aspect 
+ratios—to estimate object locations. The model does not predict bounding boxes 
+directly but instead modifies the closest anchor to better fit detected objects.
+Anchor-free models simplify detection and improve speed—critical for 
+real-time tasks like autonomous driving and surveillance. Their
+ key-point-based approach enhances flexibility, making them better at detecting small,
+  irregular, or occluded objects, especially in cluttered environments 
+  where anchor-based methods struggle \citep{wang2024yolov9}.
+
+\vspace{0.3cm}
+\subsection{{The Architecture of a Convolutional Neural Network}}
+\vspace{0.3cm}
+
+\cite{prince2023understanding} highlights three key characteristics of
+digital images that necessitate the use of specialized model architectures. 
+First, images are inherently high-dimensional. For instance, a standard 224×224 
+pixel image with three color channels (RGB) results in over 150,000 input values. 
+Processing such a large number of inputs with fully connected neural networks would 
+require an impractically high number of parameters. Second, there is a strong correlation 
+between neighboring pixels, as local regions often form meaningful patterns and structures. 
+Lastly, images tend to be robust to small spatial shifts—their content remains recognizable 
+even when objects within them are slightly moved. For instance, if a chair appears slightly 
+to the left or right in different images, we still recognize it as the same object. 
+However, a fully connected model would need to learn how to identify the chair in every 
+possible position from scratch. CNNs such as YOLO and 
+Faster R-CNN avoid this problem by using filters that can detect 
+patterns no matter where they appear in the image. This makes them far more parameter-efficient and 
+better suited for visual tasks like object detection \citep{prince2023understanding}.
+
+At a fundamental level, CNNs process input through sequential stages, 
+using convolution to detect spacial features, pooling to 
+reduce dimensionality, and activation functions to 
+introduce non-linearity \cite{10589380TEST}.
+Spatial features can be textures, lines and color variations in the input. 
+With effective training, the network learns to recognize 
+these attributes regardless of their location within an image \citep[Chapter~2]{VerdhanVaibhav2021CVUD}.
+
+\vspace{0.3cm}
+\subsubsection{The Convolutional Operation}
+\vspace{0.3cm}
+
+CNNs extract features from images by applying an operation known as convolution \cite[p.~170]{prince2023understanding}. Convolution involves sliding a learnable weight matrix, referred to as a kernel or filter, across the input. At each position, the kernel computes a weighted sum over a local neighborhood of the image, making it possible to detect spatial patterns. Figure~\ref{fig:3D} illustrates this concept. In practice, one often pads the input with zeros (padding) so that the kernel can be applied near image borders without reducing spatial dimensions. Another key hyperparameter is the stride, which specifies how far the kernel moves at each step \cite[p.~165]{prince2023understanding}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{3D.png} 
+    \caption{A simplified 2D convolution applied to an RGB image (adapted from \citep{prince2023understanding}).}
+    \label{fig:3D}  
+\end{figure}
+
+Let \(I\) be the input image, structured as three channels (red, green, and blue). Consider a \(3 \times 3 \times 3\) kernel. 
+At each spatial position, element-wise multiplication is performed between the kernel weights 
+and a \(3 \times 3\) segment from each of the three channels. The products are summed together and then combined with a bias term, producing a pre-activation value that is typically passed through a non-linear function such as ReLU. By shifting the kernel step by step over the height and width of the image, one obtains a two-dimensional feature map. To produce multiple output channels, different kernels run in parallel. Each filter generates its own 2D feature map, and stacking these maps forms a three-dimensional activation tensor, often written as \(H_{1}\).
+Equation~\eqref{eq:conv_rgb} demonstrates how the output at position \((i,j)\) can be computed for an RGB input and a \(3 \times 3\) kernel:
+
+\begin{equation}
+    \label{eq:conv_rgb}
+    \resizebox{0.9\columnwidth}{!}{%
+    \(
+    \displaystyle
+    h_{ij} = a \Bigl(
+    b + \sum\limits_{c=1}^{3}
+             \sum\limits_{m=1}^{3}
+             \sum\limits_{n=1}^{3}
+    I_{c,\,i+m-2,\,j+n-2} \cdot K_{c,\,m,\,n}
+    \Bigr)
+    \)
+    }
+    \end{equation}
+    
+    
+where \(I_{c,\,i,j}\) denotes the pixel value from channel \(c\) at position \((i,j)\), \(K_{c,\,m,n}\) is the kernel weight for channel \(c\) at offset \((m,n)\), \(b\) is a learnable bias term, and \(a(\cdot)\) represents the chosen activation function
+\cite[p.~170]{prince2023understanding}.
+
+\vspace{0.3cm}
+\subsubsection{The Pooling Operation}
+\vspace{0.3cm}
+Pooling is a downsampling operation in CNNs that reduces the spatial dimensions of feature maps while preserving essential features. 
+This improves computational efficiency and makes the network less sensitive to small spatial shifts. 
+The most common method, max pooling, slides a fixed-size window over the 
+feature map and retains only the maximum value in each region as seen in Figure~\ref{fig:pooling} \cite[p.~163]{prince2023understanding}. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.6\linewidth]{pooling.png} 
+    \caption{Max pooling applied to a \(4 \times 4\) matrix \(X\) resulting in a \(2 \times 2\) matrix \(Y\).}
+    \label{fig:pooling}  
+\end{figure}
+
+The latest YOLO models developed by \cite{ultralytics2025} extend this concept with the SPPF (Spatial Pyramid Pooling Fast) block, which increases the receptive field through repeated pooling. Figure~\ref{fig:Arc} shows its placement in the Neck in the architecture. The operation is defined as:
+
+\begin{equation} 
+    \label{eq:sppf} \mathrm{SPPF} = \mathrm{Conv}_{1 \times 1} \left( \mathrm{Concat}(X,\ P_1,\ P_2,\ P_3) \right) \end{equation}
+    
+    \noindent
+where \( X \) is the input feature map, first passed through a \( 1 \times 1 \) convolution to reduce channel dimensions. \( P_1 = \mathrm{MaxPool}_{5 \times 5}(X) \), \( P_2 = \mathrm{MaxPool}_{5 \times 5}(P_1) \), 
+and \( P_3 = \mathrm{MaxPool}_{5 \times 5}(P_2) \). All outputs \( (X, P_1, P_2, P_3) \) are concatenated along the channel 
+dimension and passed through a second \( 1 \times 1 \) convolution. 
+This design allows the model to capture multi-scale contextual information from 
+increasingly larger regions while maintaining spatial resolution, 
+which improves object detection performance, especially for small or 
+partially occluded objects \citep{ultralytics2025}.
+
+\vspace{0.3cm}
+\subsubsection{Activation Functions}
+\vspace{0.3cm}
+
+The Ultralytics YOLO architecture by \cite{ultralytics2025} primarily uses the Sigmoid Linear Unit (SiLU), 
+also known as \textit{Swish}, as its default activation function. It is defined as
+\begin{equation}
+\text{SiLU}(x) = x \cdot \sigma(x) = \frac{x}{1 + e^{-x}},
+\label{eq:silu}
+\end{equation}
+where \(\sigma(x)\) represents the sigmoid function. SiLU in Equation~\eqref{eq:silu} offers a smooth non-linearity that helps the model train more efficiently and maintain stronger gradient signals in deep layers.
+
+A simpler alternative, ReLU (Rectified Linear Unit), in Equation~\eqref{eq:relu},
+\begin{equation}
+\label{eq:relu}
+\text{ReLU}(x) = \max(0, x).
+\end{equation}
+is used in certain parts of the network that benefit from faster computation and sparser activations.
+Additionally, some layers omit activations altogether to maintain strictly linear connections.
+This is sometimes useful in residual paths or when merging feature maps. 
+However, SiLU remains the primary activation due to its observed 
+advantages in training stability and overall performance \citep{ultralytics2025}.
+
+\vspace{0.3cm}
+\subsubsection{Structural Components of the YOLO Architecture}
+\vspace{0.3cm}
+
+The three-part YOLO structure consists of Backbone, Neck, and Head—as shown in Figure \ref{fig:Arc}.
+The Backbone extracts features using 
+convolutional layers and downsampling, generating hierarchical feature maps.
+The Neck refines these features through the SPPF block for multi-scale detection 
+and the C2PSA module to enhance the recognition of occluded objects. 
+Upsampling and feature concatenation further improve resolution and information 
+retention. Finally, the Head produces the model’s output, predicting class probabilities 
+and bounding boxes across three detection layers (small, medium and large), 
+each specialized for different object sizes \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{YOLOARC.png}  % Replace with actual image file
+    \caption{The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head (adapted from \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}).}
+    \label{fig:Arc}  
+\end{figure}
+
+The C3k2 module, used in both the Backbone and Neck (Figure \ref{fig:Arc}), 
+acts like a compact feature extractor. It splits the input in half: 
+one part flows through unchanged, while the other is processed by a stack 
+of C3k blocks—convolutions with varied kernel sizes to capture both 
+fine and coarse spatial patterns. The two paths are merged and 
+compressed through a $1 \times 1$ convolution \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
+
+The C2PSA (Cross-Stage Partial with Position-Sensitive Attention) module following after the SPPF block in Figure \ref{fig:Arc} extends the Cross-Stage Partial (CSP) design with a more expressive attention mechanism known as 
+Position-Sensitive Attention (PSA).
+While C3k2 in captures features through varied convolution kernels, 
+C2PSA uses attention to focus on relevant spatial patterns—especially 
+useful for detecting large objects at low resolutions \citep{ultralytics2025}.
+
+Upsampling increases the spatial resolution of feature maps to restore details lost during downsampling. YOLO typically employs nearest-neighbor upsampling, duplicating pixels to double feature map dimensions \citep{ultralytics2025}. The subsequent concatenation merges these upsampled feature maps with earlier layers, enriching feature representations and improving multi-scale object detection capability (Figure \ref{fig:Arc}; \citealp{hidayatullah2025yolov8yolo11comprehensivearchitecture}).
+
+
+\vspace{0.3cm}
+
+
+
+ \vspace{0.3cm}
 \subsubsection{\mbox{YOLOv11 model}}
 \vspace{0.3cm}
 
@@ -657,7 +870,7 @@ facilitating development in Python and enhancing integration
    its computational efficiency, YOLO may struggle with fine-grained detail detection, 
    making it less suitable for tasks requiring high-resolution texture analysis, 
    such as road damage assessment or material surface inspection \citep{Angulo_2019}. 
-   While this thesis primarily addresses the application of YOLO within DAM in bespoke manufacturing, 
+   While this thesis primarily addresses the application of YOLO within bespoke manufacturing, 
    insights into the limitations remain highly relevant, particularly in scenarios 
    where accurate detection and classification of subtle material textures effect performance.
     
@@ -676,7 +889,7 @@ facilitating development in Python and enhancing integration
    in disassembly systems presents a different perspective. Their findings demonstrate that 
    YOLOv5 outperforms Faster R-CNN across multiple key metrics, including precision, recall, 
    inference speed (FPS), and training efficiency. This discrepancy arises from the nature of
-   the application and dataset size. As discussed by \cite{articleRANE} Faster R-CNN tends to perform 
+   the application and dataset size. As previously discussed by \cite{articleRANE} Faster R-CNN tends to perform 
    better in tasks requiring high-detail object recognition. The RPN helps it generalize
    more effectively when training data is limited, making it 
    particularly useful for small datasets 
@@ -687,268 +900,25 @@ facilitating development in Python and enhancing integration
    particularly effective in real-time, resource-constrained environments.
 
 
-\vspace{0.3cm}
-\subsubsection{\mbox{Anchor-free detection models}}
-\vspace{0.3cm}
-
-A bounding box defines an object's position and size within an image using four coordinates. 
-In object detection, it is paired with a class label and a confidence score, indicating both the object's 
-category and the model's certainty in its prediction.
-These boxes act as ground-truth references in training data, helping models learn to localize objects accurately.
-\citep{li2022yolov6}. The prediction represents the 
-final output of an object detection model as illustrated in Figure \ref{fig:bounding}.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth]{bounding.png}  % Replace with actual image file
-    \caption{Bounding box for table with legs.}
-    \label{fig:bounding}  
-\end{figure}
-
-
-\cite{vina2024yolo11} highlights the shift from anchor-based to anchor-free
-object detection as a major advancement in the field. Traditional anchor-based 
-detectors, such as YOLOv4 and its predecessors in Table 
-\ref{tab:yolo_versions}, rely on predefined anchor 
-boxes—fixed-size reference shapes placed across an image at different aspect 
-ratios—to estimate object locations. The model does not predict bounding boxes 
-directly but instead modifies the closest anchor to better fit detected objects.
-Anchor-free models simplify detection and improve speed—critical for 
-real-time tasks like autonomous driving and surveillance. Their
- key-point-based approach enhances flexibility, making them better at detecting small,
-  irregular, or occluded objects, especially in cluttered environments 
-  where anchor-based methods struggle \citep{wang2024yolov9}.
-
-\vspace{0.3cm}
-\subsubsection{{The Architecture of a Convolutional Neural Network}}
-\vspace{0.3cm}
-
-According to \cite[p. 163]{prince2023understanding} digital images possess 
-three essential properties that demand specialized model architectures.
-Images are high-dimensional. For example, a typical one
-is 224×224 pixels with three color channels (RGB), 
-amounting to 150,528 input dimensions. 
-Fully connected networks would require an enormous number 
-of parameters to process such data. Moreover, 
-nearby pixels tend to be correlated, and the overall 
-content of an image remains recognizable even with small shifts. 
-
-At a fundamental level, CNNs process input through sequential stages, 
-using convolution to detect features, pooling to 
-reduce dimensionality, and activation functions to 
-introduce non-linearity.
-In this setup, convolution identifies spatial features such as
-textures, lines and color variations in the input. 
-With effective training, the network learns to recognize 
-these attributes regardless of their location within an image \citep[Chapter~2]{VerdhanVaibhav2021CVUD}.
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1\linewidth]{kernel.png} 
-    \caption{A simplified grayscale sliding kernel operation.}
-    \label{fig:kernel}  
-\end{figure}
-
-As described by \cite[p. 170]{prince2023understanding} 
-and illustrated in Figure~\ref{fig:kernel}, a convolution 
-operation applies a \(3 \times 3\) kernel \(K\) with 
-learned weights to an input \(I\) in order to generate 
-a feature map \(O\). At each spatial position, 
-the kernel computes a weighted sum over a local \(3 \times 3\) 
-patch of the input. Including a bias term \(b\) and an activation 
-function \(a(\cdot)\), the operation is given by:
-
-\begin{equation}
-    O_{ij} = a\Biggl( b + \sum_{m=1}^{3} \sum_{n=1}^{3} I_{i+m-2,\,j+n-2} \cdot K_{mn} \Biggr),
-    \label{eq:conv_with_bias}
-\end{equation}
-
-where \(O_{ij}\) denotes the output at position \((i,j)\). The indices \(i+m-2\) and \(j+n-2\) center the kernel over the input. When no padding is applied, the output dimensions are reduced compared to the input. However, if a padding of size \(p\) is introduced (e.g., \(p=1\) for a \(3 \times 3\) kernel), the input is effectively extended so that the spatial dimensions of \(O\) can match those of \(I\).
-
-
-
-As described by \cite{VerdhanVaibhav2021CVUD}, Figure~\ref{fig:kernel} 
-illustrates a  simplified example of a convolution operation using a
-\(3 \times 3\) kernel \(K\), also known as a filter or feature detector, which contains learned weights.
-The kernel slides across the \(5 \times 5\) input matrix \(I\) with a stride of \(s = 1\).
-At each step, it overlaps a patch of \(I\)—known as the receptive field—and 
-computes the dot product between its weights and the patch.
-This operation follows Equation~\ref{eq:convolution}: 
-
-\begin{equation}
-    O_{ij} = \sum_{m=1}^{3} \sum_{n=1}^{3} I_{i+m-1,\,j+n-1} \cdot K_{mn},
-    \label{eq:convolution}
-\end{equation}
-\vspace{0.1cm}
-
-where \(O_{ij}\) is the element at the \(i\)-th row and \(j\)-th column of the feature map \(O\), 
-(with \(1 \leq i,j \leq 3\)).
-Notice that because no padding is applied, 
-the dimensions of \(O\) are reduced compared 
-to the input.
-
-Digital images are composed of pixels that encode brightness and color information
- at specific spatial locations. As explained by \cite{10589380TEST}, 
- in a standard 8-bit image each pixel is represented by an intensity 
- value ranging from 0 (darkest) to 255 (brightest).
-
-Figure~\ref{fig:kernel} demonstrates a convolution operation using 
-a simplified \(5 \times 5\) single-channel (grayscale) matrix. 
-Most umages are represented as three-dimensional
-tensors with dimensions \(H \times W \times C\), where \(H\) is the 
-height, \(W\) is the width, and \(C\) is the number of channels. 
-For example, a standard RGB image has \(C=3\) channels corresponding to red, green, 
-and blue\cite[p. 170]{prince2023understanding}. One can visualize this as three separate layers—one for 
-each color—stacked along the depth dimension, much like stacking 
-three copies of \(I\) inside Figure~\ref{fig:kernel} on top of each other.
-
-Similarly, each convolution kernel is represented as a three-dimensional 
-tensor of size \(K \times K \times C\). The depth of the kernel must 
-match the depth of the input (\(C\)) to perform element-wise multiplication
- correctly, often with an added bias to produce a single scalar output. \cite{VerdhanVaibhav2021CVUD} 
 
 
 
 
-Early layers of a CNN learn low-level features like edges and curves, 
-while deeper layers combine these to form high-level representations 
-such as faces or objects. However, as the network deepens, 
-the number of dimensions and overall complexity increase, 
-especially when image augmentations (like rotations) 
-alter the feature maps. To manage this complexity, 
-downsampling is used, which reduces the resolution of the 
-feature maps. This is achieved through a pooling layer 
-placed after the convolutional layers. Pooling layers 
-operate on each feature map individually, reducing their 
-dimensions—often halving them—by summarizing regions.
-Two common pooling methods are average pooling, which 
-computes the mean value, and max pooling, which selects 
-the maximum value from each region \citep{VerdhanVaibhav2021CVUD}.
-
-
-
-
-These layers apply small, learnable filters, also known as kernels,
-which systematically scan the image, detecting patterns 
-such as edges, textures, and shapes. Each kernel responds 
-to specific features in the input, enabling the network 
-to learn hierarchical representations through multiple layers \citep{alif2025yolov12}.
-
-In digital representation, an image is stored as a numerical matrix of pixel values.
-A color image is typically encoded as a three-dimensional tensor (H × W × C), where C represents the number of color channels—commonly three for RGB images.
-
-Unlike traditional fully connected networks, 
-CNNs utilise spatially local connections and weight 
-sharing to improve computational efficiency and 
-reduce the number of parameters
-
-As described by 
-
-
-When processin images CNNs use convolutional layers. 
-Scanning the image using filters also called kernels that
-can detect features. Each kernel anables the model to learn patterns
-by activates a specific pattern in the input image.
-
-
-
-Following convultion activation functions such as ReLu are used.
-It outputs only positive nombers, zero othewise. This helps the model
-learn nonlinear data for pattern recogition.
-
-Pooling is a downsampling operation where downsampling means to reduce 
-the dimenstionality of the feature map extracted. 
-This reduces the computational cost and also overfitting.
-
-In the end there are fully connected (FC) layers simmilar to those of a 
-neural netwok. These interpret the features.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{CNN.png}  % Replace with actual image file
-    \caption{Depicting a Convolutional Neral Netowk}
-    \label{fig:CNN}  
-\end{figure}
-
-
-\paragraph{Architecture}
-
-Both the YOLOv11 and V12 model follows the standard three-part structure of the YOLO family: 
-Backbone, Neck, and Head, as shown in Figure \ref{fig:Arc}.
-According to Hidayatullah et al. (2025), the Backbone extracts features using 
-convolutional layers and downsampling, generating hierarchical feature maps.
-The Neck refines these features through the SPPF block for multi-scale detection 
-and the C2PSA module to enhance the recognition of small and occluded objects. 
-Upsampling and feature concatenation further improve resolution and information 
-retention. Finally, the Head produces the model’s output, predicting class probabilities 
-and bounding boxes across three detection layers (small, medium and large), 
-each specialized for different object sizes \citep{hidayatullah2025yolov8yolo11comprehensivearchitecture}.
-\vspace{0.3cm}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{YOLOARC.png}  % Replace with actual image file
-    \caption{The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head.}
-    \label{fig:Arc}  
-\end{figure}
-
-and the Head 
-Create bounding boxes and pair it to a class.
-
-step 1. Overlay image with a grid in size sxs 
-Each grid cell produces 2 things:
-- 1. a set of bounding boxes centered on a point inside the grid
- with conficence scores that an object exists inside each bounding box 
-
- - 2 a class probability map for each cell: which tells what object class is most 
- likely to be in that cell given that an object exists within the cell.
-
-It combines this info to yeild the object detections 
-
-
-
-TEST
 
 \citep{alif2025yolov12}
 
 % yolo is trained on https://arxiv.org/pdf/1405.0312
 
-On one hand, YOLO’s real-time inference speed, lightweight architecture, 
-and open-source nature make it a compelling choice for applications 
-requiring fast, on-device processing. 
+
 
  As for relating to this thesis. there is limited research on the use of YOLO 
-directly relating for Digital Asset Management (DAM) applications. with only one identified 
+directly relating for Digital Asset Management (DAM) applications. 
+with only one identified 
 study—Angulo et al. 
 
 
-
-
-
-
-
-
- 
- 
- 
- 
- YOLOv1 unified architecture divided the image into a grid, predicting bounding boxes and
- class probabilities directly for each cell, enabling end-to-end learning
-Since then it has been applied in healthcare including but not limited to pill identification, diagnostic processes and treatment outcomes, 
-survailance for social distancing and face mask detection during pandemics and identification, and 
-autonomous vihechecls and also in detect and classify crops \cite{Sapkota2025YOLOv11}. 
-
-There is also use of YOLO in industry. nspection processes to detect defects and anomalies
-and moreso ensuring quality control in manufacturing and production.
-
-There is limited sources of 
-
 cite{Sapkota2025YOLOv11}. 
 
-
-
-Since then a lot has happened. In the beginning. Yolov1 - v4 relied on anchor boxes. 
 
 \paragraph{The improvements of Yolov11}
 
@@ -958,37 +928,10 @@ The recall rate, which measures how well the model detects all ground-truth obje
 YOLOv11 also exhibited fewer false detections compared to its predecessors.
 YOLOv11 displayed higher attention concentration on relevant objects, meaning it focused better on wires and transformers, reducing errors in object localization.
 
-Introduction of the C3K2 module (a new CSP bottleneck layer with smaller convolutional layers), improving feature extraction and detection efficiency.
-Integration of the C2PSA module, which enhances spatial and channel information processing for more accurate detections.
-Optimized adaptive anchor box mechanism, improving the model's adaptability across different object sizes and datasets.
-
-
-\paragraph{The kernel operation}
-At the core of CNNs is the convolution operation, a specialized linear process that replaces 
-the typical matrix multiplication found in other neural network layers. Convolution involves 
-computing a weighted average over the input, where a kernel (or filter) systematically processes
- the input data to produce a feature map. The figure \ref{fig:kernel} showcases the convolutional 
- operation.
-
-
-Convolutional filters, also called Local Receptive Feilds or kernels are used
-to detect patterns or features in input data. 
-
-The pixel values of an image are the features, because each pixel value represents the intensity of light at a given location. We want to learn the relationship between those features in an image in order to detect objects, faces etc. 
-
-For example, in image processing, filters might be designed to detect edges, 
-corners, or textures. In deep learning, the weights of these filters are learned automatically through training on large datasets.
-
-
-
-
-
 
 \subsection{\mbox{Object Detection with YOLOv11}}
 
 
-state-of-the-art one-stage object detection algorithm 
-renowned for its efficiency and simplicity
 
 construction of a object detection dataset
 
@@ -1045,18 +988,6 @@ lightweight design, inference speed, and accuracy. Crossstage partial connection
 across stages, enriching semantic information and improving
 
 
-The most recent iteration, YOLOv11, replaced the
-C2f module with the C3K2 module, a custom CSP bottleneck
-layer featuring two smaller convolutional layers, improving
-processing speed without compromising performance. While
-retaining the SPPF module from YOLOv8, YOLOv11 introduced the C2PSA module, which integrates channel and spatial
-information with multi-head attention mechanisms for more
-efficient feature extraction. An adaptive anchor box mechanism was also refined to optimize configurations across diverse
-datasets, boosting detection accuracy. Beyond object detection
-in power equipment, YOLOv11 extends its capabilities to
-instance segmentation, image classification, pose estimation,
-and oriented bounding box detection (OBB), add
-
 
 
 Among these, You only
@@ -1111,29 +1042,6 @@ these individual loss components and employing advanced
 optimization algorithms to refine the model’s performance
 in object detection tasks
 
-architecture:
-serves as the foundation for extracting multi-scale feature
-maps from input images. This is achieved through a series
-of convolutional layers and specialized modules, designed to
-generate feature maps at varying resolutions. These feature
-maps capture the spatial and semantic information necessary for subsequent processing. The Neck functions as an
-intermediate stage, tasked with aggregating and enhancing
-features from multiple scales before passing them to the Head
-network for prediction. This process often involves upsampling
-and concatenation of feature maps, enabling the model to
-efficiently capture and utilize multi-scale information. The
-Neck plays a crucial role in bridging the Backbone and Head
-components, enhancing feature expressiveness and supporting
-robust predictions. The Head is responsible for generating the
-final outputs, including object bounding boxes and object classes
-labels. It processes the enriched feature maps from the Neck to
-predict object locations and classifications with high precision.
-In summary, the Backbone extracts essential feature representations, the Neck aggregates and refines these features
-across scales, and the Head produces the final predictions.
-The Neck serves as a pivotal link, combining multi-scale
-features from the Backbone and augmenting their expressiveness through upsampling and concatenation, thereby providing
-a strong foundation for the Head’s accurate and reliable
-predictions.
 
 \subsection{\mbox{Digital Asset Management}}
 \cite{krogh2009} describes DAM as an essential framework for protecting, 
@@ -1316,27 +1224,8 @@ Despite these challenges, the benefits of AI-powered image tagging in DAM system
 Entangled states are an important part of quantum cryptography, but also relevant in other
 domains. This concept might be relevant for neutrinos, see for example [2].
 
-\subsubsection{What is the YOLO model + how does it work from a higher level perspective}
-\vspace{0.3cm}
-
-Object detection algotithm. It locates object in an image
-It is ine stage detection, it is fater than two stage. 
-It is just a algoritm... so you have to do a lot around it?
-
 \paragraph{Scheme}
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=1.2\linewidth]{YOLOSTEP.png}  % Replace with actual image file
-%     \caption{YOLOv11 performance comparison (Ultralytics Inc., 2025).}
-%     \label{fig:Scheme}  
-% \end{figure}
-
-
-\paragraph{Architecture}
-
-
-\paragraph{Loss Function}
 
 
 \subsubsection{The YOLO model}
@@ -1375,9 +1264,6 @@ efficiency.
   with YOLOv11 representing the most advanced iteration to date \citep{khanam2024yolov11overviewkeyarchitectural}.
 \vspace{0.3cm}
 
-Computational methods are increasingly used as a third method of carrying out scientific
-investigations. For example, computational experiments were used to find the amount of wear in a
-polyethylene liner of a hip prosthesis in [3].
 
 \subsection{Major background area\#2}
 The application of AI-powered image tagging in DAM systems extends beyond large corporations 
@@ -1439,6 +1325,9 @@ Do not use the title of the paper/book/… as the title of the section. Instead 
 
 \subsection{Summary}
 It is nice to bring this chapter to a close with a summary. For example, you might include a table that summarizes the ideas of others and the advantages and disadvantages of each – so that later you can compare your solution to each of these. This will also help guide you in defining the metrics that you will use for your evaluation.
+
+
+
 
 
 % ===== Section 3: Methodology =====
