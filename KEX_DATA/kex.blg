@@ -3,10 +3,9 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: kex.aux
 The style file: apalike.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "author2025"
 You've used 43 entries,
             1935 wiz_defined-function locations,
-            716 strings with 11784 characters,
+            715 strings with 11774 characters,
 and the built_in function-call counts, 16211 in all, are:
 = -- 1539
 > -- 851
@@ -45,4 +44,3 @@ warning$ -- 0
 while$ -- 107
 width$ -- 0
 write$ -- 546
-(There was 1 warning)

@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex kex"] 1742668320.51066 "kex.aux" "kex.bbl" "kex" 1742668344.3986 0
+["bibtex kex"] 1743360552.20419 "kex.aux" "kex.bbl" "kex" 1743360708.74966 0
   "./references.bib" 1742591063.82346 19228 c0f2d06bdfab196727fc546b6ea42dfa ""
   "/usr/local/texlive/2024basic/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "kex.aux" 1742668343.74017 20226 004cfd74e939cb0b877c480abe291ee3 "pdflatex"
+  "kex.aux" 1743360708.58826 20237 50008981ad604821e6ea297e22954eff "pdflatex"
   (generated)
   "kex.bbl"
   "kex.blg"
   (rewritten before read)
-["pdflatex"] 1742668339.46304 "/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex" "kex.pdf" "kex" 1742668344.40053 0
-  "/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex" 1742668339.40683 75383 8de507bdacc3070b2d5e0879cdc9515e ""
+["pdflatex"] 1743360706.9723 "/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex" "kex.pdf" "kex" 1743360708.74983 0
+  "/Users/ellakarlsson/Desktop/DA151X /KEX_DATA/kex.tex" 1743360706.67559 83689 4fa2c47789877915ce20ca9a4cef5257 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -56,6 +56,7 @@
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr5.pfb" 1255129361 120387 212cad1e763d510fc9c3ce2466274a57 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr7.pfb" 1255129361 121145 68312a933e2c689ed40ec0aba373e279 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
+  "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr9.pfb" 1255129361 121065 50bbfa703ce7e11638752ef5a6d120c7 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb" 1255129361 112593 fda2373ba4420af33949610de4c28fe8 ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
   "/usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb" 1254269338 27941 d1f5d03f61a46c3fcc3a2ba904ddda52 ""
@@ -144,13 +145,13 @@
   "YOLOARC.png" 1742583207.76773 245204 c88d0a39722621f14944576e0dea13c7 ""
   "YOLOV11.png" 1741037854.65092 264840 26bbde2ca34560d6c09d00bdaf903206 ""
   "bounding.png" 1741445688.76662 848024 5fc9e78315a12c25aa991b4796b69261 ""
-  "kex.aux" 1742668343.74017 20226 004cfd74e939cb0b877c480abe291ee3 "pdflatex"
-  "kex.bbl" 1742668320.53594 10293 67b36db51cc99447a1d7560bb4cec84b "bibtex kex"
-  "kex.lof" 1742668343.74896 1276 b4603d301cedcecdf63f8405247e9207 "pdflatex"
-  "kex.lot" 1742668343.74907 409 aa8a21a713b880a5e2baf326308a9aba "pdflatex"
-  "kex.out" 1742668343.7469 14523 616c3abdb780659b5f332c4b6581a101 "pdflatex"
-  "kex.tex" 1742668339.40683 75383 8de507bdacc3070b2d5e0879cdc9515e ""
-  "kex.toc" 1742668343.74839 7507 b0137db2e36803ba90a81a5a2a9edfb5 "pdflatex"
+  "kex.aux" 1743360708.58826 20237 50008981ad604821e6ea297e22954eff "pdflatex"
+  "kex.bbl" 1743360552.22013 10293 67b36db51cc99447a1d7560bb4cec84b "bibtex kex"
+  "kex.lof" 1743360708.59054 1172 6ee53468ba97a95d938f014f8da1a924 "pdflatex"
+  "kex.lot" 1743360708.5906 304 a43edac9095998d6d452ca79f17c719c "pdflatex"
+  "kex.out" 1743360708.5901 14924 0b6e46a120e3d2389bbf543dd881039c "pdflatex"
+  "kex.tex" 1743360706.67559 83689 4fa2c47789877915ce20ca9a4cef5257 ""
+  "kex.toc" 1743360708.59045 7800 c003981406ce93c5e3fb895bb579e226 "pdflatex"
   "kthLogga.png" 1739875066.43544 100879 2a4c0a0ec123f208339bbc47da6c3819 ""
   "pooling.png" 1742588175.17556 157891 679b420213f80799e8efa500158b2129 ""
   "targets.png" 1740757345.01573 82094 3172ef9db2f17734f3ccc98a100b2578 ""
