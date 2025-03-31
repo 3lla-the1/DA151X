@@ -249,7 +249,6 @@ INPUT ./pooling.png
 INPUT ./pooling.png
 INPUT ./pooling.png
 INPUT ./pooling.png
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
@@ -258,6 +257,7 @@ INPUT ./YOLOARC.png
 INPUT ./YOLOARC.png
 INPUT ./YOLOARC.png
 INPUT ./YOLOARC.png
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm

@@ -186,27 +186,28 @@ I would like to thank xxxx for having yyyy.
 \vspace{0.2cm} % Add some space to align table with the heading
 
 \renewcommand{\arraystretch}{1.2} % Adjust row height for readability
-\begin{flushleft} % Align the table properly with the heading
-\begin{longtable}{p{5cm} p{12cm}} % Adjust column width for proper alignment
-    
-    AI   & Artificial Intelligence \\
-    DAM  & Digital Asset Management \\
-    DSR  & Design Science Research \\
-    DT   & Digital Transformation \\
-    ERP  & Enterprise Resource Planning \\
-    IT   & Information Technology \\
-    ML   & Machine Learning \\
-    MCS  & Management Control Systems \\
-    MDM  & Metadata Management \\
-    RBAC & Role-based access control \\
-    RBV  & Resource-Based View \\
-    SME  & Small and Medium-sized Enterprises \\
-    UX   & User Experience \\
-    VRIN & Valuable, Rare, Inimitable, Non-substitutable \\
-    YOLO & You Only Look Once \\
-    
+\begin{flushleft}
+\begin{longtable}{p{5cm} p{12cm}}
+
+AI     & Artificial Intelligence \\
+CNN    & Convolutional Neural Network \\
+DAM    & Digital Asset Management \\
+DETR   & Detection Transformer \\
+DSR    & Design Science Research \\
+DT     & Digital Transformation \\
+IoU    & Intersection over Union \\
+IT     & Information Technology \\
+ML     & Machine Learning \\
+mAP    & Mean Average Precision \\
+RF-DETR & Roboflow Detection Transformer \\
+SDG    & Sustainable Development Goal \\
+SME    & Small and Medium-sized Enterprises \\
+UX     & User Experience \\
+YOLO   & You Only Look Once \\
+
 \end{longtable}
 \end{flushleft}
+
 
 
 % --------------------------------------------------------------------------------------------------------------------------------------------
@@ -226,14 +227,38 @@ I would like to thank xxxx for having yyyy.
 % ===== Section 2: Introduction =====
 
 \section{Introduction}
-
-To be added 
-state-of-the-art one-stage object detection algorithm 
-renowned for its efficiency and simplicity
 % This chapter describes the specific problem that this thesis addresses, the context of the problem,
 % the goals of this thesis project, and outlines the structure of the thesis.
 % Give a general introduction to the area. (Remember to use appropriate references in this and all
 % other sections.)
+
+Small, design-oriented manufacturers increasingly rely on 
+large volumes of product images to communicate with 
+customers, showcase bespoke work, and manage visual 
+branding across digital channels. As visual assets 
+become central to everyday operations, the lack of structured 
+organization makes them difficult to manage, retrieve, 
+and reuse efficiently.
+
+Digital Asset Management (DAM) systems address 
+this by adding searchable metadata to images.
+While some DAM platforms offer automatic metadata tagging, 
+these systems typically rely on general-purpose obejct detection
+models trained on broad categories. For companies with 
+domain-specific products these generic labels provide
+limited value.
+
+This thesis explores how two state-of-the-art object 
+detection models, YOLOv12 and RF-DETR, can be fine-tuned on 
+a company-specific dataset to support automated metadata 
+generation for a bespoke furniture SME. The goal is to 
+evaluate how well these models can classify 
+and localize visual elements in real company images, and 
+how such automation can improve asset retrieval and 
+knowledge sharing. The research includes both a technical 
+comparison of the models and a business-oriented assessment 
+of their value in a real-world context.
+
 
 \subsection{Background}
 Digital Asset Management (DAM) emerged in the late 1990s as organizations began grappling 

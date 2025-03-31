@@ -1,8 +1,8 @@
 \contentsline {figure}{\numberline {1-1}{\ignorespaces Sustainable Development Target 9.5 and 12.6}}{9}{figure.1.1}%
 \contentsline {figure}{\numberline {2-1}{\ignorespaces Illustrating the five main stages of DAM.}}{11}{figure.2.1}%
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Bounding box for table with legs.}}{12}{figure.2.2}%
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Bounding box for table with legs.}}{13}{figure.2.2}%
 \contentsline {figure}{\numberline {2-3}{\ignorespaces A simplified 2D convolution applied to an RGB image (adapted from \citep {prince2023understanding}).}}{13}{figure.2.3}%
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Max pooling applied to a \(4 \times 4\) matrix \(X\) resulting in a \(2 \times 2\) matrix \(Y\).}}{13}{figure.2.4}%
-\contentsline {figure}{\numberline {2-5}{\ignorespaces The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head (adapted from \citep {hidayatullah2025yolov8yolo11comprehensivearchitecture}).}}{14}{figure.2.5}%
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Max pooling applied to a \(4 \times 4\) matrix \(X\) resulting in a \(2 \times 2\) matrix \(Y\).}}{14}{figure.2.4}%
+\contentsline {figure}{\numberline {2-5}{\ignorespaces The architecture of YOLOv11, illustrating its three main components: Backbone, Neck, and Head (adapted from \citep {hidayatullah2025yolov8yolo11comprehensivearchitecture}).}}{15}{figure.2.5}%
 \contentsline {figure}{\numberline {2-6}{\ignorespaces YOLOv11 performance comparison (Ultralytics Inc., 2025).}}{17}{figure.2.6}%
 \contentsline {figure}{\numberline {A-1}{\ignorespaces An example figure in Appendix A.}}{24}{figure.A.1}%
