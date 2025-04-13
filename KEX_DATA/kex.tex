@@ -66,7 +66,7 @@
     {\large UNDERGRADUATE LEVEL, 15 CREDITS}\\[2.5cm]
     
     \linespread{0.9}\selectfont % Tighter title spacing
-    {\Huge \textbf{Digital Asset Management for Project-Based Manufacturing: \\ 
+    {\Huge \textbf{Digital Asset Management in Project-Based Manufacturing: \\ 
     A Comparative Study of YOLOv12 and RF-DETR}}\\[0.7cm]
     {\Large Fine-Tuning Object Detection Models on \\ Company-Specific Imagery 
     to Enhance \\ Knowledge Sharing}\\[1cm]
@@ -139,6 +139,7 @@ Digital Asset Management (DAM), Object Detection, YOLOv12, RF-DETR,
 Transformer Models, Metadata Tagging, Knowledge Sharing, Real-Time Inference, 
 Project-Based Manufacturing, SMEs, Deep Learning, Edge Deployment
 
+\newpage
 \phantomsection 
 \section*{Sammanfattning}
 \addcontentsline{toc}{section}{Sammanfattning}
@@ -232,45 +233,55 @@ YOLO   & You Only Look Once \\
 % Give a general introduction to the area. (Remember to use appropriate references in this and all
 % other sections.)
 
-Small, design-oriented manufacturers increasingly rely on 
+Design-oriented manufacturers increasingly rely on 
 large volumes of product images to communicate with 
-customers, showcase bespoke work, and manage visual 
-branding across digital channels. As visual assets 
-become central to everyday operations, the lack of structured 
-organization makes them difficult to manage, retrieve, 
-and reuse efficiently.
+customers, showcase bespoke work, and maintain 
+branding across channels. However, as visual assets 
+accumulate, the lack of structured organization 
+hinders efficient management and retrieval.
 
 Digital Asset Management (DAM) systems address 
 this by adding searchable metadata to images.
-While some DAM platforms offer automatic metadata tagging, 
+While some modern DAM platforms offer automatic metadata tagging, 
 these systems typically rely on general-purpose obejct detection
 models trained on broad categories. For companies with 
-domain-specific products these generic labels provide
-limited value.
+domain-specific products this provides limited value.
 
 This thesis explores how two state-of-the-art object 
 detection models, YOLOv12 and RF-DETR, can be fine-tuned on 
-a company-specific dataset to support automated metadata 
-generation for a bespoke furniture SME. The goal is to 
-evaluate how well these models can classify 
-and localize visual elements in real company images, and 
-how such automation can improve asset retrieval and 
-knowledge sharing. The research includes both a technical 
-comparison of the models and a business-oriented assessment 
-of their value in a real-world context.
+a company-specific dataset to support domain-relevant 
+metadata generation. The aim is to evaluate how well 
+these models can classify and localize objects in 
+product imagery, and how such automation can 
+improve asset retrieval and knowledge sharing.  
+The study combines technical 
+model evaluation and a business-oriented assessment 
+of their value in a real-world SME context.
 
 
 \subsection{Background}
-Digital Asset Management (DAM) emerged in the late 1990s as organizations began grappling 
-with the rapid increase in digital content \citep{krogh2009}. Early DAM systems were primarily on-premises 
-solutions designed to store and manage assets such as images, videos, and documents. 
-In the early 2000s, these systems transitioned to cloud-based platforms, offering 
-improved scalability and accessibility \citep{mccain2021}.
+The increasing integration of digital workflows 
+has intensified the demand for scalable, intelligent 
+systems that manage visual content. 
+In industries where products are highly customized 
+and aesthetics play a central role, imagery is not 
+just supplementary, as it is the product’s primary 
+communication medium across design reviews, client 
+interactions, and marketing platforms. This 
+image-centric reality creates both a strategic 
+asset and a logistical burden: as image archives 
+grow, manual curation and retrieval processes 
+quickly become unsustainable.
 
-More recently, the integration of Artificial Intelligence (AI) and machine learning (ML) has transformed 
-DAM by automating key processes like image tagging, sorting, and categorization. Advanced computer 
+DAM emerged in the late 1990s as organizations began grappling 
+with the rapid increase in digital content \citep{krogh2009}. 
+More recently, the integration of Artificial Intelligence (AI) 
+and machine learning (ML) has transformed DAM by automating key 
+processes like image tagging, sorting, and categorization. Advanced computer 
 vision techniques now enable systems to analyze and tag images automatically, 
 reducing manual effort and increasing accuracy \citep{MINGfANG}.
+
+
 
 % \begin{figure}[htbp]
 %     \centering
@@ -1298,6 +1309,18 @@ assurance, suggesting a shift rather than a net loss in employment.
 
 \subsection{Related work}
 \subsubsection{Major related work}
+
+\begin{figure*}[t]
+    \centering
+    \makebox[\linewidth][c]{%
+        \includegraphics[width=1.2\textwidth]{YOLO_RFDTR.png}  % Adjust scale here
+    }
+    \caption{Comparison between YOLOv12 and RF-DETR architectures. The YOLOv12 pipeline (left) illustrates its three main components: \textit{Backbone}, \textit{Neck}, and \textit{Head}, adapted from \citet{hidayatullah2025yolov8yolo11comprehensivearchitecture}. The RF-DETR architecture (right) is based on multi-scale deformable attention and transformer decoders, as described in the Deformable DETR paper published at ICLR 2021 by \citet{zhu2021deformabledetr}.}
+    \label{fig:Arc}
+\end{figure*}
+
+
+
 % Do not use the title of the paper/book/… as the title of the section. Instead summarize what the contribution of this work is in your own words.
 
 % Geo-distributed data centers are increasingly used to provide increased availability and reduce
@@ -1322,11 +1345,12 @@ assurance, suggesting a shift rather than a net loss in employment.
 \newpage
 TEST
 \newpage
+TEST
+\newpage
 
 % ===== Section 3: Methodology =====
 
-\section{<Engineering-related content, Methodologies and Methods>
-Use a self-explaining title}
+\section{Methodology}
 
 % The contents and structure of this chapter will change with your choice of methodology and methods.
 % For example, if you have implemented an artifact, what did you do and why? How will your evaluate it.
@@ -1350,138 +1374,288 @@ Use a self-explaining title}
 % of the data collected. Section 3.6 describes the method used for the data analysis. Finally, Section 3.7
 % describes the framework selected to evaluate xxx.
 
+This chapter describes the research methodology applied to develop, 
+implement, and evaluate a computer vision system for object detection. 
+The study follows a design science research (DSR) paradigm, with a 
+focus on constructing and rigorously testing computational 
+artifacts in a real-world context.
 
-This chapter outlines the engineering process and research methods 
-used to develop, evaluate, and contextualize the object detection solution 
-based on YOLOv12. It details the overall research strategy, the steps for 
-constructing the dataset, model training and evaluation, and reflects on 
-reliability and validity. The methodology is designed to meet both technical 
-and organizational objectives, ensuring practical relevance for the partner company.
+The methodology consists of a structured sequence of engineering steps: 
+dataset construction, model training, performance evaluation, and 
+comparative analysis. Two object detection models—YOLOv12 and RF-DETR—were 
+trained and evaluated under equivalent experimental conditions using a 
+domain-specific dataset derived from the partner company.
 
-
-
-
-\subsection{Research Process}
-% Image of: steps conducted to do the research 
-% Fig: research processes
-The research followed an iterative cycle, divided into the following phases:
-
-\begin{enumerate} 
-    \item Data acquisition and object class definition
-    \item Dataset construction and annotation
-    \item Image preprocessing and augmentation
-    \item Model training and monitoring
-    \item Evaluation and comparison with alternative models
-    \item Organizational impact analysis (INDEK perspective)
-    \item Recommendations for continuous innovation
-\end{enumerate} 
-
-A visual overview of this process is presented in Figure (placeholder)
+The chapter also outlines the methods used for data annotation,
+experimental setup, evaluation metrics, and the steps taken to 
+ensure reliability and internal validity. The purpose is to provide
+a replicable, systematic framework for artifact development and 
+performance assessment.
 
 \subsection{Research Paradigm}
 
-This thesis adopts a design science research (DSR)
-paradigm, focusing on the development and evaluation 
-of a computational artifact (YOLOv12-based object 
-detection model) intended to solve a real-world 
-business problem in digital asset management (DAM). 
-The paradigm emphasizes iterative development, 
-practical utility, and reflective learning.
+This thesis adopted the Design Science Research (DSR) paradigm,
+a problem-solving approach rooted in the sciences of the artificial \citep{simon1996sciences}, 
+and widely applied in information systems and technology-driven domains \citep{vomBrocke2020introduction}. 
+DSR is suited for research that aims to generate actionable 
+knowledge through the design and evaluation of innovative artifacts \citep{hevner2004design}.
+
+According to \citet{hevner2004design}, rigorous and relevant DSR is guided by seven core principles: 
+(1) the creation of a purposeful artifact, (2) addressing a relevant problem, 
+(3) evaluating the artifact’s utility, (4) contributing novel knowledge, 
+(5) applying rigorous design and evaluation methods, (6) iterative development, 
+and (7) clear communication to both technical and managerial audiences. 
+By following these guidelines, DSR enables the creation of useful, tested, and transferable knowledge.
+
+The DSR paradigm was particularly well-suited for this thesis due to its dual contribution 
+to both technical and organizational domains. This project designed, implemented, 
+and evaluated machine learning models (YOLOv12 and RF-DETR) for object detection 
+within a real-world, business-driven context, specifically to enhance 
+DAM processes in a bespoke furniture manufacturing SME.
+
+As illustrated in Figure~\ref{fig:research-process}, the research was structured 
+around two intertwined tracks: a technical track, which includes dataset preparation, 
+model training, evaluation, and comparative analysis (steps 1T–8T); and a business track, 
+which encompassed stakeholder need definition, class selection, workflow alignment, 
+and organizational fit analysis (steps 1B–4B). These tracks converged in step 9T5B, 
+where insights from both domains were synthesized to inform strategic DAM recommendations.
+
+Beyond the two functional object detection artifacts, this thesis contributes 
+to the design knowledge (DK) base—defined as prescriptive knowledge explaining 
+how and why a solution works in a specific context \citep{vomBrocke2020introduction}. 
+DK consists of three interlinked components: a clearly defined problem space, 
+a corresponding solution, and a contextual evaluation.
+This type of contribution aligns with what \citet{gregor2013positioning} 
+refer to as the instrumental knowledge base of Information Systems—practical, 
+actionable insights that not only extend theoretical understanding, 
+but also inform real-world decision-making and system design.
+
+\subsection{Research Process}
+
+Building on the DSR paradigm described in Section~3.1, 
+this study followed a structured dual-track process 
+encompassing both technical and organizational components. 
+The overall approach is visualized in Figure~\ref{fig:research-process}, 
+which highlights the sequence and interdependencies of the steps undertaken.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\linewidth]{map.png}
+    \caption{Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, workflow alignment, and organizational fit. Both tracks converged in step 9T5B to inform strategic recommendations for DAM.}
+    \label{fig:research-process}
+\end{figure}
+
+The technical track (T) in Figure~\ref{fig:research-process} 
+addresses the machine learning pipeline: beginning with dataset 
+definition and annotation, progressing through model training 
+and evaluation (YOLOv12 and RF-DETR), and culminating in 
+comparative analysis. A manual tagging baseline was also 
+established in step 5T. In parallel, the business track (B) defined the object detection 
+needs, selected classes in collaboration with stakeholders, 
+and assessed workflow integration and organizational fit.
+These efforts converged in the final step (9T5B), where technical 
+and business insights were synthesized to inform actionable 
+recommendations for improving DAM.
+
+This structured approach ensured that technical development did not 
+evolve in isolation but remained aligned with organizational needs—upholding 
+the DSR principles of relevance, utility, and contextual fit. 
+Methodological details for each step, including data collection, 
+model selection, and evaluation strategy, are elaborated in the subsequent sections.
 
 \subsection{Data Collection}
 % (This should also show that you are aware of the social and ethical concerns that might be relevant
 % to your data collection method.)
 
-Data were collected through collaboration 
-with the partner company. The following 
-sources were used:
+This section outlines the sources of data used 
+in the research, as well as the ethical and legal 
+measures taken to ensure compliance with relevant 
+data protection regulations.
+Data for this study were collected through 
+collaboration with the partner company. 
+Three primary sources were used:
 
-\begin{itemize} 
-    \item Internal pricing list 
-    \item Images from the company’s digital asset repository in DropBox
-    \item Website containing current product catalog
-\end{itemize} 
+\begin{itemize}
+    \item \textbf{Internal pricing list:} An internal pricing document from 2024, detailing 50 product variants, offered in several size, material, and finish combinations.
+    \item \textbf{Image dataset:} Approximately 4,000 photographs were sourced from the company's Dropbox-based digital asset repository. These include high-resolution product images from multiple angles, in various environments and lighting conditions. 
+    The collected data spanned a wide range of furniture categories (e.g., stools, side tables, coffee tables, dining tables, 
+    lamps, and mirrors) and exhibited considerable variation in materials (e.g., walnut, mahogany, oak, mappa burl) and finishes (e.g., matte, hi-gloss). 
+
+    \item \textbf{Public website:} Product descriptions and visual marketing materials were extracted from the firm’s public-facing website.
+\end{itemize}
+
+
+All data were handled in accordance with the General Data Protection Regulation (GDPR) (EU, 2016/679) \citep{gdpr}. 
+The dataset primarily consisted of product-only images. In a limited number of 
+cases, incidental human presence, such as background figures or reflected faces, was visible. 
+These images were not annotated, labeled, or used in any way to train the models.
+To uphold GDPR principles of data minimization and privacy by design (Articles 5 and 25), 
+images with clearly identifiable individuals were manually reviewed and either excluded 
+or masked during preprocessing. Under the Swedish Ethical Review Act (2003:460), 
+research involving fully anonymized material does not require formal 
+ethical approval \citep{etik}.
+
+Image annotation was performed manually in a private Roboflow workspace, 
+which supports secure, browser-based workflows and restricts public access \citep{roboflow_terms}. 
+Upon the completion of the annotation process (2T in Figure~\ref{fig:research-process}), 
+the dataset was deleted in accordance with Roboflow's data retention controls.
+Model training was conducted in Google Colab, a session-based environment where  all data are automatically deleted at the end of each runtime session or after 12 hours of inactivity \citep{colab_terms}. No data were permanently stored 
+on third-party servers.
 
 \vspace{0.3cm} 
-\subsubsection{Sampling}
+\subsubsection{Sampling and Target Population}
 \vspace{0.3cm} 
-% 1. Aa
-% 2. Bb
-% 3. Cc
-Initially, the company used over 100 internal 
-categories. These were manually reviewed and 
-consolidated into 33 object classes for improved 
-learnability, model generalizability, and annotation 
-efficiency.
-\vspace{0.3cm} 
-\subsubsection{Sample Size}
-\vspace{0.3cm} 
-A total of 3905 annotated images were created. 
-The dataset was split as follows:
-\begin{itemize} 
-    \item Training set: 70\% 
-    \item Validation set: 20\%
-    \item Test set: 10\%
-\end{itemize} 
 
-\vspace{0.3cm} 
-\subsubsection{Target Population}
-\vspace{0.3cm} 
-The target visual categories include 
-bespoke furniture components, fixtures, 
-and associated materials relevant to the 
-company’s product line.
+The company maintained an evolving catalogue of product 
+configurations that varied in design, material, size, 
+and finish. For instance, the “Cloud Table” was available 
+in multiple wood types and dimensions. While each 
+configuration constituted a commercially distinct 
+offering, many shared a common visual structure. 
+In the context of object detection, such surface-level 
+differences are not reliably distinguishable without 
+large volumes of labeled data.
+To ensure model robustness and prevent overfitting to 
+underrepresented configurations, variants with limited 
+visual representation, such as special editions with 
+only a few available images, were excluded. Including 
+these would have introduced foreground–foreground class 
+imbalance, where a few frequently occurring object classes 
+dominate the dataset. This results in a long-tailed 
+distribution, characterized by a small number of “head” 
+classes with abundant samples and a large number of “tail” 
+classes with very few. Such imbalance poses challenges for 
+object detectors, which tend to perform well on head 
+classes but struggle to generalize to rare categories. 
+This issue is pronounced in single-stage detectors like 
+YOLOv5 and its successors. \citet{crasto2024imbalance} 
+demonstrate that long-tailed datasets significantly 
+degrade mean Average Precision (mAP) for underrepresented 
+classes, and that standard mitigation strategies such as 
+sampling and loss weighting offer limited effectiveness 
+in correcting this bias.
+
+To address this, all product variants were manually 
+consolidated into 33 high-level object classes 
+representing the most visually distinct product 
+archetypes, rather than fine-grained subtypes. 
+The consolidation process prioritized three criteria: 
+(1) visual separability between classes, (2) sufficient 
+representation across the dataset, and (3) compatibility 
+with the company’s internal digital asset tagging practices.
+More on this in section ~\ref{section:class selection}
+
+A small number of strategically important new designs were
+retained and supplemented with additional images from the 
+company’s website and social media channels to ensure 
+coverage. The majority of the dataset was sourced from the 
+company’s internal Dropbox-based asset repository. Social media 
+content was typically excluded due to redundancy or 
+low image quality caused by compression.
+
+The final annotated dataset consisted of 3,905 images, 
+partitioned as follows:
+\begin{itemize}
+    \item \textbf{Training set:} 70\%
+    \item \textbf{Validation set:} 20\%
+    \item \textbf{Test set:} 10\%
+\end{itemize}
+
+This 70/20/10 split was selected to ensure effective 
+model training, reliable validation, and unbiased final 
+evaluation. The relatively large validation set (20\%) 
+was particularly important given the limited dataset 
+size and the complexity of the models used. 
+Transformer-based detectors such as Re-DETR are 
+known to overfit when training data is scarce, 
+partly due to their lack of inductive biases such as
+locality and translation invariance, which are present 
+in convolutional models \citep{carion2020detr}. 
+
 
 \subsection{Experimental Design}
 % /Planned Measurement
 \vspace{0.3cm} 
-\subsubsection{Test environment}
-\vspace{0.3cm} 
+
 % /test bed/model
 % Describe everything that someone else would need to reproduce your test environment/test
 % bed/model/…
 
-All model development was conducted using Google Colab 
-Pro with access to a Tesla T4 GPU. 
-The software stack included:
+Model training and evaluation were conducted in a 
+cloud-based environment using Google Colab. The object 
+detection models, YOLOv12 and RF-DETR, were 
+fine-tuned on the same annotated dataset. 
+This setup enabled a controlled and consistent 
+baseline for architectural comparison. 
+The software stack included the following components:
 
-\begin{itemize} 
-    \item YOLOv12 (Ultralytics fork)
-    \item Roboflow for annotation
-    \item Python 3.10, OpenCV, PyTorch
-\end{itemize} 
+\begin{itemize}
+    \item \textbf{Annotation and Augmentation:} Roboflow Pro (web interface)
+    \item \textbf{Environment:} Google Colab (Jupyter-based)
+    \item \textbf{Programming Language:} Python 3.10
+    \item \textbf{Frameworks:} PyTorch 2.0, OpenCV
+    \item \textbf{Models:}  Ultralytics (YOLOv12), Hugging Face (RF-DETR)
+    \item \textbf{Utilities and Tooling:} supervision (visualization and benchmarking), flash-attn (CUDA-accelerated attention), tqdm (progress tracking) 
+\end{itemize}
 
-\vspace{0.3cm} 
-\subsubsection{Hardware/Software to be used}
-\vspace{0.3cm} 
+YOLOv12 was installed directly from the official GitHub repository, 
+as it was not yet available via the Python Package Index (PyPI) \citep{yolov12repo}.
+API authentication for Roboflow (used for dataset access) and Hugging 
+Face (used for RF-DETR) was securely managed through Google 
+Colab’s userdata module, which enabled token-based access 
+without exposing credentials in the notebook.
+The detailed system configuration is summarized in 
+Table~\ref{tab:hardware_overview}, including GPU usage, 
+batch sizes, and training epochs. Notably, RF-DETR was 
+trained using a smaller per-step batch size and gradient 
+accumulation to match YOLOv12's effective batch size of 32.
+
 
 \begin{table}[htbp]
     \centering
-    {\small
-    \begin{tabularx}{\linewidth}{|c|X|}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\linewidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
         \hline
-        \textbf{Component} & \textbf{Specification} \\
+        \multicolumn{3}{|c|}{\textbf{Configuration, Resources, and Parameters}} \\
         \hline
-        \makecell[t]{\textbf{GPU}} 
-        & {Tesla T4 (15GB VRAM)} \\
+        \textbf{Component} & \textbf{YOLOv12} & \textbf{RF-DETR} \\
         \hline
-        \makecell[t]{\textbf{CUDA Version}} 
-        & {12.4} \\
+        Framework & Ultralytics (YOLOv12s .yaml), Roboflow & Hugging Face (rfdetr) \\
         \hline
-        \makecell[t]{\textbf{RAM Used}} 
-        & {13.3 / 15.0 GB} \\
+        GPU & \multicolumn{2}{c|}{Tesla T4 (15GB VRAM)} \\
         \hline
-        \makecell[t]{\textbf{Epochs}} 
-        & {36} \\
+        Max RAM Usage & 13.3 / 15.0 GB & 14.8 / 15.0 GB \\
         \hline
-        \makecell[t]{\textbf{Batch Size}} 
-        & {32} \\
+        CUDA Version & \multicolumn{2}{c|}{12.4} \\
+        \hline
+        Dataset Format & Roboflow YAML & COCO-style JSON \\
+        \hline
+        Input Resolution & 640×640 & 448×448 \\
+        \hline
+        Epochs & 36 & 4 \\
+        \hline
+        Batch Size & 32 & 4 (gradient accumulation over 8 steps) \\
+        \hline
+        Effective Batch Size & \multicolumn{2}{c|}{32} \\
         \hline
     \end{tabularx}
-    }
-    \caption{Hardware Specifications}
-    \label{tab:Hardware_Specifications}
+    \caption{Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4.}
+    \label{tab:hardware_overview}
 \end{table}
+
+As shown in Table~\ref{tab:hardware_overview}, the input resolution 
+for YOLOv12 was set to 640×640, consistent with its default 
+configuration. For RF-DETR, a lower resolution of 448×448 
+was selected to reduce memory consumption and ensure training 
+completed within the four-hour runtime limit imposed by Google 
+Colab’s free-tier environment (Tesla T4 GPU). To maintain 
+comparability between the two models, the effective batch
+size was standardized to 32. Due to higher memory requirements, 
+RF-DETR achieved this through gradient accumulation over eight 
+steps, while YOLOv12 was able to use a full batch size of 32 
+directly.
+
 
 
 \subsection{Assessing reliability and validity of the data collected}

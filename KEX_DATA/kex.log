@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  31 MAR 2025 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  13 APR 2025 22:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -399,7 +399,11 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box63
-) (./kex.aux)
+) (./kex.aux
+
+LaTeX Warning: Label `fig:Arc' multiply defined.
+
+)
 \openout1 = `kex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
@@ -506,7 +510,7 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2024basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-<kthLogga.png, id=344, 88.1694pt x 98.2872pt>
+<kthLogga.png, id=328, 88.1694pt x 98.2872pt>
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
 Package pdftex.def Info: kthLogga.png  used on input line 64.
@@ -518,7 +522,7 @@ Package pdftex.def Info: kthLogga.png  used on input line 64.
 {/usr/local/texlive/2024basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} <./kthLogga.png>] [1
 
 
-] [2] (./kex.toc
+] [2] [3] (./kex.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -541,128 +545,128 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 8.
- [3
+ [4
 
 ])
 \tf@toc=\write4
 \openout4 = `kex.toc'.
 
- [4] (./kex.lof)
+ [5] (./kex.lof)
 \tf@lof=\write5
 \openout5 = `kex.lof'.
 
- [5{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (./kex.lot)
+ [6{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (./kex.lot)
 \tf@lot=\write6
 \openout6 = `kex.lot'.
 
- [6]
-Overfull \hbox (52.45273pt too wide) in alignment at lines 190--208
+ [7]
+Overfull \hbox (52.45273pt too wide) in alignment at lines 191--209
  [] [] 
  []
 
-[7] [8
+[8] [9
 
 ]
-<targets.png, id=532, 438.63875pt x 293.095pt>
+<targets.png, id=529, 438.63875pt x 293.095pt>
 File: targets.png Graphic file (type png)
 <use targets.png>
-Package pdftex.def Info: targets.png  used on input line 406.
+Package pdftex.def Info: targets.png  used on input line 417.
 (pdftex.def)             Requested size: 106.85762pt x 71.39969pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 454.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 465.
  (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [9{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./targets.png>]
+) [10{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./targets.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-<4steg.png, id=576, 288.07625pt x 463.7325pt>
+ [11]
+<4steg.png, id=573, 288.07625pt x 463.7325pt>
 File: 4steg.png Graphic file (type png)
 <use 4steg.png>
-Package pdftex.def Info: 4steg.png  used on input line 627.
+Package pdftex.def Info: 4steg.png  used on input line 638.
 (pdftex.def)             Requested size: 111.31102pt x 179.18501pt.
- [11 <./4steg.png>]
+ [12 <./4steg.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-<bounding.png, id=618, 701.62125pt x 675.52374pt>
+ [13]
+<bounding.png, id=615, 701.62125pt x 675.52374pt>
 File: bounding.png Graphic file (type png)
 <use bounding.png>
-Package pdftex.def Info: bounding.png  used on input line 761.
+Package pdftex.def Info: bounding.png  used on input line 772.
 (pdftex.def)             Requested size: 155.83475pt x 150.03813pt.
-<3D.png, id=637, 614.295pt x 324.21124pt>
+<3D.png, id=634, 614.295pt x 324.21124pt>
 File: 3D.png Graphic file (type png)
 <use 3D.png>
-Package pdftex.def Info: 3D.png  used on input line 816.
+Package pdftex.def Info: 3D.png  used on input line 827.
 (pdftex.def)             Requested size: 222.62206pt x 117.49265pt.
- [13 <./bounding.png> <./3D.png>]
-<pooling.png, id=659, 1491.5725pt x 489.83pt>
+ [14 <./bounding.png> <./3D.png>]
+<pooling.png, id=656, 1491.5725pt x 489.83pt>
 File: pooling.png Graphic file (type png)
 <use pooling.png>
-Package pdftex.def Info: pooling.png  used on input line 855.
+Package pdftex.def Info: pooling.png  used on input line 866.
 (pdftex.def)             Requested size: 133.57458pt x 43.85857pt.
 
-Underfull \hbox (badness 6758) in paragraph at lines 865--873
+Underfull \hbox (badness 6758) in paragraph at lines 876--884
 \T1/lmr/m/n/10 (+20) where $\OML/lmm/m/it/10 X$ \T1/lmr/m/n/10 (+20) is the in-put fea-ture map, first
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 865--873
+Underfull \hbox (badness 1931) in paragraph at lines 876--884
 \T1/lmr/m/n/10 (+20) chan-nel di-men-sions. $\OML/lmm/m/it/10 P[] \OT1/lmr/m/n/10 (+20) = [][](\OML/lmm/m/it/10 X\OT1/lmr/m/n/10 (+20) )$\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 865--873
+Underfull \hbox (badness 2884) in paragraph at lines 876--884
 \T1/lmr/m/n/10 (+20) to cap-ture multi-scale con-tex-tual in-for-ma-tion
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 865--873
+Underfull \hbox (badness 1960) in paragraph at lines 876--884
 \T1/lmr/m/n/10 (+20) per-for-mance, es-pe-cially for small or par-tially
  []
 
-<YOLOARC.png, id=674, 816.04875pt x 982.67125pt>
+<YOLOARC.png, id=671, 816.04875pt x 982.67125pt>
 File: YOLOARC.png Graphic file (type png)
 <use YOLOARC.png>
-Package pdftex.def Info: YOLOARC.png  used on input line 913.
+Package pdftex.def Info: YOLOARC.png  used on input line 924.
 (pdftex.def)             Requested size: 222.62206pt x 268.06874pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./pooling.png>]
+[15{/usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./pooling.png>]
 Underfull \vbox (badness 3601) has occurred while \output is active []
 
- [15 <./YOLOARC.png>]
-Underfull \hbox (badness 2717) in paragraph at lines 1046--1056
+ [16 <./YOLOARC.png>]
+Underfull \hbox (badness 2717) in paragraph at lines 1057--1067
 []\T1/lmr/m/n/10 (+20) The trade-off be-tween speed and ac-cu-racy
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 1046--1056
+Underfull \hbox (badness 1242) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) such as [][]Rane[][] ([][]2023[][]), which con-trasts YOLO
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 1046--1056
+Underfull \hbox (badness 2359) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) with Faster R-CNN. While YOLO ex-cels in
  []
 
 
-Underfull \hbox (badness 3189) in paragraph at lines 1046--1056
+Underfull \hbox (badness 3189) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) check-out au-toma-tion, and e-commerce vi-sual
  []
 
 
-Underfull \hbox (badness 4595) in paragraph at lines 1046--1056
+Underfull \hbox (badness 4595) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) search^^VFaster R-CNN of-fers su-pe-rior ob-ject
  []
 
 
-Underfull \hbox (badness 2012) in paragraph at lines 1046--1056
+Underfull \hbox (badness 2012) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) on a re-gion pro-posal net-work (RPN) re-sults
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 1046--1056
+Underfull \hbox (badness 1142) in paragraph at lines 1057--1067
 \T1/lmr/m/n/10 (+20) in sig-nif-i-cantly higher com-pu-ta-tional de-mands,
  []
 
@@ -670,81 +674,145 @@ Underfull \hbox (badness 1142) in paragraph at lines 1046--1056
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (3.8019pt too wide) in paragraph at lines 1101--1101
+Overfull \hbox (3.8019pt too wide) in paragraph at lines 1112--1112
 |[][]| 
  []
 
-[16]
+[17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<YOLOV11.png, id=842, 725.71124pt x 302.12875pt>
+<YOLOV11.png, id=838, 725.71124pt x 302.12875pt>
 File: YOLOV11.png Graphic file (type png)
 <use YOLOV11.png>
-Package pdftex.def Info: YOLOV11.png  used on input line 1246.
+Package pdftex.def Info: YOLOV11.png  used on input line 1257.
 (pdftex.def)             Requested size: 222.62206pt x 92.6816pt.
- [17 <./YOLOV11.png>]
+ [18 <./YOLOV11.png>]
 Underfull \vbox (badness 1968) has occurred while \output is active []
 
- [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1329
-|[]\T1/lmr/bx/n/14.4 (+20) <Engineering-related
- []
+<YOLO_RFDTR.png, id=849, 1666.225pt x 862.22125pt>
+File: YOLO_RFDTR.png Graphic file (type png)
+<use YOLO_RFDTR.png>
+Package pdftex.def Info: YOLO_RFDTR.png  used on input line 1317.
+(pdftex.def)             Requested size: 546.29153pt x 282.69199pt.
+ [19] [20 <./YOLO_RFDTR.png>]
+<map.png, id=881, 437.635pt x 556.0775pt>
+File: map.png Graphic file (type png)
+<use map.png>
+Package pdftex.def Info: map.png  used on input line 1443.
+(pdftex.def)             Requested size: 222.62206pt x 282.87454pt.
+
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [21 <./map.png>]
+
+LaTeX Warning: Reference `section:class selection' on page 22 undefined on input line 1546.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1329
-\T1/lmr/bx/n/14.4 (+20) con-tent, Method-olo-gies
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19] [20]
-Underfull \hbox (badness 1286) in paragraph at lines 1617--1617
+ [22] [23]
+Underfull \hbox (badness 1286) in paragraph at lines 1791--1791
 |[]\T1/lmr/bx/n/12 (+20) YOLOv12 Train-ing Con-fig-u-ra-
  []
 
-
-Underfull \vbox (badness 2096) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1710--1710
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1884--1884
 |[]\T1/lmr/bx/n/14.4 (+20) Conclusions and Fu-ture
  []
 
-[21] (./kex.bbl
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 65.
- (/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmtt.fd
+(./kex.bbl
+Underfull \hbox (badness 2229) in paragraph at lines 35--38
+[]\T1/lmr/m/n/10 (+20) Crasto, N. (2024).  Class im-bal-ance in ob-
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 47.
+(/usr/local/texlive/2024basic/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [22]) [23]
+
+Underfull \hbox (badness 5316) in paragraph at lines 45--49
+[]\T1/lmr/m/n/10 (+20) European Union (2016).  Reg-u-la-tion (EU)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
+[][]$\T1/lmtt/m/n/10 https : / / eur-[]lex . europa . eu / legal-[]content /
+ []
+
+[25]
+Underfull \hbox (badness 1048) in paragraph at lines 56--60
+\T1/lmr/m/n/10 (+20) vice.  [][]$\T1/lmtt/m/n/10 https : / / colab . research . google . com /
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+[]\T1/lmr/m/n/10 (+20) Swedish Par-lia-ment (2003).  Lag
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+\T1/lmr/m/n/10 (+20) (2003:460) om etikprövn-ing av forskn-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+\T1/lmr/m/n/10 (+20) ing som avser män-niskor.  [][]$\T1/lmtt/m/n/10 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+\T1/lmtt/m/n/10 / / www . riksdagen . se / sv / dokument-[]lagar /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+\T1/lmtt/m/n/10 dokument / svensk-[]forfattningssamling /
+ []
+
+
+Overfull \hbox (26.09982pt too wide) in paragraph at lines 192--196
+\T1/lmtt/m/n/10 lag-[]2003460-[]om-[]etikprovning-[]av-[]forskning-[]som _
+ []
+
+) [27]
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 1767.
+Package pdftex.def Info: kthLogga.png  used on input line 1941.
 (pdftex.def)             Requested size: 182.09486pt x 203.01976pt.
- [24
+ [28
 
-] [25] (./kex.aux)
+] [29] (./kex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `kex.out' has not changed.
-(rerunfilecheck)             Checksum: 0B6E46A120E3D2389BBF543DD881039C;14924.
+(rerunfilecheck)             Checksum: BF5350D854EC788506064C4E2F5BA76A;14004.
  ) 
 Here is how much of TeX's memory you used:
- 14336 strings out of 475567
- 226529 string characters out of 5777889
+ 14428 strings out of 475567
+ 228158 string characters out of 5777889
  1952187 words of memory out of 5000000
- 35867 multiletter control sequences out of 15000+600000
- 630604 words of font info for 178 fonts, out of 8000000 for 9000
+ 35926 multiletter control sequences out of 15000+600000
+ 638594 words of font info for 194 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,16n,79p,1046b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on kex.pdf (26 pages, 2282251 bytes).
+ 75i,16n,79p,1046b,718s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on kex.pdf (30 pages, 3475059 bytes).
 PDF statistics:
- 1021 PDF objects out of 1200 (max. 8388607)
- 882 compressed objects within 9 object streams
- 187 named destinations out of 1000 (max. 500000)
- 42193 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1096 PDF objects out of 1200 (max. 8388607)
+ 943 compressed objects within 10 object streams
+ 193 named destinations out of 1000 (max. 500000)
+ 48315 words of extra memory for PDF output out of 51595 (max. 10000000)
 

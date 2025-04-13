@@ -211,6 +211,7 @@ OUTPUT kex.toc
 INPUT ./kex.lof
 INPUT ./kex.lof
 INPUT kex.lof
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 OUTPUT kex.lof
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
@@ -249,7 +250,6 @@ INPUT ./pooling.png
 INPUT ./pooling.png
 INPUT ./pooling.png
 INPUT ./pooling.png
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT ./YOLOARC.png
@@ -272,6 +272,21 @@ INPUT ./YOLOV11.png
 INPUT ./YOLOV11.png
 INPUT ./YOLOV11.png
 INPUT ./YOLOV11.png
+INPUT ./YOLO_RFDTR.png
+INPUT ./YOLO_RFDTR.png
+INPUT ./YOLO_RFDTR.png
+INPUT ./YOLO_RFDTR.png
+INPUT ./YOLO_RFDTR.png
+INPUT ./map.png
+INPUT ./map.png
+INPUT ./map.png
+INPUT ./map.png
+INPUT ./map.png
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ec-lmbx8.tfm
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/tfm/public/lm/ts1-lmr8.tfm
 INPUT ./kex.bbl
 INPUT ./kex.bbl
 INPUT kex.bbl
@@ -288,6 +303,7 @@ INPUT ./kex.out
 INPUT ./kex.out
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmbx9.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
@@ -297,7 +313,6 @@ INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr5.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb
-INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmr9.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/local/texlive/2024basic/texmf-dist/fonts/type1/public/lm/lmsy7.pfb

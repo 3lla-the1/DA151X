@@ -21,20 +21,47 @@ Bochkovskiy, A., Wang, C.-Y., and Liao, H.-Y.~M. (2020).
 \newblock Yolov4: Optimal speed and accuracy of object detection.
 \newblock arXiv:2004.10934v1, 23 Apr 2020.
 
+\bibitem[Carion et~al., 2020]{carion2020detr}
+Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., and Zagoruyko, S. (2020).
+\newblock End-to-end object detection with transformers.
+\newblock In {\em European Conference on Computer Vision (ECCV)}, pages 213--229. Springer.
+
 \bibitem[Civelek et~al., 2023]{Civelek2023}
 Civelek, M., Kraj{\v{c}}{\'i}k, V., and Klju{\v{c}}nikov, A. (2023).
 \newblock The impacts of dynamic capabilities on smes' digital transformation process: The resource-based view perspective.
 \newblock {\em Oeconomia Copernicana}, 14(4):1367--1392.
+
+\bibitem[Crasto, 2024]{crasto2024imbalance}
+Crasto, N. (2024).
+\newblock Class imbalance in object detection: An experimental diagnosis and study of mitigation strategies.
+\newblock {\em arXiv preprint arXiv:2403.07113}.
 
 \bibitem[Creswell, 2014]{creswell2014}
 Creswell, J.~W. (2014).
 \newblock {\em Research Design: Qualitative, Quantitative, and Mixed Methods Approaches}.
 \newblock SAGE Publications, 4th edition.
 
+\bibitem[{European Union}, 2016]{gdpr}
+{European Union} (2016).
+\newblock {Regulation (EU) 2016/679 of the European Parliament and of the Council on the protection of natural persons}.
+\newblock \url{https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679}.
+\newblock Accessed: 2025-03-12.
+
 \bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
 Goodfellow, I., Bengio, Y., and Courville, A. (2016).
 \newblock {\em Deep Learning}.
 \newblock MIT Press.
+
+\bibitem[{Google Inc.}, 2024]{colab_terms}
+{Google Inc.} (2024).
+\newblock Google colab terms of service.
+\newblock \url{https://colab.research.google.com/pro/terms/v1}.
+\newblock Accessed: 2025-04-12.
+
+\bibitem[Gregor and Hevner, 2013]{gregor2013positioning}
+Gregor, S. and Hevner, A.~R. (2013).
+\newblock Positioning and presenting design science research for maximum impact.
+\newblock {\em MIS Quarterly}, 37(2):337--355.
 
 \bibitem[Hanelt et~al., 2020]{Haneltarticle}
 Hanelt, A., Bohnsack, R., Marz, D., and Antunes~Marante, C. (2020).
@@ -53,6 +80,12 @@ Hevner, A.~R., March, S.~T., Park, J., and Ram, S. (2004).
 \bibitem[Hidayatullah et~al., 2025]{hidayatullah2025yolov8yolo11comprehensivearchitecture}
 Hidayatullah, P., Syakrani, N., Sholahuddin, M.~R., Gelar, T., and Tubagus, R. (2025).
 \newblock Yolov8 to yolo11: A comprehensive architecture in-depth comparative review.
+
+\bibitem[Jie, 2025]{yolov12repo}
+Jie, S. (2025).
+\newblock Yolov12 - ultralytics-style object detector.
+\newblock \url{https://github.com/sunsmarterjie/yolov12}.
+\newblock Accessed: 2025-04-13.
 
 \bibitem[Jobin et~al., 2019]{jobin2019global}
 Jobin, A., Ienca, M., and Vayena, E. (2019).
@@ -134,15 +167,32 @@ Redmon, J. and Farhadi, A. (2018).
 \newblock Yolov3: An incremental improvement.
 \newblock arXiv:1804.02767v1.
 
+\bibitem[{Roboflow Inc.}, 2024]{roboflow_terms}
+{Roboflow Inc.} (2024).
+\newblock Roboflow terms of service.
+\newblock \url{https://roboflow.com/terms}.
+\newblock Accessed: 2025-04-12.
+
 \bibitem[Sapkota et~al., 2025]{Sapkota2025YOLOv11}
 Sapkota, R., Qureshi, R., Flores-Calero, M., Badgujar, C., Nepal, U., Poulose, A., Zeno, P., Vaddevolu, U. B.~P., Khan, S., Shoman, M., Yan, H., and Karkee, M. (2025).
 \newblock Yolo11 to its genesis: A decadal and comprehensive review of the you only look once (yolo) series.
 \newblock {\em arXiv}, 2406(19407v5).
 
+\bibitem[Simon, 1996]{simon1996sciences}
+Simon, H.~A. (1996).
+\newblock {\em The Sciences of the Artificial}.
+\newblock MIT Press, Cambridge, MA, 3rd edition.
+
 \bibitem[Soori et~al., 2023]{SOORI202354}
 Soori, M., Arezoo, B., and Dastres, R. (2023).
 \newblock Artificial intelligence, machine learning and deep learning in advanced robotics, a review.
 \newblock {\em Cognitive Robotics}, 3:54--70.
+
+\bibitem[{Swedish Parliament}, 2003]{etik}
+{Swedish Parliament} (2003).
+\newblock {Lag (2003:460) om etikprövning av forskning som avser människor}.
+\newblock \url{https://www.riksdagen.se/sv/dokument-lagar/dokument/svensk-forfattningssamling/lag-2003460-om-etikprovning-av-forskning-som_sfs-2003-460}.
+\newblock Accessed: 2025-03-12.
 
 \bibitem[Teng et~al., 2022]{teng2022}
 Teng, X., Wu, Z., and Yang, F. (2022).
@@ -187,6 +237,11 @@ Vina, A. (2024).
 \newblock The benefits of ultralytics yolo11 being an anchor-free detector.
 \newblock {\em Ultralytics Blog}.
 
+\bibitem[vom Brocke et~al., 2020]{vomBrocke2020introduction}
+vom Brocke, J., Hevner, A., and Maedche, A. (2020).
+\newblock Introduction to design science research.
+\newblock In vom Brocke, J., Hevner, A., and Maedche, A., editors, {\em Design Science Research: Cases}, pages 1--16. Springer, Cham.
+
 \bibitem[Wang et~al., 2024a]{wang2024yolov10}
 Wang, A., Chen, H., Liu, L., Chen, K., Lin, Z., Han, J., and Ding, G. (2024a).
 \newblock Yolov10: Real-time end-to-end object detection.
@@ -216,5 +271,10 @@ Yin, R.~K. (2014).
 Zhang, L., Sun, Z., Tao, H., Wang, M., and Yi, W. (2025).
 \newblock Research on mine-personnel helmet detection based on multi-strategy-improved yolov11.
 \newblock {\em Sensors (Basel, Switzerland)}, 25(1):170--.
+
+\bibitem[Zhu et~al., 2021]{zhu2021deformabledetr}
+Zhu, X., Su, W., Lu, L., Li, B., Wang, X., and Dai, J. (2021).
+\newblock Deformable detr: Deformable transformers for end-to-end object detection.
+\newblock In {\em International Conference on Learning Representations (ICLR)}.
 
 \end{thebibliography}

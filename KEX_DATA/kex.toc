@@ -1,87 +1,83 @@
 \contentsline {section}{Abstract}{1}{section*.1}%
-\contentsline {section}{Sammanfattning}{1}{section*.2}%
-\contentsline {section}{Acknowledgments}{2}{section*.3}%
-\contentsline {section}{List of Figures}{5}{section*.5}%
-\contentsline {section}{List of Tables}{6}{section*.6}%
-\contentsline {section}{List of Acronyms and Abbreviations}{7}{section*.7}%
-\contentsline {section}{\numberline {1}Introduction}{8}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Background}{8}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Problem}{8}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Purpose}{8}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Technical Research questions}{8}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Business Research questions}{9}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Societal Impact}{9}{subsubsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.4}Ethical considerations}{9}{subsubsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.5}Sustainability, and social considerations}{9}{subsubsection.1.3.5}%
-\contentsline {subsection}{\numberline {1.4}Goals}{9}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Research Methodology}{10}{subsection.1.5}%
-\contentsline {subsubsection}{\numberline {1.5.1}Design Science Approach}{10}{subsubsection.1.5.1}%
-\contentsline {subsubsection}{\numberline {1.5.2}Quantitative and Qualitative Methods }{10}{subsubsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.6}Delimitations}{10}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Structure of the thesis}{11}{subsection.1.7}%
-\contentsline {section}{\numberline {2}Background}{11}{section.2}%
-\contentsline {subsection}{\numberline {2.1}\mbox {Digital Asset Management}}{11}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Choosing a DAM and the key tasks}{11}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Technological Tools Demand Continuous Organizational Adaptation}{12}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}\mbox {Artificial Inteligence}}{12}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Object Detection}{12}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}\mbox {Anchor-free detection models}}{13}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}{The Architecture of a Convolutional Neural Network}}{13}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}The Convolutional Operation}{13}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}The Pooling Operation}{14}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Activation Functions}{14}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Structural Components of the YOLO Architecture}{14}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}\mbox {YOLOv11 model}}{15}{subsubsection.2.3.5}%
-\contentsline {paragraph}{The improvements of Yolov11}{16}{table.2.1}%
-\contentsline {subsection}{\numberline {2.4}\mbox {Object Detection with YOLOv11}}{16}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}\mbox {LOSS}}{16}{subsection.2.5}%
-\contentsline {subsubsection}{\numberline {2.5.1}Why to make our own and not use a service}{16}{subsubsection.2.5.1}%
-\contentsline {subsubsection}{\numberline {2.5.2}Major background area\#1\#1}{17}{subsubsection.2.5.2}%
-\contentsline {paragraph}{Scheme}{17}{subsubsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.3}The YOLO model}{17}{subsubsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.6}Major background area\#2}{18}{subsection.2.6}%
-\contentsline {subsubsection}{\numberline {2.6.1}Major background area\#2\#1}{18}{subsubsection.2.6.1}%
-\contentsline {subsubsection}{\numberline {2.6.2}Major background area\#2\#2}{18}{subsubsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.7}Related work}{18}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Major related work}{18}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Major related work}{18}{subsubsection.2.7.2}%
-\contentsline {subsubsection}{\numberline {2.7.3}Minor related work}{18}{subsubsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.8}Summary}{18}{subsection.2.8}%
-\contentsline {section}{\numberline {3}<Engineering-related content, Methodologies and Methods> Use a self-explaining title}{19}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Research Process}{19}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Research Paradigm}{19}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Data Collection}{19}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Sampling}{20}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Sample Size}{20}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Target Population}{20}{subsubsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.4}Experimental Design}{20}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Test environment}{20}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Hardware/Software to be used}{20}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{20}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{20}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Validity}{20}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{20}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{20}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{20}{subsubsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.8}Evaluation framework}{20}{subsection.3.8}%
-\contentsline {section}{\numberline {4} Implementation and Engineering Design}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Class Definition and Dataset Construction}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Image Preprocessing and Augmentatio}{21}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}YOLOv12 Training Configuration}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Model Evaluation and Business Fit}{21}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Comparative Analysis}{21}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Organizational and INDEK Perspective}{21}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Results and Analysis}{21}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Major results}{21}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{21}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Validity Analysis}{21}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Discussion}{21}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Conclusions and Future work}{21}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Conclusions}{21}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Limitations}{22}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Future work}{22}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Reflections}{22}{subsection.6.4}%
-\contentsline {section}{References}{22}{subsection.6.4}%
-\contentsline {section}{Appendices}{24}{section*.8}%
-\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{24}{appendix.A}%
-\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{25}{appendix.B}%
+\contentsline {section}{Sammanfattning}{2}{section*.2}%
+\contentsline {section}{Acknowledgments}{3}{section*.3}%
+\contentsline {section}{List of Figures}{6}{section*.5}%
+\contentsline {section}{List of Tables}{7}{section*.6}%
+\contentsline {section}{List of Acronyms and Abbreviations}{8}{section*.7}%
+\contentsline {section}{\numberline {1}Introduction}{9}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Background}{9}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem}{9}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Purpose}{9}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Technical Research questions}{9}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Business Research questions}{10}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Societal Impact}{10}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Ethical considerations}{10}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.5}Sustainability, and social considerations}{10}{subsubsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.4}Goals}{10}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Research Methodology}{11}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Design Science Approach}{11}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Quantitative and Qualitative Methods }{11}{subsubsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.6}Delimitations}{11}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Structure of the thesis}{12}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Background}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\mbox {Digital Asset Management}}{12}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Choosing a DAM and the key tasks}{12}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Technological Tools Demand Continuous Organizational Adaptation}{13}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}\mbox {Artificial Inteligence}}{13}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Object Detection}{13}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}\mbox {Anchor-free detection models}}{14}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}{The Architecture of a Convolutional Neural Network}}{14}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}The Convolutional Operation}{14}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}The Pooling Operation}{15}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Activation Functions}{15}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Structural Components of the YOLO Architecture}{15}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}\mbox {YOLOv11 model}}{16}{subsubsection.2.3.5}%
+\contentsline {paragraph}{The improvements of Yolov11}{17}{table.2.1}%
+\contentsline {subsection}{\numberline {2.4}\mbox {Object Detection with YOLOv11}}{17}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}\mbox {LOSS}}{17}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Why to make our own and not use a service}{17}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Major background area\#1\#1}{18}{subsubsection.2.5.2}%
+\contentsline {paragraph}{Scheme}{18}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}The YOLO model}{18}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Major background area\#2}{19}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Major background area\#2\#1}{19}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Major background area\#2\#2}{19}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.7}Related work}{19}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Major related work}{19}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Major related work}{19}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Minor related work}{19}{subsubsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.8}Summary}{19}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Methodology}{21}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Research Paradigm}{21}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Research Process}{21}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Data Collection}{22}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Sampling and Target Population}{22}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}Experimental Design}{23}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{23}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{23}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Validity}{23}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{24}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{24}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{24}{subsubsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.8}Evaluation framework}{24}{subsection.3.8}%
+\contentsline {section}{\numberline {4} Implementation and Engineering Design}{24}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Class Definition and Dataset Construction}{24}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Image Preprocessing and Augmentatio}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}YOLOv12 Training Configuration}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Model Evaluation and Business Fit}{24}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Comparative Analysis}{24}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Organizational and INDEK Perspective}{24}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Results and Analysis}{25}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Major results}{25}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{25}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Validity Analysis}{25}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Discussion}{25}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusions and Future work}{25}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Conclusions}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Limitations}{25}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Future work}{25}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Reflections}{25}{subsection.6.4}%
+\contentsline {section}{References}{25}{subsection.6.4}%
+\contentsline {section}{Appendices}{28}{section*.8}%
+\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{28}{appendix.A}%
+\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{29}{appendix.B}%
