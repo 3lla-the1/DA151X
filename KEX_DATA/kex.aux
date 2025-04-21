@@ -165,8 +165,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{21}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Research Paradigm}{21}{subsection.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Research Process}{21}{subsection.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3-1}{\ignorespaces Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, workflow alignment, and organizational fit. Both tracks converged in step 9T5B to inform strategic recommendations for DAM.}}{21}{figure.3.1}\protected@file@percent }
-\newlabel{fig:research-process}{{3-1}{21}{Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, workflow alignment, and organizational fit. Both tracks converged in step 9T5B to inform strategic recommendations for DAM}{figure.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3-1}{\ignorespaces Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, and organizational fit. Both tracks converged in step 9T4B to inform strategic recommendations for DAM.}}{21}{figure.3.1}\protected@file@percent }
+\newlabel{fig:research-process}{{3-1}{21}{Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, and organizational fit. Both tracks converged in step 9T4B to inform strategic recommendations for DAM}{figure.3.1}{}}
 \citation{gdpr}
 \citation{etik}
 \citation{roboflow_terms}
@@ -176,23 +176,39 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Sampling and Target Population}{22}{subsubsection.3.3.1}\protected@file@percent }
 \citation{carion2020detr}
 \citation{yolov12repo}
+\citation{hevner2004design,vomBrocke2020introduction}
+\citation{oedReliability}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Experimental Design}{23}{subsection.3.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4.}}{23}{table.3.1}\protected@file@percent }
-\newlabel{tab:hardware_overview}{{3.1}{23}{Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4}{table.3.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{23}{subsection.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{23}{subsubsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Validity}{23}{subsection.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{24}{subsection.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{24}{subsubsection.3.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{24}{subsubsection.3.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Evaluation framework}{24}{subsection.3.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4} Implementation and Engineering Design}{24}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Class Definition and Dataset Construction}{24}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Image Preprocessing and Augmentatio}{24}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}YOLOv12 Training Configuration}{24}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Model Evaluation and Business Fit}{24}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Comparative Analysis}{24}{subsection.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Organizational and INDEK Perspective}{24}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Reliability and Validity}{23}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4} Implementation}{23}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Bussines Implementation\\(1B–3B)}{23}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Define Business Need for Object Detection (1B)}{23}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Class Selection with Stakeholder Input (2B)}{23}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Organizational Fit (3B)}{24}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Technical Implementation\\(1T-8T)}{24}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dataset Definition and Scope (1T)}{24}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:dataset-scope}{{4.2}{24}{Dataset Definition and Scope (1T)}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Image Annotation and Preprocessing (2T)}{24}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Model Training: YOLOv12 and RF-DETR (3T–4T)}{24}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4.}}{24}{table.4.1}\protected@file@percent }
+\newlabel{tab:hardware_overview}{{4.1}{24}{Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4}{table.4.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Evaluation: Manual, YOLOv12, RF-DETR (5T–7T)}{24}{table.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Model Comparison (8T)}{24}{table.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Strategic DAM Recommendation (9T4B)}{24}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results and Analysis}{25}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Major results}{25}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{25}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Validity Analysis}{25}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Discussion}{25}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}YOLOv12 Training Configuration}{25}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Model Evaluation and Business Fit}{25}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Comparative Analysis}{25}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Organizational and INDEK Perspective}{25}{subsection.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}Planned Data Analysis}{25}{subsection.5.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.1}Data Analysis Technique}{25}{subsubsection.5.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.9.2}Software Tools}{25}{subsubsection.5.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10}Evaluation framework}{25}{subsection.5.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions and Future work}{25}{section.6}\protected@file@percent }
 \bibstyle{apalike}
 \citation{*}
 \bibdata{references}
@@ -205,17 +221,6 @@
 \bibcite{crasto2024imbalance}{{7}{2024}{{Crasto}}{{}}}
 \bibcite{creswell2014}{{8}{2014}{{Creswell}}{{}}}
 \bibcite{gdpr}{{9}{2016}{{European Union}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results and Analysis}{25}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Major results}{25}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Reliability Analysis}{25}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Validity Analysis}{25}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Discussion}{25}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions and Future work}{25}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Conclusions}{25}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Limitations}{25}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Future work}{25}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Reflections}{25}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{25}{subsection.6.4}\protected@file@percent }
 \bibcite{Goodfellow-et-al-2016}{{10}{2016}{{Goodfellow et~al.}}{{}}}
 \bibcite{colab_terms}{{11}{2024}{{Google Inc.}}{{}}}
 \bibcite{gregor2013positioning}{{12}{2013}{{Gregor and Hevner}}{{}}}
@@ -227,6 +232,11 @@
 \bibcite{jobin2019global}{{18}{2019}{{Jobin et~al.}}{{}}}
 \bibcite{ultralytics2025}{{19}{2025}{{Jocher and Ultralytics}}{{}}}
 \bibcite{johnson2004mixed}{{20}{2004}{{Johnson and Onwuegbuzie}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Conclusions}{26}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Limitations}{26}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Future work}{26}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Reflections}{26}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{26}{subsection.6.4}\protected@file@percent }
 \bibcite{KARBOUJ2024527}{{21}{2024}{{Karbouj et~al.}}{{}}}
 \bibcite{khanam2024yolov11overviewkeyarchitectural}{{22}{2024}{{Khanam and Hussain}}{{}}}
 \bibcite{10589380}{{23}{2024a}{{Khanam et~al.}}{{}}}
@@ -235,39 +245,41 @@
 \bibcite{li2022yolov6}{{26}{2022}{{Li et~al.}}{{}}}
 \bibcite{LOVE2019102930}{{27}{2019}{{Love and Matthews}}{{}}}
 \bibcite{mccain2021}{{28}{2021}{{McCain et~al.}}{{}}}
-\bibcite{prince2023understanding}{{29}{2023}{{Prince}}{{}}}
-\bibcite{articleRANE}{{30}{2023}{{Rane}}{{}}}
-\bibcite{redmon2016you}{{31}{2016}{{Redmon et~al.}}{{}}}
-\bibcite{redmon2016yolo9000betterfasterstronger}{{32}{2016}{{Redmon and Farhadi}}{{}}}
-\bibcite{redmon2018yolov3}{{33}{2018}{{Redmon and Farhadi}}{{}}}
-\bibcite{roboflow_terms}{{34}{2024}{{Roboflow Inc.}}{{}}}
-\bibcite{Sapkota2025YOLOv11}{{35}{2025}{{Sapkota et~al.}}{{}}}
-\bibcite{simon1996sciences}{{36}{1996}{{Simon}}{{}}}
-\bibcite{SOORI202354}{{37}{2023}{{Soori et~al.}}{{}}}
-\bibcite{etik}{{38}{2003}{{Swedish Parliament}}{{}}}
-\bibcite{teng2022}{{39}{2022}{{Teng et~al.}}{{}}}
-\bibcite{tillvaxtverket2021}{{40}{2021}{{Tillväxtverket}}{{}}}
-\bibcite{ultralytics2024yolov5}{{41}{2020}{{Ultralytics}}{{}}}
-\bibcite{ultralytics2025yolov8}{{42}{2023}{{Ultralytics}}{{}}}
-\bibcite{UltralyticsYOLO11}{{43}{2025}{{Ultralytics Inc.}}{{}}}
-\bibcite{UN2030Agenda}{{44}{2015}{{United Nations}}{{}}}
-\bibcite{VerdhanVaibhav2021CVUD}{{45}{2021}{{Verdhan}}{{}}}
-\bibcite{vina2024yolo11}{{46}{2024}{{Vina}}{{}}}
-\bibcite{vomBrocke2020introduction}{{47}{2020}{{vom Brocke et~al.}}{{}}}
-\bibcite{wang2024yolov10}{{48}{2024a}{{Wang et~al.}}{{}}}
-\bibcite{wang2022yolov7}{{49}{2022}{{Wang et~al.}}{{}}}
-\bibcite{wang2024yolov9}{{50}{2024b}{{Wang et~al.}}{{}}}
-\bibcite{MINGfANG}{{51}{2022}{{Wu et~al.}}{{}}}
-\bibcite{yin2014case}{{52}{2014}{{Yin}}{{}}}
-\bibcite{ZhangLei2025RoMH}{{53}{2025}{{Zhang et~al.}}{{}}}
-\bibcite{zhu2021deformabledetr}{{54}{2021}{{Zhu et~al.}}{{}}}
-\@writefile{toc}{\contentsline {section}{Appendices}{28}{section*.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{28}{appendix.A}\protected@file@percent }
-\newlabel{appendix:A}{{A}{28}{Appendix A: Example Appendix Title}{appendix.A}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A-1}{\ignorespaces An example figure in Appendix A.}}{28}{figure.A.1}\protected@file@percent }
-\newlabel{fig:appendixA}{{A-1}{28}{An example figure in Appendix A}{figure.A.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces An example table in Appendix A.}}{28}{table.A.1}\protected@file@percent }
-\newlabel{tab:appendixA}{{A.1}{28}{An example table in Appendix A}{table.A.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{29}{appendix.B}\protected@file@percent }
-\newlabel{appendix:B}{{B}{29}{Appendix B: Another Appendix Example}{appendix.B}{}}
-\gdef \@abspage@last{30}
+\bibcite{oedReliability}{{29}{2009a}{{Oxford University Press}}{{}}}
+\bibcite{oedValidity}{{30}{2009b}{{Oxford University Press}}{{}}}
+\bibcite{prince2023understanding}{{31}{2023}{{Prince}}{{}}}
+\bibcite{articleRANE}{{32}{2023}{{Rane}}{{}}}
+\bibcite{redmon2016you}{{33}{2016}{{Redmon et~al.}}{{}}}
+\bibcite{redmon2016yolo9000betterfasterstronger}{{34}{2016}{{Redmon and Farhadi}}{{}}}
+\bibcite{redmon2018yolov3}{{35}{2018}{{Redmon and Farhadi}}{{}}}
+\bibcite{roboflow_terms}{{36}{2024}{{Roboflow Inc.}}{{}}}
+\bibcite{Sapkota2025YOLOv11}{{37}{2025}{{Sapkota et~al.}}{{}}}
+\bibcite{simon1996sciences}{{38}{1996}{{Simon}}{{}}}
+\bibcite{SOORI202354}{{39}{2023}{{Soori et~al.}}{{}}}
+\bibcite{etik}{{40}{2003}{{Swedish Parliament}}{{}}}
+\bibcite{teng2022}{{41}{2022}{{Teng et~al.}}{{}}}
+\bibcite{tillvaxtverket2021}{{42}{2021}{{Tillväxtverket}}{{}}}
+\bibcite{ultralytics2024yolov5}{{43}{2020}{{Ultralytics}}{{}}}
+\bibcite{ultralytics2025yolov8}{{44}{2023}{{Ultralytics}}{{}}}
+\bibcite{UltralyticsYOLO11}{{45}{2025}{{Ultralytics Inc.}}{{}}}
+\bibcite{UN2030Agenda}{{46}{2015}{{United Nations}}{{}}}
+\bibcite{VerdhanVaibhav2021CVUD}{{47}{2021}{{Verdhan}}{{}}}
+\bibcite{vina2024yolo11}{{48}{2024}{{Vina}}{{}}}
+\bibcite{vomBrocke2020introduction}{{49}{2020}{{vom Brocke et~al.}}{{}}}
+\bibcite{wang2024yolov10}{{50}{2024a}{{Wang et~al.}}{{}}}
+\bibcite{wang2022yolov7}{{51}{2022}{{Wang et~al.}}{{}}}
+\bibcite{wang2024yolov9}{{52}{2024b}{{Wang et~al.}}{{}}}
+\bibcite{MINGfANG}{{53}{2022}{{Wu et~al.}}{{}}}
+\bibcite{yin2014case}{{54}{2014}{{Yin}}{{}}}
+\bibcite{ZhangLei2025RoMH}{{55}{2025}{{Zhang et~al.}}{{}}}
+\bibcite{zhu2021deformabledetr}{{56}{2021}{{Zhu et~al.}}{{}}}
+\@writefile{toc}{\contentsline {section}{Appendices}{29}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{29}{appendix.A}\protected@file@percent }
+\newlabel{appendix:A}{{A}{29}{Appendix A: Example Appendix Title}{appendix.A}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A-1}{\ignorespaces An example figure in Appendix A.}}{29}{figure.A.1}\protected@file@percent }
+\newlabel{fig:appendixA}{{A-1}{29}{An example figure in Appendix A}{figure.A.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces An example table in Appendix A.}}{29}{table.A.1}\protected@file@percent }
+\newlabel{tab:appendixA}{{A.1}{29}{An example table in Appendix A}{table.A.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{30}{appendix.B}\protected@file@percent }
+\newlabel{appendix:B}{{B}{30}{Appendix B: Another Appendix Example}{appendix.B}{}}
+\gdef \@abspage@last{31}

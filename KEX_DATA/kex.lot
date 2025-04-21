@@ -1,3 +1,3 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Summary of YOLO Model Evolution}}{16}{table.2.1}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4.}}{23}{table.3.1}%
-\contentsline {table}{\numberline {A.1}{\ignorespaces An example table in Appendix A.}}{28}{table.A.1}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Hardware configuration and model training parameters for YOLOv12 and RF-DETR. Both models were trained on the same cloud-based GPU instance using CUDA 12.4.}}{24}{table.4.1}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces An example table in Appendix A.}}{29}{table.A.1}%

@@ -1348,6 +1348,23 @@ TEST
 TEST
 \newpage
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % ===== Section 3: Methodology =====
 
 \section{Methodology}
@@ -1416,8 +1433,8 @@ DAM processes in a bespoke furniture manufacturing SME.
 As illustrated in Figure~\ref{fig:research-process}, the research was structured 
 around two intertwined tracks: a technical track, which includes dataset preparation, 
 model training, evaluation, and comparative analysis (steps 1T–8T); and a business track, 
-which encompassed stakeholder need definition, class selection, workflow alignment, 
-and organizational fit analysis (steps 1B–4B). These tracks converged in step 9T5B, 
+which encompassed stakeholder need definition, class selection,
+and organizational fit analysis (steps 1B–3B). These tracks converged in step 9T4B, 
 where insights from both domains were synthesized to inform strategic DAM recommendations.
 
 Beyond the two functional object detection artifacts, this thesis contributes 
@@ -1441,7 +1458,7 @@ which highlights the sequence and interdependencies of the steps undertaken.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=1\linewidth]{map.png}
-    \caption{Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, workflow alignment, and organizational fit. Both tracks converged in step 9T5B to inform strategic recommendations for DAM.}
+    \caption{Overview of the dual-track research process. The technical track (T) included data preparation, model training, evaluation, and comparison, while the business track (B) focused on stakeholder needs, class selection, and organizational fit. Both tracks converged in step 9T4B to inform strategic recommendations for DAM.}
     \label{fig:research-process}
 \end{figure}
 
@@ -1452,16 +1469,14 @@ and evaluation (YOLOv12 and RF-DETR), and culminating in
 comparative analysis. A manual tagging baseline was also 
 established in step 5T. In parallel, the business track (B) defined the object detection 
 needs, selected classes in collaboration with stakeholders, 
-and assessed workflow integration and organizational fit.
-These efforts converged in the final step (9T5B), where technical 
-and business insights were synthesized to inform actionable 
+and assessed organizational fit.
+These processes converged in the final step (9T4B), where they 
+were synthesized to inform actionable 
 recommendations for improving DAM.
 
 This structured approach ensured that technical development did not 
 evolve in isolation but remained aligned with organizational needs—upholding 
 the DSR principles of relevance, utility, and contextual fit. 
-Methodological details for each step, including data collection, 
-model selection, and evaluation strategy, are elaborated in the subsequent sections.
 
 \subsection{Data Collection}
 % (This should also show that you are aware of the social and ethical concerns that might be relevant
@@ -1604,12 +1619,95 @@ API authentication for Roboflow (used for dataset access) and Hugging
 Face (used for RF-DETR) was securely managed through Google 
 Colab’s userdata module, which enabled token-based access 
 without exposing credentials in the notebook.
-The detailed system configuration is summarized in 
-Table~\ref{tab:hardware_overview}, including GPU usage, 
-batch sizes, and training epochs. Notably, RF-DETR was 
-trained using a smaller per-step batch size and gradient 
-accumulation to match YOLOv12's effective batch size of 32.
 
+\subsection{Reliability and Validity}
+In line with the 
+DDSR paradigm, the evaluation of artifacts must be both 
+ystematic and context-aware, incorporating principles of 
+internal consistency, transparency, and contextual 
+relevance \citep{hevner2004design, vomBrocke2020introduction}.
+
+Reliability refers to “the degree to which repeated 
+measurements of the same subject under identical conditions 
+yield consistent results” \citep{oedReliability}.
+All training runs used a fixed GPU, 
+consistent data splits, and logged hyperparameters. 
+Roboflow’s version control with a locked dataset version 
+and a timestamped hash, ensured each training run referenced 
+an identical input distribution. 
+
+Validity refers to “the quality of being well-founded on fact, 
+or established on sound principles, and thoroughly applicable 
+to the case or circumstances”
+Internal validity was ensured by isolating the model 
+architecture as the primary variable, while external 
+validity was supported through stakeholder-driven 
+class consolidation and real-world deployment context.
+Furthermore, a baseline of manual tagging performance was 
+established (Step 5T in Figure~\ref{fig:research-process}) 
+to provide a human-comparable reference point for assessing 
+practical utility.
+
+% ===== Section 4: WHAT has been Done =====
+\section{ Implementation}
+% What have you done? How did you do it? What design decisions did you make? How did what you
+% did help you to meet your goals?
+
+Building on the research process defined in Chapter 3, 
+this chapter presents the technical implementation 
+corresponding to both the engineering process (1T–8T) 
+and business process (1B–3B) in Figure~\ref{fig:research-process}. 
+These converge in step 9T4B.
+
+\subsection{Bussines Implementation\\(1B–3B)}
+
+\paragraph{Define Business Need for Object Detection (1B)}
+A stakeholder meeting was held to investigate current image 
+management workflows. The meeting informed the specification 
+of object detection as a potential component in the 
+proposed solution.
+
+\paragraph{Class Selection with Stakeholder Input (2B)}
+Product variants were extracted from the internal pricing list (2024) and grouped based on three criteria: (1) visual separability between classes, (2) sufficient representation across the dataset, and (3) compatibility with the company’s internal digital asset tagging
+practices. The draft list of 33 classes was validated through follow-up with the company. 
+This activity was conducted in parallel with the dataset definition process (1T) described in Section~\ref{sec:dataset-scope}, as illustrated in Figure~\ref{fig:research-process}.
+
+\paragraph{Organizational Fit (3B)}
+Conducted in parallel with 
+model comparison (8T), this step examined how model 
+outputs could be incorporated into current workflows. 
+The Dropbox folder structure and file naming 
+conventions were mapped to the model’s class 
+schema. Operational aspects, 
+such as user interaction, model access, and 
+retraining procedures, were reviewed to 
+identify integration requirements.
+
+
+\subsection{Technical Implementation\\(1T-8T)}
+\paragraph{Dataset Definition and Scope (1T)} \label{sec:dataset-scope}
+Images were selected from Dropbox based on 
+suitability for object detection. Non-compliant images including humans were excluded 
+during manual review to ensure training relevance and privacy compliance.
+
+\paragraph{Image Annotation and Preprocessing (2T)}
+3,905 product images were annotated in Roboflow 
+using bounding boxes and 33 class labels. 
+The dataset was split into training 
+(2,733 images), validation (781 images), and 
+testing (391 images).
+Preprocessing steps included EXIF-based auto-orientation, 
+resolution normalization, and format conversion: 
+Roboflow YAML for YOLOv12 and COCO-style JSON for 
+RF-DETR. Each training image was augmented to generate 
+three additional variants through controlled rotation 
+(±10°), shear (±10° horizontal, +10° vertical), and 
+grayscale transformation (applied to 10\% of images) to improve model robustness.
+
+\paragraph{Model Training: YOLOv12 and RF-DETR (3T–4T)}
+The training configurations is summarized in 
+Table~\ref{tab:hardware_overview}, including GPU usage, 
+batch sizes, and training epochs. 
 
 \begin{table}[htbp]
     \centering
@@ -1624,8 +1722,6 @@ accumulation to match YOLOv12's effective batch size of 32.
         Framework & Ultralytics (YOLOv12s .yaml), Roboflow & Hugging Face (rfdetr) \\
         \hline
         GPU & \multicolumn{2}{c|}{Tesla T4 (15GB VRAM)} \\
-        \hline
-        Max RAM Usage & 13.3 / 15.0 GB & 14.8 / 15.0 GB \\
         \hline
         CUDA Version & \multicolumn{2}{c|}{12.4} \\
         \hline
@@ -1644,97 +1740,73 @@ accumulation to match YOLOv12's effective batch size of 32.
     \label{tab:hardware_overview}
 \end{table}
 
+Notably, RF-DETR was 
+trained using a smaller per-step batch size and gradient 
+accumulation to match YOLOv12's effective batch size of 32.
 As shown in Table~\ref{tab:hardware_overview}, the input resolution 
-for YOLOv12 was set to 640×640, consistent with its default 
-configuration. For RF-DETR, a lower resolution of 448×448 
-was selected to reduce memory consumption and ensure training 
+for RF-DETR was set to a lower resolution of 448×448 
+to reduce memory consumption and ensure training 
 completed within the four-hour runtime limit imposed by Google 
-Colab’s free-tier environment (Tesla T4 GPU). To maintain 
-comparability between the two models, the effective batch
-size was standardized to 32. Due to higher memory requirements, 
-RF-DETR achieved this through gradient accumulation over eight 
-steps, while YOLOv12 was able to use a full batch size of 32 
-directly.
+Colab’s Tesla T4 GPU. RF-DETR required gradient accumulation 
+over eight steps to reach an effective batch size of 32 due to higher 
+memory usage. 
+
+\paragraph{Evaluation: Manual, YOLOv12, RF-DETR (5T–7T)}
+THE held-out test set of 391 images was used to assess both models on
+standard COCO metrics: mean Average Precision (mAP), precision, 
+recall, and Intersection over Union (IoU). 
+Both were evaluated using their native PyTorch-based pipelines, 
+with predictions compared against ground-truth annotations.
+To benchmark human performance, a subset of 50 randomly 
+selected test images was manually tagged by locating 
+each file through the Dropbox folders. 
+Using filename metadata, the product specialist 
+identified the product class and entered it into a 
+structured spreadsheet. No bounding boxes were drawn. 
+The time taken to complete the task was measured with a stopwatch, 
+and average tagging time per image was calculated. 
+
+\paragraph{Model Comparison (8T)}
+YOLOv12, RF-DETR, and the manual tagging baseline
+were compared across three dimensions: classification 
+accuracy, inference or tagging speed, and implementation 
+complexity.
+
+\subsection{Strategic DAM Recommendation (9T4B)}
+This final step synthesised the findings from both tracks.
+The objective was not to simply prescribe implementation, but 
+to define under what conditions such a system could be viable. 
+Scenarios were outlined where integration would 
+add operational value, as well as cases where technical 
+or organizational constraints might outweigh the benefits
 
 
 
-\subsection{Assessing reliability and validity of the data collected}
-
-\subsubsection{Reliability}
-% How will you know if your results are reliable?
-To ensure replicability:
-Random seeds were fixed during training and 
-dataset splits were logged and version-controlled. 
-All augmentation operations were deterministic and tracked.
-
-\subsection{Validity}
-% How will you know if your results are valid?
-Internal validity was addressed through strict separation 
-of training and test sets. External validity was ensured 
-by involving business stakeholders in the annotation 
-process and aligning object classes with 
-real business needs.
-
-
-\subsection{Planned Data Analysis}
-
-\subsubsection{Data Analysis Technique}
-The performance of the trained model was evaluated using:
-\begin{itemize} 
-    \item Mean Average Precision (mAP)
-    \item Precision
-    \item Recall
-    \item Intersection over Union (IoU)
-\end{itemize} 
-These metrics were chosen to balance 
-localization and classification quality.
-
-\subsubsection{Software Tools}
-
-\begin{itemize} 
-    \item Python, Pandas, and Matplotlib for result visualization
-    \item Roboflow for managing annotations and generating YOLOv12-compatible labels
-\end{itemize} 
-
-
-\subsection{Evaluation framework}
-The trained model was compared against 
-Faster R-CNN and current DAM systems used 
-by the company (manually tagged folders and 
-internal table-based search). Evaluation considered:
-
-\begin{itemize} 
-    \item Inference speed
-    \item Accuracy
-    \item Model complexity
-    \item Organizational integration effort
-\end{itemize} 
 
 
 
-% ===== Section 4: WHAT has been Done =====
-\section{ Implementation and Engineering Design}
-% What have you done? How did you do it? What design decisions did you make? How did what you
-% did help you to meet your goals?
 
-This chapter presents the engineering work carried out to 
-implement the proposed object detection system using YOLOv12. 
-It includes decisions made during dataset design, preprocessing, 
-model selection, and evaluation, with a focus on achieving practical, 
-scalable results in a business context.
 
-\subsection{Class Definition and Dataset Construction}
-% Hardware/Software design …/ModelSimulation model parameters/…
-% Figure 4-1 shows a simple icon for a home page. The time to access this page when served will be
-% quantified in a series of experiments. The configurations that have been tested in the test bed are
-% listed in Table 4-1.
 
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.4\linewidth]{kthLogga.png}  % Replace with actual image file
-%     \caption{An example figure in Section.}
-%     \label{fig:ldone}  
-% \end{figure}
+
+
+
+\newpage
+
+
+
+% ===== Section 5: Results and analysis  =====
+\section{Results and Analysis}
+In this chapter, we present the results and discuss them.
+
+Keep in mind: How you are going to evaluate what you have done? What are your metrics?
+Analysis of your data and proposed solution
+Does this meet the goals which you had when you started?
+
+\subsection{Major results}
+% Some statistics of the delay measurements are shown in Table 5-1.
+% The delay has been computed from the time the GET request is received until the response is
+% sent.
 
 % \begin{table}[htbp]
 %     \centering
@@ -1746,46 +1818,29 @@ scalable results in a business context.
 %         Data 3 & Data 4 \\
 %         \hline
 %     \end{tabular}
-%     \caption{An example table in Section.}
-%     \label{tab:done}  
+%     \caption{An example table in Section}
+%     \label{tab:res}  
 % \end{table}
 
+% \ref{tab:res} is a table
+
+\subsection{Reliability Analysis}
+LALALA
+
+\subsection{Validity Analysis}
+LALALA
 
 
-% \ref{fig:done} is an image 
-% \ref{tab:done} is a table
+\subsection{Discussion}
 
-Step 1: Object Class Consolidation
+Max RAM Usage , 13.3 15.0 GB , 14.8 15.0 GB 
+       
 
-From an initial set of over 100 item categories used internally by the company, 33 business-relevant and visually distinct classes were defined. This ensured:
-	•	Efficient learning
-	•	Business applicability
-	•	Simplified annotation
 
-    Step 2: Image Annotation
 
-Images were labeled using Roboflow, with bounding boxes and class labels. Resulting dataset: 3905 annotated images.
 
-Split:
-	•	Training: 2733 images
-	•	Validation: 781 images
-	•	Testing: 391 images
 
-\subsection{Image Preprocessing and Augmentatio}
 
-Preprocessing
-	•	Auto-orientation applied using EXIF data
-	•	Resolution normalization
-	•	Conversion to YOLOv12 training format
-
-Augmentation Strategy
-
-Each training image generated 3 augmented variants with:
-	•	Rotation: ±10 degrees
-	•	Shear: ±10 (horizontal), +10 (vertical)
-	•	Grayscale conversion: 10\% of images
-
-This improved model robustness to real-world variations.
 
 
 \subsection{YOLOv12 Training Configuration}
@@ -1838,43 +1893,41 @@ This implementation was assessed through the lens of:
 These components support sustainable AI integration and knowledge management in the company’s digital asset processes.
 
 
-% ===== Section 5: Results and analysis  =====
-\section{Results and Analysis}
-In this chapter, we present the results and discuss them.
+\subsection{Planned Data Analysis}
 
-Keep in mind: How you are going to evaluate what you have done? What are your metrics?
-Analysis of your data and proposed solution
-Does this meet the goals which you had when you started?
+\subsubsection{Data Analysis Technique}
+The performance of the trained model was evaluated using:
+\begin{itemize} 
+    \item Mean Average Precision (mAP)
+    \item Precision
+    \item Recall
+    \item Intersection over Union (IoU)
+\end{itemize} 
+These metrics were chosen to balance 
+localization and classification quality.
 
-\subsection{Major results}
-% Some statistics of the delay measurements are shown in Table 5-1.
-% The delay has been computed from the time the GET request is received until the response is
-% sent.
+\subsubsection{Software Tools}
 
-% \begin{table}[htbp]
-%     \centering
-%     \begin{tabular}{|c|c|}
-%         \hline
-%         Column 1 & Column 2 \\
-%         \hline
-%         Data 1 & Data 2 \\
-%         Data 3 & Data 4 \\
-%         \hline
-%     \end{tabular}
-%     \caption{An example table in Section}
-%     \label{tab:res}  
-% \end{table}
-
-% \ref{tab:res} is a table
-
-\subsection{Reliability Analysis}
-LALALA
-
-\subsection{Validity Analysis}
-LALALA
+\begin{itemize} 
+    \item Python, Pandas, and Matplotlib for result visualization
+    \item Roboflow for managing annotations and generating YOLOv12-compatible labels
+\end{itemize} 
 
 
-\subsection{Discussion}
+\subsection{Evaluation framework}
+The trained model was compared against 
+Faster R-CNN and current DAM systems used 
+by the company (manually tagged folders and 
+internal table-based search). Evaluation considered:
+
+\begin{itemize} 
+    \item Inference speed
+    \item Accuracy
+    \item Model complexity
+    \item Organizational integration effort
+\end{itemize} 
+
+
 
 
 

@@ -53,31 +53,38 @@
 \contentsline {subsection}{\numberline {3.3}Data Collection}{22}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Sampling and Target Population}{22}{subsubsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.4}Experimental Design}{23}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Assessing reliability and validity of the data collected}{23}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Reliability}{23}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Validity}{23}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Planned Data Analysis}{24}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Data Analysis Technique}{24}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Software Tools}{24}{subsubsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.8}Evaluation framework}{24}{subsection.3.8}%
-\contentsline {section}{\numberline {4} Implementation and Engineering Design}{24}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Class Definition and Dataset Construction}{24}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Image Preprocessing and Augmentatio}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}YOLOv12 Training Configuration}{24}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Model Evaluation and Business Fit}{24}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Comparative Analysis}{24}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Organizational and INDEK Perspective}{24}{subsection.4.6}%
+\contentsline {subsection}{\numberline {3.5}Reliability and Validity}{23}{subsection.3.5}%
+\contentsline {section}{\numberline {4} Implementation}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bussines Implementation\\(1B–3B)}{23}{subsection.4.1}%
+\contentsline {paragraph}{Define Business Need for Object Detection (1B)}{23}{subsection.4.1}%
+\contentsline {paragraph}{Class Selection with Stakeholder Input (2B)}{23}{subsection.4.1}%
+\contentsline {paragraph}{Organizational Fit (3B)}{24}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Technical Implementation\\(1T-8T)}{24}{subsection.4.2}%
+\contentsline {paragraph}{Dataset Definition and Scope (1T)}{24}{subsection.4.2}%
+\contentsline {paragraph}{Image Annotation and Preprocessing (2T)}{24}{subsection.4.2}%
+\contentsline {paragraph}{Model Training: YOLOv12 and RF-DETR (3T–4T)}{24}{subsection.4.2}%
+\contentsline {paragraph}{Evaluation: Manual, YOLOv12, RF-DETR (5T–7T)}{24}{table.4.1}%
+\contentsline {paragraph}{Model Comparison (8T)}{24}{table.4.1}%
+\contentsline {subsection}{\numberline {4.3}Strategic DAM Recommendation (9T4B)}{24}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Results and Analysis}{25}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Major results}{25}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Reliability Analysis}{25}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Validity Analysis}{25}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Discussion}{25}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}YOLOv12 Training Configuration}{25}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Model Evaluation and Business Fit}{25}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Comparative Analysis}{25}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Organizational and INDEK Perspective}{25}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Planned Data Analysis}{25}{subsection.5.9}%
+\contentsline {subsubsection}{\numberline {5.9.1}Data Analysis Technique}{25}{subsubsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.2}Software Tools}{25}{subsubsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.10}Evaluation framework}{25}{subsection.5.10}%
 \contentsline {section}{\numberline {6}Conclusions and Future work}{25}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Conclusions}{25}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Limitations}{25}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Future work}{25}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Reflections}{25}{subsection.6.4}%
-\contentsline {section}{References}{25}{subsection.6.4}%
-\contentsline {section}{Appendices}{28}{section*.8}%
-\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{28}{appendix.A}%
-\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{29}{appendix.B}%
+\contentsline {subsection}{\numberline {6.1}Conclusions}{26}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Limitations}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Future work}{26}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Reflections}{26}{subsection.6.4}%
+\contentsline {section}{References}{26}{subsection.6.4}%
+\contentsline {section}{Appendices}{29}{section*.8}%
+\contentsline {section}{\numberline {A}Appendix A: Example Appendix Title}{29}{appendix.A}%
+\contentsline {section}{\numberline {B}Appendix B: Another Appendix Example}{30}{appendix.B}%
