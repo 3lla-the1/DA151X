@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  21 APR 2025 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.11)  21 APR 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -728,12 +728,12 @@ Underfull \hbox (badness 8151) in paragraph at lines 1770--1774
  []
 
 [24]
-Underfull \hbox (badness 1286) in paragraph at lines 1846--1846
+Underfull \hbox (badness 1286) in paragraph at lines 1849--1849
 |[]\T1/lmr/bx/n/12 (+20) YOLOv12 Train-ing Con-fig-u-ra-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1940
 |[]\T1/lmr/bx/n/14.4 (+20) Conclusions and Fu-ture
  []
 
@@ -800,7 +800,7 @@ Overfull \hbox (26.09982pt too wide) in paragraph at lines 202--206
 ]
 File: kthLogga.png Graphic file (type png)
 <use kthLogga.png>
-Package pdftex.def Info: kthLogga.png  used on input line 1994.
+Package pdftex.def Info: kthLogga.png  used on input line 1997.
 (pdftex.def)             Requested size: 182.09486pt x 203.01976pt.
  [29
 
